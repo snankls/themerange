@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - DEPLOYPATH=/home/themeran/public_html/
-    - /bin/cp -r . "$DEPLOYPATH"
+    - /bin/cp * "$DEPLOYPATH"
