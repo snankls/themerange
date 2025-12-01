@@ -33,6 +33,7 @@ class TR_Elementor_Widget_Icon_Box extends TR_Elementor_Widget_Base{
                 'tab' => Controls_Manager::TAB_CONTENT
             )
         );
+		
 		//Start repeater
 		$repeater = new Repeater();
 		$repeater->add_control(

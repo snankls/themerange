@@ -200,6 +200,13 @@ button {
   button:focus {
     outline: none; }
 
+h1 {
+  font-size: 55px;
+  line-height: 70px;
+  margin: 15px 0 20px;
+  letter-spacing: -2px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--bs-dark);
@@ -2735,7 +2742,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .it_solution_hero_content {
   background-size: auto;
-  padding: 132px 220px 133px;
+  padding: 132px 190px 133px;
   background-repeat: no-repeat;
   background-position: left center;
   background-color: var(--bs-light);
