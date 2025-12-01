@@ -457,18 +457,18 @@ if( !function_exists('themerange_banner') ){
 			$bg_url = $tr_theme_options['tr_bg_breadcrumbs']['url'];
 			$breadcrumb_bg_option = !empty($bg_url) ? $bg_url : $background_image;
 			$breadcrumb_bg = '';
-			$classes = array();
+			//$classes = array();
 			
-			$classes[] = 'page-title';	
-			$classes[] = 'breadcrumb-' . $tr_theme_options['tr_breadcrumb_layout'];
-			$classes[] = $show_banner?'':'no-breadcrumb';
-			$classes[] = $show_page_title?'':'no-title';
+			// $classes[] = 'page-title';	
+			// $classes[] = 'breadcrumb-' . $tr_theme_options['tr_breadcrumb_layout'];
+			// $classes[] = $show_banner?'':'no-breadcrumb';
+			// $classes[] = $show_page_title?'':'no-title';
 			
 			if( $show_page_title ){
 				$page_title = '<h1 class="' . $extra_class . '">' . $page_title . '</h1>';
 			}
 			
-			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'">
+			echo '<section class="page_banner_section text-center">
 				<div class="container">
 					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
 					'.$page_title;
