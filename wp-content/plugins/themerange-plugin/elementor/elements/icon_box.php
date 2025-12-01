@@ -217,18 +217,33 @@ class TR_Elementor_Widget_Icon_Box extends TR_Elementor_Widget_Base{
         
 		<?php if ($layout == 'layout2') { ?>
         
-            <div class="iconbox_block">
-				<div class="iconbox_icon bg-warning-subtle tr-icon">
-					<?php \Elementor\Icons_Manager::render_icon($item['icon']); ?>
+			<!-- Policy Section - Start
+			================================================== -->
+			<section class="policy_section bg-light">
+				<div class="container">
+					<div class="row">
+
+						<?php foreach($settings['icon_box'] as $index => $item) : ?>
+						<div class="col-lg-4">
+							<div class="iconbox_block">
+								<div class="iconbox_icon bg-warning-subtle tr-icon">
+									<?php \Elementor\Icons_Manager::render_icon($item['icon']); ?>
+								</div>
+								<div class="iconbox_content">
+									<h3 class="iconbox_title"><?php echo wp_kses($item['title'], $allowed_html); ?></h3>
+									<p class="mb-0">
+										<?php echo wp_kses($item['text'], $allowed_html); ?>
+									</p>
+								</div>
+							</div>
+						</div>
+						<?php endforeach; ?>
+					</div>
 				</div>
-				<div class="iconbox_content">
-					<h3 class="iconbox_title"><?php echo wp_kses($item['title'], $allowed_html); ?></h3>
-					<p class="mb-0">
-						<?php echo wp_kses($item['text'], $allowed_html); ?>
-					</p>
-				</div>
-			</div>
-        
+			</section>
+			<!-- Policy Section - End
+			================================================== -->
+
         <?php } else { ?>
         	
             <!-- Policy Section - Start
