@@ -459,34 +459,16 @@ if( !function_exists('themerange_banner') ){
 			$breadcrumb_bg = '';
 			$classes = array();
 			
-			if($tr_theme_options['tr_breadcrumb_layout'] == 'v2')
-				$classes[] = 'page-title_two style-two';
-			else
-				$classes[] = 'page-title';
-				
+			$classes[] = 'page-title';	
 			$classes[] = 'breadcrumb-' . $tr_theme_options['tr_breadcrumb_layout'];
 			$classes[] = $show_banner?'':'no-breadcrumb';
 			$classes[] = $show_page_title?'':'no-title';
-			
-			if( $breadcrumb_bg_option == '' )
-				$breadcrumb_bg = get_template_directory_uri() . '/assets/images/background/breadcrumb_'.$tr_theme_options['tr_breadcrumb_layout'].'.jpg';
-			else
-				$breadcrumb_bg = $breadcrumb_bg_option;
-					
-			$style = '';
-			if( $breadcrumb_bg != '' ){
-				$parallex = ($tr_theme_options['tr_bg_parallax'] != 0) ? $tr_theme_options['tr_bg_parallax'] : $parallex;
-				$style = 'style="background-image: url('. esc_url($breadcrumb_bg) .')"';
-				if( $parallex ){
-					$classes[] = 'tr-breadcrumb-parallax';
-				}
-			}
 			
 			if( $show_page_title ){
 				$page_title = '<h1 class="' . $extra_class . '">' . $page_title . '</h1>';
 			}
 			
-			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" '.$style.'>
+			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'">
 				<div class="container">
 					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
 					'.$page_title;
