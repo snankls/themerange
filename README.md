@@ -5,9 +5,9 @@ It includes theme files, plugins, and wp-content modifications necessary for run
 
 # 📌 Project Overview #
 This project is a WordPress-based website built with:
-- **Custom WordPress theme
-- **Required and custom plugins
-- **Standard WordPress folder structure
-- **CMS-powered content management
-- **Fully responsive layout
-- **The repository includes only the wp-content directory, which contains themes, plugins, and media—not core WordPress files.
+- Custom WordPress theme
+- Required and custom plugins
+- Standard WordPress folder structure
+- CMS-powered content management
+- Fully responsive layout
+- The repository includes only the wp-content directory, which contains themes, plugins, and media—not core WordPress files.
