@@ -450,7 +450,7 @@ if( !function_exists('themerange_breadcrumbs') ){
 }
 
 if( !function_exists('themerange_banner') ){
-	function themerange_banner( $show_banner = false, $layout_view = false, $background_image = false, $show_page_title = false, $page_title = '', $page_breadcrumb = false, $parallex = '', $extra_class = ''){
+	function themerange_banner( $show_banner = false, $layout_view = false, $background_image = false, $show_page_title = false, $page_title = '', $page_breadcrumb = false, $parallex = '', $extra_class = 'class="page_title mb-0 text-white"'){
 		$tr_theme_options = themerange_get_theme_options();
 		if( $show_banner )
 		{
@@ -486,8 +486,9 @@ if( !function_exists('themerange_banner') ){
 				$page_title = '<h1 class="' . $extra_class . '">' . $page_title . '</h1>';
 			}
 			
-			echo '<section class="'.esc_attr(implode(' ', array_filter($classes))).'" '.$style.'>
-				<div class="auto-container">
+			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" '.$style.'>
+				<div class="container">
+					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
 					'.$page_title;
 				
 				$page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;

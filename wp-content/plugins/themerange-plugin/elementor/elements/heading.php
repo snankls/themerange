@@ -53,7 +53,7 @@ class TR_Elementor_Widget_Heading extends TR_Elementor_Widget_Base{
             <div class="heading_focus_text">
                 <?php echo wp_kses($subtitle, $allowed_html); ?> <span class="badge bg-secondary text-white"><?php echo wp_kses($highlighted_subtitle, $allowed_html); ?></span>
             </div>
-            <<?php echo esc_attr($settings['title_tag']); ?> class="heading_text">
+            <<?php echo esc_attr($settings['title_tag']); ?>>
 				<?php echo wp_kses($title, $allowed_html); ?>
             </<?php echo esc_attr($settings['title_tag']); ?>>
         </div>
