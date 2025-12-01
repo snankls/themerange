@@ -25,22 +25,14 @@ if ( $_SERVER['HTTP_HOST'] === 'localhost' ) {
     define( 'DB_NAME', 'themerange' );
     define( 'DB_USER', 'root' );
     define( 'DB_PASSWORD', '' );
+    $table_prefix = 'wp_';
 } else {
     define( 'DB_NAME', 'themeran_wp169' );
     define( 'DB_USER', 'themeran_wp169' );
     define( 'DB_PASSWORD', '2pS9(ffV].Y@K5-5' );
     define( 'DB_HOST', 'localhost' );
+    $table_prefix = 'wp8k_';
 }
-
-
-// if ( file_exists( __DIR__ . '/wp-config-local.php' ) ) {
-//     include __DIR__ . '/wp-config-local.php';
-// } else {
-//     define( 'DB_NAME', 'themerange' );      // Production
-//     define( 'DB_USER', 'prod_user' );       // Production
-//     define( 'DB_PASSWORD', 'prod_password' );
-//     define( 'DB_HOST', 'localhost' );
-// }
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -87,7 +79,6 @@ define( 'NONCE_SALT',       'qu8zijvh1rlbrsg21lj8gjsrdwq5oiua8vu0yqu6lge5mkxwkkz
  *
  * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#table-prefix
  */
-$table_prefix = 'wp8k_';
 
 /**
  * For developers: WordPress debugging mode.
