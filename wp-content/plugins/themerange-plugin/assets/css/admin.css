@@ -1,0 +1,112 @@
+/*Elementor Shortcode Icon*/
+.elementor-element .icon .tr-custom-icon {
+	background:url(../images/favicon.png) center no-repeat;
+	background-size: cover;
+	width:20px;
+	height:20px;
+	display:inline-block;
+}
+.elementor-navigator__item .elementor-navigator__element__element-type .tr-custom-icon {
+	background:url(../images/favicon.png) center no-repeat;
+	background-size: cover;
+	width:12px;
+	height:12px;
+	display:inline-block;
+}
+
+/*Mega Menu Style*/
+.main-header .tr-mega-menu li {
+	display:block;
+	width:100%;
+}
+.main-header .main-menu .menu .tr-mega-menu li a {
+	padding:0;
+	text-align:left;
+	font-size: var(--font-15);
+	font-weight:500;
+}
+
+
+/* Admin Menu */
+#adminmenu .menu-icon-tr_testimonial div.wp-menu-image:before,
+#adminmenu .menu-icon-tr_portfolio div.wp-menu-image:before,
+#adminmenu .menu-icon-tr_team div.wp-menu-image:before,
+#adminmenu .menu-icon-tr_logo div.wp-menu-image:before,
+#adminmenu .menu-icon-tr_size_chart div.wp-menu-image:before,
+#adminmenu .menu-icon-tr_mega_menu div.wp-menu-image:before{
+	font: normal normal 900 17px/1 "Font Awesome 5 Free";
+}
+
+#adminmenu .menu-icon-tr_testimonial div.wp-menu-image:before{
+	content: "\f10d";
+}
+#adminmenu .menu-icon-tr_portfolio div.wp-menu-image:before{
+	content: "\f03e";
+}
+#adminmenu .menu-icon-tr_team div.wp-menu-image:before{
+	content: "\f0c0";
+}
+#adminmenu .menu-icon-tr_logo div.wp-menu-image:before{
+	content: "\f009";
+}
+#adminmenu .menu-icon-tr_size_chart div.wp-menu-image:before{
+	content: "\f5ae";
+}
+#adminmenu .menu-icon-tr_mega_menu div.wp-menu-image:before{
+	content: "\f0c9";
+}
+
+/* Elementor Control */
+.elementor-control .categorydiv .tabs-panel{
+	min-height: 42px;
+    max-height: 200px;
+    overflow: auto;
+    padding: 0 .9em;
+    border: solid 1px #ddd;
+    background-color: #fdfdfd;
+}
+.elementor-control .categorychecklist{
+	margin: 10px 0;
+}
+.elementor-control .categorychecklist ul{
+	margin-left: 18px;
+}
+.elementor-control .categorychecklist li{
+	line-height: 1.7;
+}
+.elementor-control .categorychecklist input[type="checkbox"]{
+	margin-right: 4px;
+}
+
+.elementor-control.elementor-control-type-select .elementor-control-input-wrapper{
+	width: auto;
+	min-width: 60px;
+}
+
+/* One Click Demo Import Notice */
+.tr-ocdi-notice-info{
+	padding: 15px;
+	margin: 20px 30px 10px 30px;
+	border: 3px solid #2271b1;
+}
+.tr-ocdi-notice-info p{
+	font-size: 18px;
+	line-height: 24px;
+	font-style: italic;
+	margin: 5px 0;
+	display: table;
+}
+.tr-ocdi-notice-info p i, .tr-ocdi-notice-info p span{
+	display: table-cell;
+}
+.tr-ocdi-notice-info p i{
+	width: 30px;
+	color: #2271b1;
+}
+
+/* Filter by Price */
+.widget .widget-content > .two-columns > *{
+	width: 48%;
+	display: inline-block;
+	margin-right: 1%;
+}

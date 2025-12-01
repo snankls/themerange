@@ -1,0 +1,1767 @@
+/*
+	1. SHORTCODE HOT DEAL
+	2. SHORTCODE BANNER
+	3. SHORTCODE BANNER IMAGE
+	4. SHORTCODE LOGO SLIDER
+	5. SHORTCODE PRODUCT SLIDER
+	6. SHORTCODE BLOG
+	7. SHORTCODE TESTIMONIAL 
+	8. SHORTCODE TEAM MEMBER
+	9. SHORTCODE PORTFOLIO
+	10. SHORTCODE TWITTER
+	11. SHORTCODE PRODUCT BRANDS
+	12. SHORTCODE TAB PRODUCTS
+	13. SHORTCODE SUBSCRIPTION
+	14. SHORTCODE PRODUCTS CATEGORIES
+	15. SHORTCODE PRODUCTS CATEGORIES/BRANDS LIST
+*/
+
+/*-------------------------------------------------------------------------------------------------------------------
+	EFFECTS
+---------------------------------------------------------------------------------------------------------------------*/
+.animated{
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+@-webkit-keyframes fadeIn{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+@keyframes fadeIn{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+.fadeIn{
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn
+}
+@-webkit-keyframes fadeOut{
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+@keyframes fadeOut{
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+.fadeOut{
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut
+}
+/*** single image / banner ***/
+.ts-effect-image{
+	text-align: center;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.ts-effect-image .image-link{
+	display: block;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	1. SHORTCODE HOT DEAL
+---------------------------------------------------------------------------------------------------------------------*/
+.counter-wrapper{
+	display: inline-block;
+	padding: 12px 25px;
+	border-radius: 5px;
+}
+.text-center .counter-wrapper{
+	text-align: center;
+}
+.text-right .counter-wrapper{
+	text-align: right;
+}
+.counter-wrapper .dots{
+	line-height: 1;
+    vertical-align: top;
+}
+.counter-wrapper .hidden + .dots{
+	display: none;
+}
+.counter-wrapper > div{
+    min-width: 80px;
+    text-align: center;
+	display: inline-block;
+}
+.counter-wrapper > div:not(:last-child){
+	margin-right: 10px; /*rtl*/
+}
+.counter-wrapper > div > *{
+    display: block;
+}
+.counter-wrapper .number-wrapper{
+    display: block;
+	line-height: 1;
+}
+.counter-wrapper .ref-wrapper{
+    display: block;
+	line-height: 20px;
+}
+.shortcode-heading-wrapper .counter-wrapper .ref-wrapper{
+	margin-top: -6px;
+}
+
+/*** TS Product Deals ***/
+.ts-product-deals-wrapper .shortcode-heading-wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.ts-product-deals-wrapper.style-1 .shortcode-heading-wrapper .ts-countdown{
+	margin-left: auto; /*rtl*/
+}
+.shortcode-heading-wrapper .counter-wrapper{
+    padding: 8px 20px 6px;
+}
+.shortcode-heading-wrapper .counter-wrapper > div{
+    min-width: 54px;
+}
+.ts-product-deals-wrapper.style-2 .shortcode-heading-wrapper,
+.ts-product-deals-wrapper.style-3 .shortcode-heading-wrapper{
+	justify-content: center;
+}
+.ts-product-deals-wrapper.style-2 .shortcode-heading-wrapper .counter-wrapper > div{
+    min-width: 40px;
+}
+.ts-product-deals-wrapper.style-2 .shortcode-heading-wrapper .shortcode-title + .ts-countdown{
+	margin-left: 30px; /*rtl*/
+}
+.ts-product-deals-wrapper.style-2 .content-wrapper{
+	position: relative;
+}
+.ts-product-deals-wrapper.style-2 .content-wrapper:before{
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	bottom: 97px;
+	right: -3px;
+	border-width: 3px;
+	border-style: solid;
+}
+.ts-product-deals-wrapper.style-2 .shortcode-heading-wrapper{
+	margin-bottom: 60px;
+}
+.ts-product-deals-wrapper.style-3 .shortcode-heading-wrapper{
+	margin-bottom: 0;
+}
+.ts-product-deals-wrapper.style-3 .shortcode-heading-wrapper .shortcode-title{
+	margin-bottom: 53px;
+}
+.ts-product-deals-wrapper .shortcode-heading-wrapper .banner-bg{
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	margin-bottom: 17px;
+}
+.ts-product-deals-wrapper .shortcode-heading-wrapper .banner-bg:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.64);
+	z-index: 2;
+}
+.ts-product-deals-wrapper .shortcode-heading-wrapper .banner-bg img{
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.ts-product-deals-wrapper .shortcode-heading-wrapper .banner-bg .ts-countdown{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 3;
+	white-space: nowrap;
+}
+.ts-product-deals-wrapper .shortcode-heading-wrapper .banner-bg .counter-wrapper{
+	background: transparent;
+	color: #ffffff;
+}
+.shortcode-heading-wrapper .banner-bg .counter-wrapper > div{
+    min-width: 65px;
+}
+
+/*** Coundown in product meta ***/
+.meta-wrapper .counter-wrapper{
+	padding: 8px 10px 3px;
+}
+.meta-wrapper .counter-wrapper > div{
+    min-width: 34px;
+}
+.meta-wrapper .counter-wrapper > div:not(:last-child){
+	margin-right: 5px; /*rtl*/
+}
+
+/*** Availability Bar ***/
+.availability-bar .progress-bar{
+	display: block;
+	width: 100%;
+	height: 7px;
+	border-radius: 10px;
+	background-color: #e6e6e6;
+	position: relative;
+}
+.availability-bar .progress-bar > span{
+	display: inline-block;
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0; /*rtl*/
+}
+.availability-bar .sold{
+	margin-top: 10px;
+	display: block;
+}
+.availability-bar .sold > span:first-child{
+	color: #afafaf;
+}
+.woocommerce.ts-product.columns-1.grid .products .product:not(.product-category) .product-wrapper > .meta-wrapper{
+    padding: 70px 30px 30px;
+}
+.woocommerce.ts-product.columns-1.grid .products .meta-wrapper > .availability-bar:not(.product-group-button-meta){
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+}
+.product-hover-vertical-style-2 .woocommerce.ts-product.columns-1.grid .products .product .product-wrapper .product-group-button-meta{
+	padding: 1px 30px 30px;
+}
+.ts-product.columns-1 .products .meta-wrapper .counter-wrapper > div{
+    min-width: 50px;
+}
+.ts-product.columns-1 .meta-wrapper .counter-wrapper .ref-wrapper{
+    font-size: 14px;
+}
+.ts-product.columns-1 .meta-wrapper .counter-wrapper{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	2. SHORTCODE BANNER
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-banner,
+.ts-banner *{
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+} 
+.ts-banner{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.ts-banner .banner-wrapper{
+	position: relative;
+}
+.ts-banner .banner-wrapper .banner-bg{
+	overflow: hidden;
+}
+.ts-banner.has-border-radius .banner-wrapper .banner-bg{
+	border-radius: 10px;
+}
+.ts-banner .banner-wrapper > a{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 4;
+}
+.ts-banner .banner-bg img{
+	position: relative;
+	margin: 0 -1px;
+	width: calc(100% + 2px);
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.ts-banner .box-content{
+	position: absolute;
+	z-index: 2;
+	transition: 300ms ease 0s;
+}
+.ts-banner .box-content > div{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+.ts-banner.description-top .box-content > div > .description{
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
+}
+.ts-banner .box-content > div > *{
+	line-height: 1.2;
+	margin-bottom: 10px;
+}
+.ts-banner .box-content > div > .description{
+	margin-bottom: 30px;
+}
+.custom-spacing .ts-banner .box-content > div > *{
+	margin-bottom: 5px;
+}
+.custom-spacing .ts-banner .box-content > div > .description{
+	margin-bottom: 25px;
+}
+.custom-spacing .ts-banner .ts-banner-button .button:not(.button-text){
+    margin-top: 0;
+}
+.ts-banner .box-content .description > *:last-child,
+.ts-banner .box-content > div > *:last-child{
+	margin-bottom: 0;
+}
+.ts-banner.description-top .box-content > div > .description:not(:last-child){
+	margin-bottom: 4px;
+}
+.ts-banner.description-top .box-content > div > h2:not(:last-child){
+	margin-bottom: 30px;
+}
+.ts-banner header{
+	display: table-cell;
+	vertical-align: middle;
+}
+.ts-banner .banner-link{
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.ts-banner .ts-banner-button{
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+.ts-banner .ts-banner-button .button{
+    text-decoration: none;
+}
+.ts-banner .ts-banner-button .button:not(.button-text){
+    margin-top: 10px;
+}
+.ts-banner.button-text .ts-banner-button .button{
+    padding: 0 !important;
+    border: 0 !important;
+	background: transparent !important;
+	margin: 0 !important;
+}
+.ts-banner.button-text .ts-banner-button .button:after{
+	margin-left: 3px; /*rtl*/
+}
+.ts-banner.button-text .box-content > div > .description{
+    margin-bottom: 23px;
+}
+.ts-banner.center-top .box-content h2,
+.ts-banner.center-bottom .box-content h2{
+	margin-left: auto;
+	margin-right: auto;
+}
+.left-top .box-content,
+.left-bottom .box-content,
+.left-center .box-content{
+	text-align: start;
+}
+.right-top .box-content,
+.right-bottom .box-content,
+.right-center .box-content{
+	text-align: end;
+}
+.center-top .box-content,
+.center-bottom .box-content,
+.center-center .box-content{
+	text-align: center;
+}
+
+/*** Banner content position ***/
+.left-top .box-content{
+	left: 40px;right: auto;
+	top: 40px;bottom: auto;
+}
+.left-bottom .box-content{
+	left: 40px;right: auto;
+	top: auto;bottom: 40px;
+}
+.left-center .box-content{
+	left: 40px;right: auto;
+	top: 50%;bottom: auto;
+	transform: translate(0,-50%);
+}
+.right-top .box-content{
+	right: 40px;left: auto;
+	top: 40px;bottom: auto;
+}
+.right-bottom .box-content{
+	right: 40px;left: auto;
+	top: auto;bottom: 40px;
+}
+.right-center .box-content{
+	right: 40px;left: auto;
+	top: 50%;bottom: auto;
+	transform: translate(0,-50%);
+}
+.center-top .box-content{
+	text-align: center;
+	left: 40px;right: 40px;
+	top: 40px;bottom: auto;
+}
+.center-bottom .box-content{
+	text-align: center;
+	left: 40px;right: 40px;
+	top: auto;bottom: 40px;
+}
+.center-center .box-content{
+	left: 40px;right: 40px;
+	top: 50%;bottom: auto;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.center-top .box-content > div,
+.center-bottom .box-content > div,
+.center-center .box-content > div{
+	margin-left: auto;
+	margin-right: auto;
+}
+.right-top .box-content > div,
+.right-bottom .box-content > div,
+.right-center .box-content > div{
+	margin-left: auto;
+	margin-right: 0;
+}
+.center-text .box-content{
+	text-align: center;
+}
+.line-height-1 .box-content h2,
+.center-text .box-content h2{
+	line-height: 1;
+}
+
+/*** Effects Banner ***/
+/* Zoom in */
+.eff-zoom-in .image-link .bg-image,
+.eff-zoom-in .banner-bg img{
+	transition: transform 500ms;
+}
+.eff-zoom-in:hover .image-link .bg-image,
+.eff-zoom-in:hover .banner-bg img{
+	-webkit-transform: scale(1.12);
+	transform: scale(1.12);
+}
+
+/* Zoom out */
+.eff-zoom-out .image-link .bg-image,
+.eff-zoom-out .banner-bg img{
+    width: calc(100% + 60px);
+	max-width: none;
+    transition: transform 500ms;
+    transform: translate3d(-30px,0,0) scale(1.12);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.eff-zoom-out:hover .image-link .bg-image,
+.eff-zoom-out:hover .banner-bg img{
+    -webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1);
+}
+
+/* Rotate zoom */
+.eff-zoom-rotate .image-link .bg-image,
+.eff-zoom-rotate .bg-content img{
+	transition: 500ms ease;
+}
+.eff-zoom-rotate:hover .image-link .bg-image,
+.eff-zoom-rotate:hover .bg-content img{
+	-webkit-transform: rotate(6deg) scale(1.15);
+	transform: rotate(6deg) scale(1.15);
+}
+.elementor-col-50 .eff-zoom-rotate:hover .image-link .bg-image,
+.elementor-col-50 .eff-zoom-rotate:hover .bg-content img,
+.elementor-col-60 .eff-zoom-rotate:hover .image-link .bg-image,
+.elementor-col-60 .eff-zoom-rotate:hover .bg-content img,
+.elementor-col-70 .eff-zoom-rotate:hover .image-link .bg-image,
+.elementor-col-70 .eff-zoom-rotate:hover .bg-content img,
+.elementor-col-80 .eff-zoom-rotate:hover .image-link .bg-image,
+.elementor-col-80 .eff-zoom-rotate:hover .bg-content img,
+.elementor-col-90 .eff-zoom-rotate:hover .image-link .bg-image,
+.elementor-col-90 .eff-zoom-rotate:hover .bg-content img,
+.elementor-col-100 .eff-zoom-rotate:hover .image-link .bg-image,
+.elementor-col-100 .eff-zoom-rotate:hover .bg-content img{
+	-webkit-transform: rotate(6deg) scale(1.3);
+	transform: rotate(6deg) scale(1.3);
+}
+
+/* Flash */
+.eff-flash .bg-content,
+.eff-flash .image-link{
+  position: relative;
+  overflow: hidden;
+}
+.eff-flash .bg-content:before,
+.eff-flash .bg-content:after,
+.eff-flash .image-link:before, 
+.eff-flash .image-link:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: transform .5s,opacity .2s ease-in-out 0s;
+    opacity: 0;
+}
+.eff-flash:hover .bg-content:before,
+.eff-flash:hover .image-link:before{
+    transform: scale(0,1);
+    opacity: 1;
+}
+.eff-flash:hover .bg-content:after,
+.eff-flash:hover .image-link:after{
+    transform: scale(1,0);
+    opacity: 1;
+}
+
+/* line */
+.eff-line .image-link{
+	position: relative;
+	overflow: hidden;
+	line-height: 1;
+}
+.eff-line .bg-content:before,
+.eff-line .bg-content:after,
+.eff-line .image-link:before,
+.eff-line .image-link:after{
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	border: 1px solid rgba(255,255,255,.7);  
+	transition: all ease .45s;
+	z-index: 2;
+	display: block;
+}
+.eff-line .bg-content:before,
+.eff-line .image-link:before{
+	width: calc(100% - 30px);
+	height: 0;
+	border-top: none;
+	border-bottom: none;
+}
+.eff-line .bg-content:after,
+.eff-line .image-link:after{
+	height: calc(100% - 30px);
+	width: 0;
+	border-left: none;
+	border-right: none;
+}
+.eff-line:hover .bg-content:before,
+.eff-line:hover .image-link:before{
+	height: calc(100% - 30px);
+}
+.eff-line:hover .bg-content:after,
+.eff-line:hover .image-link:after{
+	width: calc(100% - 30px);
+}
+/* overlay */
+.eff-overlay .bg-content,
+.eff-overlay .image-link{
+  position: relative;
+  overflow: hidden;
+}
+.eff-overlay .bg-content:before,
+.eff-overlay .image-link:before,
+.eff-overlay .bg-content:after,
+.eff-overlay .image-link:after{
+	content: '';
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 50%;
+    left: 0; /*rtl*/
+    position: absolute;
+    transition: all 0.2s;
+	z-index: 2;
+}
+.eff-overlay .bg-content:before,
+.eff-overlay .image-link:before{
+    top: -50%;
+}
+.eff-overlay .bg-content:after,
+.eff-overlay .image-link:after{
+    top: 100%;
+}
+.eff-overlay:hover .bg-content:before,
+.eff-overlay:hover .image-link:before{
+    top: 0;
+}
+.eff-overlay:hover .bg-content:after,
+.eff-overlay:hover .image-link:after{
+    top: 50%;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	3. SHORTCODE BANNER IMAGE
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-banner-image{
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.ts-banner-image *{
+	backface-visibility: hidden;
+}
+.ts-banner-image img.text-image{
+	position: absolute;
+	z-index: 2;
+}
+.ts-banner-image > *{
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.ts-banner-image > *:after{
+	display: table;
+	content: "";
+	clear: both;
+}
+.ts-banner-image img.bg-image{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	transition: 400ms ease 0s;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.ts-banner-image .overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: "";
+	z-index: 0;
+}
+/*** Banner content position ***/
+.ts-banner-image img.text-image{
+	max-width: 85%;
+	transition: 500ms ease 0s;
+	margin: 0;
+}
+.ts-banner-image.left-top img.text-image{
+	left: 5%;right: auto;
+	top: 5%;bottom: auto;
+	margin: 20px 0 0 10px;
+}
+.ts-banner-image.left-bottom img.text-image{
+	left: 5%;right: auto;
+	top: auto;bottom: 8%;
+	margin: 0 0 20px 20px;
+}
+.ts-banner-image.left-center img.text-image{
+	left: 5%;right: auto;
+	margin: 0 0 0 10px;
+	top: 50%;bottom: auto;
+	transform: translate(0,-50%);
+}
+.ts-banner-image.right-top img.text-image{
+	right: 5%;left: auto;
+	top: 5%;bottom: auto;
+	margin: 20px 10px 0 0;
+}
+.ts-banner-image.right-bottom img.text-image{
+	right: 5%;left: auto;
+	top: auto;bottom: 8%;
+	margin: 0 10px 20px 0;
+}
+.ts-banner-image.right-center img.text-image{
+	right: 5%;left: auto;
+	top: 50%;bottom: auto;
+	margin: 0 20px 0 0;
+	transform: translate(0,-50%);
+}
+.ts-banner-image.center-top img.text-image{
+	left: 50%;right: auto;
+	top: 8%;bottom: auto;
+	margin: 10px 0 0 0;
+	transform: translate(-50%,0);
+}
+.ts-banner-image.center-bottom img.text-image{
+	left: 50%;right: auto;
+	top: auto;bottom: 8%;
+	margin: 0 0 10px 0;
+	transform: translate(-50%,0);
+}
+.ts-banner-image.center-center img.text-image{
+	left: 50%;right: auto;
+	top: 50%;bottom: auto;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	max-width: 70%;
+}
+/*** Effect ***/
+
+/*-------------------------------------------------------------------------------------------------------------------
+	4. SHORTCODE LOGO SLIDER
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-logo-slider-wrapper .content-wrapper{
+	text-align: center;
+}
+.ts-logo-slider-wrapper .swiper *{
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.ts-shortcode.ts-logo-slider-wrapper.style-border .items{
+	margin: 0;
+	border-width: 0 0 0 1px; /*rtl*/
+	border-style: solid;
+}
+.ts-shortcode.ts-logo-slider-wrapper.style-border .items .item{
+	padding: 0;
+	border-width: 1px 1px 1px 0; /*rtl*/
+	border-style: solid;
+}
+.ts-shortcode.ts-logo-slider-wrapper.style-border .items{
+	padding-top: 1px;
+}
+.ts-shortcode.ts-logo-slider-wrapper.style-border .items .item{
+	margin-top: -1px;
+}
+.ts-shortcode.ts-logo-slider-wrapper .items .item > a{
+    display: block;
+}
+.ts-shortcode.ts-logo-slider-wrapper .items .item > a:after{
+    display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	5. SHORTCODE PRODUCT SLIDER
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-shortcode{
+	position: relative;
+	clear: both;
+}
+.ts-shortcode .shortcode-heading-wrapper h2{
+	margin-bottom: 0;
+	display: block;
+}
+.ts-shortcode.title-border-bottom .shortcode-heading-wrapper h2{
+	width: 100%;
+	position: relative;
+	padding-bottom: 4px;
+}
+.ts-shortcode.title-border-bottom .shortcode-heading-wrapper h2:before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-width: 4px 0 0 0;
+	border-style: solid;
+	content: "";
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	6. SHORTCODE BLOG
+---------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------
+	7. SHORTCODE TESTIMONIAL 
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-shortcode.ts-testimonial-wrapper.columns-1:not(.ts-slider) .items{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.ts-testimonial-wrapper:not(.ts-slider) .items{
+	margin-bottom: -30px;
+}
+.ts-testimonial-wrapper:not(.ts-slider) .item{
+	margin-bottom: 30px;
+}
+.ts-shortcode:not(.ts-slider).columns-2 .item{
+	width: 50%;
+}
+.ts-shortcode:not(.ts-slider).columns-3 .item{
+	width: 33.33333%;
+}
+.ts-shortcode:not(.ts-slider).columns-4 .item{
+	width: 25%;
+}
+.ts-shortcode:not(.ts-slider).columns-5 .item{
+	width: 20%;
+}
+.ts-shortcode:not(.ts-slider).columns-6 .item{
+	width: 16.66666%;
+}
+.ts-shortcode:not(.ts-slider).columns-7 .item{
+	width: 14.2857%;
+}
+.ts-shortcode:not(.ts-slider).columns-8 .item{
+	width: 12.5%;
+}
+.ts-shortcode:not(.ts-slider).columns-9 .item{
+	width: 11.111111%;
+}
+.ts-shortcode:not(.ts-slider).columns-10 .item{
+	width: 10%;
+}
+.ts-testimonial-wrapper blockquote{
+	padding: 39px 35px 45px;
+	font-family: inherit !important;
+	font-style: normal;
+	text-align: center;
+}
+.ts-testimonial-wrapper blockquote:before{
+	display: none;
+}
+.ts-testimonial-wrapper .image{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.ts-testimonial-wrapper blockquote .author-role{
+	line-height: 18px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 31px;
+	justify-content: center;
+}
+.ts-testimonial-wrapper blockquote .author-date{
+	text-align: start;
+    padding-left: 13px; /*rtl*/
+}
+.ts-testimonial-wrapper blockquote .author-date > *:not(:last-child){
+	margin-bottom: 2px;
+}
+.ts-testimonial-wrapper blockquote .author-date > *{
+    display: block;
+}
+.ts-testimonial-wrapper blockquote .rating{
+	margin-top: 6px;
+}
+.ts-testimonial-wrapper blockquote .author{
+	text-transform: uppercase;
+}
+
+/*text light*/
+.ts-testimonial-wrapper.text-light blockquote{
+	color: #202020;
+	background: #ffffff;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	8. SHORTCODE TEAM MEMBER
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-team-members:not(.ts-slider) .items{
+	margin-bottom: -30px;
+}
+.ts-team-members:not(.ts-slider) .item{
+	margin-bottom: 30px;
+}
+.ts-team-members .image-thumbnail{
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	margin-bottom: 26px;
+}
+.ts-team-members .image-thumbnail img{
+	width: 100%;
+}
+.ts-team-members .team-info{
+	text-align: center;
+}
+.ts-team-members .team-info > *:not(:last-child){
+	margin-bottom: 2px;
+	display: block;
+}
+.ts-team-members .team-info .member-role{
+	text-transform: uppercase;
+}
+.ts-team-members .member-social{
+	margin: 0 -5px -10px;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+.ts-team-members .member-social a{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 0 5px 10px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	color: inherit;
+	letter-spacing: 0;
+	transition: 200ms ease;
+}
+.ts-team-members .member-social a i{
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.ts-team-members .member-social a i:before{
+	line-height: 40px;
+}
+.ts-team-members .member-social a.facebook:hover{
+	background: #3b5998;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.twitter:hover{
+	background: #2caae1;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.linked:hover{
+	background: #0073b1;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.rss:hover{
+	background: #0073b1;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.dribbble:hover{
+	background: #ea4c89;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.pinterest:hover{
+	background: #cb2027;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.instagram:hover{
+	background: #d32558;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.flickr:hover{
+	background: #e30761;
+	color: #ffffff !important;
+}
+.ts-team-members .member-social a.custom:hover{
+	background: #202020;
+	color: #ffffff !important;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	9. SHORTCODE PORTFOLIO
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-portfolio-wrapper .item-wrapper{
+	position: relative;
+}
+.ts-portfolio-wrapper .item-wrapper *{
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.ts-portfolio-wrapper:not(.ts-slider) .portfolio-wrapper-content,
+.ts-portfolio-wrapper:not(.ts-slider) .items{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.ts-portfolio-wrapper:not(.ts-slider) .items{
+	width: calc(100% + 30px);
+}
+.ts-portfolio-wrapper .item-wrapper .portfolio-thumbnail{
+	border-radius: 10px;
+	overflow: hidden;
+}
+.ts-portfolio-wrapper .item-wrapper .portfolio-thumbnail a{
+	display: block;
+}
+.ts-portfolio-wrapper .item-wrapper .portfolio-thumbnail + .portfolio-meta .date-time{
+	position: absolute;
+	top: 30px;
+	left: 30px; /*rtl*/
+	text-align: center;
+	padding: 6px 18px;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+	margin: 0;
+	border-radius: 25px;
+	z-index: 2;
+}
+.ts-portfolio-wrapper.ts-slider .item-wrapper .portfolio-thumbnail + .portfolio-meta .date-time,
+.ts-portfolio-wrapper.related-portfolios .item-wrapper .portfolio-thumbnail + .portfolio-meta .date-time{
+	top: 20px;
+	left: 20px; /*rtl*/
+}
+.ts-portfolio-wrapper .portfolio-wrapper-content,
+.ts-portfolio-wrapper .items{
+	margin: 0 -15px -60px;
+}
+.ts-portfolio-wrapper .portfolio-wrapper-content .item,
+.ts-portfolio-wrapper .items .item{
+	padding: 0 15px;
+	margin-bottom: 54px;
+}
+.ts-portfolio-wrapper .entry-meta-top:not(:last-child)\{
+    margin-bottom: 8px;
+}
+.ts-portfolio-wrapper .item figure img{
+	width: 100%;
+}
+.ts-portfolio-wrapper .portfolio-meta{
+	padding: 0 30px;
+}
+.ts-portfolio-wrapper .item-wrapper .portfolio-thumbnail + .portfolio-meta{
+	padding-top: 28px;
+}
+.ts-portfolio-wrapper .portfolio-meta .heading-title{
+	line-height: 1.1;
+	margin-bottom: 20px;
+}
+.ts-portfolio-wrapper .portfolio-meta > *:last-child{
+	margin-bottom: 0;
+}
+.ts-portfolio-wrapper .portfolio-meta .heading-title,
+.ts-portfolio-wrapper .portfolio-meta a{
+	color: inherit;
+	text-decoration: none;
+}
+.entry-meta-top .cats-portfolio{
+	display: inline-block;
+}
+.entry-meta-top .cats-portfolio a:hover{
+	text-decoration: underline;
+}
+.single-portfolio .entry-meta-top,
+.ts-portfolio-wrapper .entry-meta-top{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+.single-portfolio .entry-meta-top .cats-portfolio > span:first-child,
+.single-portfolio .entry-meta-top > *:not(:last-child),
+.ts-portfolio-wrapper .entry-meta-top .cats-portfolio > span:first-child,
+.ts-portfolio-wrapper .entry-meta-top > *:not(:last-child){
+	margin-right: 11px; /*rtl*/
+}
+.single-portfolio .portfolio-like,
+.ts-portfolio-wrapper a.like{
+	font-size: 12px;
+    line-height: 20px;
+    border-radius: 5px;
+    letter-spacing: 0;
+    padding: 1px 8px;
+	text-transform: none;
+}
+.single-portfolio .portfolio-like .ic-like,
+.ts-portfolio-wrapper a.like:before{
+	letter-spacing: 0;
+    display: inline-block;
+    vertical-align: -1px;
+    margin-right: 5px; /*rtl*/
+	min-width: 12px;
+}
+.single-portfolio .entry-meta-top .portfolio-like,
+.ts-portfolio-wrapper .entry-meta-top a.like{
+	margin-left: auto; /*rtl*/
+	margin-right: 0; /*rtl*/
+}
+
+/*** Pagination/Loadmore ***/
+.ts-portfolio-wrapper .load-more-wrapper,
+.ts-portfolio-wrapper .page_navi{
+	margin: 99px 0 0;
+	position: relative;
+    z-index: 2;
+}
+.ts-portfolio-wrapper .page_navi{
+	text-align: center;
+}
+.ts-portfolio-wrapper .page_navi .nav-content{
+	margin: 0 auto;
+	display: inline-block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	10. SHORTCODE TWITTER
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-twitter-slider .twitter-content{
+	text-align: center;
+}
+.ts-twitter-slider .twitter-content .date-time a{
+	color: inherit;
+	text-decoration: underline;
+}
+.ts-twitter-slider .twitter-content .date-time a:hover{
+	text-decoration: none;
+}
+.twitter-content .content{
+	font-style: italic;
+}
+.ts-twitter-slider .icon{
+	font-size: 300%;
+	line-height: 1;
+	color: #2CAAE1;
+	margin-bottom: 20px;
+}
+.ts-twitter-slider .date-time{
+	margin-bottom: 10px;
+}
+.ts-twitter-slider.text-light .item *,
+#page .ts-shortcode.text-light .shortcode-heading-wrapper .shortcode-title{
+	color: #fff;
+}
+.ts-twitter-slider h4{
+	font-size: 100%;
+	margin-bottom: 0;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	11. SHORTCODE PRODUCT BRANDS
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-product-brand-wrapper .item > a > img{
+	border-radius: 10px;
+}
+.ts-product-brand-wrapper .meta-wrapper{
+	margin-top: 7px;
+}
+.ts-product-brand-wrapper .meta-wrapper h3{
+	margin-bottom: 0;
+}
+.ts-product-brand-wrapper .meta-wrapper h3 .count{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 16px;
+	display: block;
+	margin-top: -2px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	12. SHORTCODE TAB PRODUCTS
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-shortcode .heading-tab,
+.ts-shortcode .column-tabs{
+	text-align: center;
+}
+.ts-shortcode .column-tabs{
+	margin-bottom: 40px;
+}
+.column-tabs .heading-tab,
+.column-tabs ul.tabs{
+	width: 100%;
+	margin: 0;
+}
+.column-tabs .heading-tab .heading-title{
+	margin-bottom: 21px;
+}
+.column-tabs ul.tabs li{
+	list-style: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: inline-block;
+	cursor: pointer;
+	line-height: 1.3 !important;
+}
+.column-tabs ul.tabs li:not(:last-child){
+	padding-right: 60px; /*rtl*/
+}
+.column-tabs ul.tabs li.current{
+	cursor: default;
+}
+.column-tabs ul.tabs li span.count{
+	text-transform: none;
+}
+.column-tabs .list-categories{
+	padding-bottom: 20px;
+}
+.column-tabs .list-categories ul.tabs li{
+	padding: 10px 28px;
+	border-radius: 40px;
+	margin: 0;
+}
+
+/*** Style vertical ***/
+.ts-product.style-tabs-vertical{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.ts-product.style-tabs-vertical .heading-tab{
+	width: 100%;
+}
+.ts-product.style-tabs-vertical .heading-tab .heading-title{
+	margin-bottom: 52px; 
+}
+.ts-product.style-tabs-vertical .column-tabs{
+	width: 23%;
+	padding-right: 20px; /*rtl*/
+	z-index: 15;
+}
+.ts-product.style-tabs-vertical .column-content{
+	width: 77%;
+}
+.ts-product.style-tabs-vertical.style-tabs-vertical-banner .column-content{
+	width: 100%;
+}
+.ts-product.style-tabs-vertical.style-tabs-vertical-banner .column-content,
+.style-tabs-vertical-banner .tab-content-wrapper,
+.ts-product.style-tabs-vertical.style-tabs-vertical-banner ul.tabs{
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.ts-shortcode .column-content .shop-more{
+	text-align: center;
+	margin-top: 30px;
+}
+.style-tabs-vertical .column-tabs .heading-tab .heading-title{
+	margin-bottom: 12px;
+	line-height: 1.3;
+}
+.style-tabs-vertical > *,
+.style-tabs-vertical .column-tabs .list-categories{
+	transition: 300ms ease;
+}
+.style-tabs-vertical:not(.style-tabs-vertical-banner) .column-tabs .list-categories{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.style-tabs-vertical:not(.style-tabs-vertical-banner) .column-tabs .list-categories ul.tabs li{
+	padding: 15px 0;
+	display: block;
+    width: 100%;
+	margin-bottom: 21px;
+	border-radius: 5px;
+	font-size: 100%;
+	font-weight: normal;
+	border: 1px solid #cbcbcb;
+}
+.style-tabs-vertical .column-tabs .shop-more{
+	width: 100%;
+	margin-top: auto;
+	margin-left: 0; /*rtl*/
+}
+.style-tabs-vertical .column-tabs .shop-more .button-text{
+	margin-top: 16px;
+}
+
+/*** Style vertical banner ***/
+.style-tabs-vertical-banner.heading-top .column-tabs{
+	width: 100%;
+	padding-right: 0; /*rtl*/
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
+}
+.ts-product.style-tabs-vertical.style-tabs-vertical-banner ul.tabs{
+	text-align: end;
+}
+.ts-product.style-tabs-vertical.style-tabs-vertical-banner .heading-tab{
+	max-width: 33%;
+	text-align: start;
+}
+.style-tabs-vertical-banner .banner{
+	margin-right: 30px; /*rtl*/
+	position: relative;
+}
+.style-tabs-vertical-banner .banner > .banner-link{
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.no-banner .style-tabs-vertical-banner .banner{
+	display: none;
+}
+.style-tabs-vertical-banner.has-border-radius .banner img{
+	border-radius: 10px;
+}
+.style-tabs-vertical-banner .banner img.banner-sm,
+.style-tabs-vertical-banner .banner img.banner-md{
+	display: none;
+}
+.style-tabs-vertical.style-tabs-vertical-banner .column-tabs .heading-tab .heading-title{
+    margin-bottom: 0;
+}
+.style-tabs-vertical-banner .column-tabs .list-categories{
+	padding-bottom: 12px;
+}
+.style-tabs-vertical-banner.heading-top .column-tabs .list-categories{
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.ts-product.style-tabs-vertical .tab-content-wrapper .column-tabs{
+    width: 100%;
+    padding-right: 0; /*rtl*/
+}
+.ts-product.style-tabs-vertical-banner.heading-side .tab-content-wrapper .column-tabs{
+    margin-bottom: 20px;
+}
+.style-tabs-vertical-banner.heading-top .column-tabs .list-categories ul.tabs li{
+	font-weight: normal;
+}
+.style-tabs-vertical-banner.heading-side .column-tabs .list-categories ul.tabs li{
+	font-size: 100%;
+	padding: 9px 15px;
+}
+
+/*** Fix loading ***/
+.woocommerce .column-products.loading .products{
+	transition: 300ms ease 0s;
+}
+.column-products.loading:after{
+    top: 35%;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	13. SHORTCODE SUBSCRIPTION
+---------------------------------------------------------------------------------------------------------------------*/
+.mailchimp-subscription .widget-title-wrapper{
+	margin-bottom: 26px;
+}
+.mailchimp-subscription .widget-title-wrapper .widget-title{
+    line-height: 1.2;
+	margin-bottom: 0 !important;
+}
+.mailchimp-subscription .newsletter{
+	line-height: 20px;
+	margin-top: 12px;
+}
+.mc4wp-form .subscribe-email{
+	position: relative;
+}
+.mc4wp-form .subscribe-email input[type="email"]{
+	width: 100%;
+	padding-right: 150px; /*rtl*/
+	margin-bottom: 0;
+}
+.mc4wp-form .subscribe-email input[type="email"],
+.size-small .mc4wp-form .subscribe-email input[type="email"]{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.mc4wp-form .subscribe-email a{
+	color: inherit;
+}
+.mc4wp-form .subscribe-email .button{
+	position: absolute;
+	top: 5px;
+	right: 5px; /*rtl*/
+	bottom: 5px;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: calc(100% - 10px);
+	min-width: 0;
+}
+.custom-color .mc4wp-form .subscribe-email .button:hover{
+	background: transparent !important;
+}
+#left-sidebar .mc4wp-form .subscribe-email .button,
+#right-sidebar .mc4wp-form .subscribe-email .button{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#left-sidebar .mc4wp-form .subscribe-email input[type="email"],
+#right-sidebar .mc4wp-form .subscribe-email input[type="email"]{
+	padding-right: 130px; /*rtl*/
+}
+/*style icon*/
+.style-button-icon .mc4wp-form .subscribe-email .button{
+	font-size: 0;
+	letter-spacing: 0;
+	width: 44px;
+	padding: 0;
+	text-align: center;
+	border-radius: 50%;
+}
+.style-button-icon .mc4wp-form .subscribe-email .button:before{
+	font-size: 16px;
+	line-height: 44px !important;
+}
+.style-button-icon:not(.size-large) .mc4wp-form .subscribe-email .button{
+	top: 3px;
+	right: 3px; /*rtl*/
+	bottom: 3px;
+	height: calc(100% - 6px);
+}
+.style-button-icon.size-large .mc4wp-form .subscribe-email .button{
+	width: 50px;
+}
+.style-button-icon.size-large .mc4wp-form .subscribe-email .button:before{
+	font-size: 18px;
+	line-height: 50px !important;
+}
+.style-button-icon .mc4wp-form .subscribe-email input[type="email"]{
+	padding-right: 60px; /*rtl*/
+}
+
+/*text light*/
+.text-light .mailchimp-subscription .widget-title,
+.text-light .mailchimp-subscription .newsletter{
+	color: #ffffff !important;
+}
+.text-light,
+.ts-mailchimp-subscription-shortcode.text-light label,
+.ts-mailchimp-subscription-shortcode.text-light p > label{
+	color: #ffffff !important;
+}
+.ts-mailchimp-subscription-shortcode.text-light .mc4wp-form .subscribe-email .button{
+	background: #ffffff !important;
+	border-color: #ffffff !important;
+}
+.ts-mailchimp-subscription-shortcode.text-light .mc4wp-form .subscribe-email .button:hover{
+	background: transparent !important;
+	color: #ffffff !important;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	14. SHORTCODE PRODUCTS CATEGORIES
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-product-category-wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.ts-product-category-wrapper .products{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.ts-product-category-wrapper:not(.title-left) > *{
+	 width: 100%;
+}
+.ts-product-category-wrapper .product .category-name,
+.ts-product-category-wrapper .product .category-name > *{
+	margin-bottom: 0;
+}
+.ts-product-category-wrapper .product .category-name h3 a:hover,
+.ts-product-category-wrapper .product:hover .category-name h3 a{
+	text-decoration: none !important;
+}
+/*** Title Left ***/
+.ts-product-category-wrapper.title-left{
+	align-items: center;
+}
+.ts-product-category-wrapper.title-left .shortcode-heading-wrapper{
+	width: 23%;
+	padding-right: 30px; /*rtl*/
+	margin-bottom: 0;
+}
+.ts-product-category-wrapper.title-left .content-wrapper{
+	width: 77%;
+}
+.ts-product-category-wrapper.title-left .shortcode-heading-wrapper .shortcode-title,
+.ts-product-category-wrapper.title-left .shortcode-heading-wrapper .sub-title{
+    text-align: start;
+}
+.heading-black .ts-product-category-wrapper.title-left .shortcode-heading-wrapper .shortcode-title,
+.heading-black .ts-product-category-wrapper.title-left .shortcode-heading-wrapper .sub-title{
+	color: #000 !important;
+}
+.ts-product-category-wrapper.title-left .products.swiper{
+    position: static;
+}
+.ts-product-category-wrapper.title-left.ts-slider.show-nav .shortcode-heading-wrapper{
+    margin-bottom: 67px;
+}
+body .ts-product-category-wrapper.title-left .products.swiper .swiper-button-next, 
+body .ts-product-category-wrapper.title-left .products.swiper .swiper-button-prev{
+    left: 0 !important; /*rtl*/
+	right: auto !important; /*rtl*/
+	top: calc(50% + 38px);
+	opacity: 1;
+	visibility: visible;
+}
+body .ts-product-category-wrapper.title-left .products.swiper .swiper-button-next{
+    left: 53px !important; /*rtl*/
+}
+body .ts-product-category-wrapper.title-left.nav-light .products.swiper .swiper-button-next, 
+body .ts-product-category-wrapper.title-left.nav-light .products.swiper .swiper-button-prev{
+	color: #202020;
+    background: rgba(255,255,255,0.2);
+}
+body .ts-product-category-wrapper.title-left.nav-light .products.swiper .swiper-button-next:hover, 
+body .ts-product-category-wrapper.title-left.nav-light .products.swiper .swiper-button-prev:hover{
+    background: rgba(255,255,255,0.7);
+}
+
+/*** Style 2 ***/
+.ts-product-category-wrapper.woocommerce.style-2 .products{
+	border-width: 0 0 0 1px; /*rtl*/
+	border-style: solid;
+}
+.ts-product-category-wrapper.style-2 .product{
+	border-width: 1px 1px 1px 0; /*rtl*/
+	border-style: solid;
+}
+.ts-product-category-wrapper.style-2:not(.ts-slider) .product{
+	margin-top: -1px;
+}
+.ts-product-category-wrapper.woocommerce.style-2  .products .product-category .product-wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 39px 25px;
+}
+.ts-product-category-wrapper.style-2 .product-wrapper > a.term-link{
+	display: none;
+}
+.ts-product-category-wrapper.style-2 .product-wrapper > a:first-child{
+	width: 70px;
+	margin-right: 13px; /*rtl*/
+}
+.ts-product-category-wrapper.woocommerce.style-2  .products .product-category .product-wrapper > .meta-wrapper{
+	width: calc(100% - 83px);
+	padding: 0;
+	margin: 0;
+}
+.ts-product-category-wrapper.woocommerce.style-2 .product .category-name{
+	text-align: start;
+}
+.ts-product-category-wrapper.woocommerce.show-icon .products .product a{
+	text-align: center;
+}
+.ts-product-category-wrapper.woocommerce.show-icon .products .product a img{
+    width: auto !important;
+	max-width: 40px;
+}
+
+/*** Style 3 ***/
+.ts-product-category-wrapper.style-3 .products{
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-bottom: -10px;
+}
+.ts-product-category-wrapper.style-3.woocommerce .products .product-category .product-wrapper{
+    padding: 0 5px;
+	margin-bottom: 10px;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper{
+	position: relative;
+	overflow: hidden;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper > a:last-child{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 4;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper > a:first-child{
+	position: relative;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper > a:first-child:after{
+	content: '';
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper > .meta-wrapper .category-name{
+	position: absolute;
+	top: calc(50% - 57px);
+	left: 15px;
+	right: 15px;
+	transform: translateY(-50%);
+	text-align: center;
+	z-index: 3;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper > .meta-wrapper .shop-now-button{
+	position: absolute;
+	bottom: 88px;
+	left: 15px;
+	right: 15px;
+	text-align: center;
+	z-index: 5;
+}
+.ts-product-category-wrapper.style-3 .product .category-name{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+.ts-product-category-wrapper.style-3 .product .category-name > *{
+	margin-bottom: 20px;
+}
+.ts-product-category-wrapper.style-3 .product .category-name > .count{
+	margin-bottom: 7px;
+}
+.ts-product-category-wrapper.style-3 .product .category-name > h3{
+	line-height: 1.2;
+}
+.ts-product-category-wrapper.style-3 .category-name a,
+.ts-product-category-wrapper.style-3 .category-name a:hover{
+	text-decoration: none !important;
+}
+.ts-product-category-wrapper.style-3 .product .category-name > .count{
+	text-transform: uppercase;
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
+}
+.ts-product-category-wrapper.style-3 .product-wrapper > .meta-wrapper .shop-now-button .button:hover{
+	background: #ffffff;
+	border-color: #ffffff;
+	color: #202020;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+	15. SHORTCODE PRODUCTS CATEGORIES/BRANDS LIST
+---------------------------------------------------------------------------------------------------------------------*/
+.ts-list-of-product-categories-wrapper h3.heading-title{
+	font-size: 100%;
+	line-height: 1.3;
+	margin-bottom: 20px;
+}
+.ts-list-of-product-categories-wrapper .list-categories{
+	margin: 0;
+	display: block;
+}
+.ts-list-of-product-categories-wrapper .list-categories:after{
+	display: none;
+}
+.ts-list-of-product-categories-wrapper .list-categories ul{
+	margin: 0 -10px -20px;
+	display: flex;
+	flex-flow: row wrap;
+}
+.ts-list-of-product-categories-wrapper .list-categories ul li{
+	width: 100%;
+	list-style: none;
+	padding: 0 10px 20px;
+}
+.ts-list-of-product-categories-wrapper.columns-1 .list-categories ul{
+	margin-bottom: 0;
+}
+.ts-list-of-product-categories-wrapper.columns-1 .list-categories ul li{
+	padding-bottom: 14px;
+}
+.ts-list-of-product-categories-wrapper.columns-1 .list-categories ul li:last-child{
+	padding-bottom: 0;
+}
+.ts-list-of-product-categories-wrapper.columns-2 .list-categories ul li{
+	width: 50%;
+}
+.ts-list-of-product-categories-wrapper.columns-3 .list-categories ul li{
+	width: 33.33333%;
+}
+.ts-list-of-product-categories-wrapper.columns-4 .list-categories ul li{
+	width: 25%;
+}
+.ts-list-of-product-categories-wrapper.columns-5 .list-categories ul li{
+	width: 20%;
+}
+.ts-list-of-product-categories-wrapper .list-categories ul li a{
+	color: inherit;
+	display: block;
+}
+.ts-list-of-product-categories-wrapper .shop-more-button:after{
+	margin-left: 8px; /*rtl*/
+}
+.ts-list-of-product-categories-wrapper .list-categories ul li .shop-more-button:hover{
+    text-decoration: underline;
+}
+.style-horizontal .ts-list-of-product-categories-wrapper .list-categories ul{
+	justify-content: center;
+}
+.style-horizontal .ts-list-of-product-categories-wrapper .list-categories ul li{
+	display: inline-block;
+	width: auto;
+	line-height: 1;
+    font-size: 100% !important;
+	padding: 0;
+	margin-bottom: 10px;
+	position: relative;
+}
+.style-horizontal .ts-list-of-product-categories-wrapper .list-categories ul li:not(:last-child){
+	padding-right: 15px; /*rtl*/
+	margin-right: 15px; /*rtl*/
+}
+.style-horizontal .ts-list-of-product-categories-wrapper .list-categories ul li:not(:last-child):after{
+	content: '';
+	width: 1px;
+	height: 10px;
+	border-right: 1px solid;
+	position: absolute;
+	top: 50%;
+	right: 0; /*rtl*/
+	margin-top: -5px;
+}
+
+/*** Has Border ***/
+.ts-list-of-product-categories-wrapper.has-border .list-categories ul li a{
+	width: 100%;
+	border: 1px solid #cbcbcb;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 20px;
+	padding: 14px 5px;
+}
+
+/*** Text Light ***/
+.ts-list-of-product-categories-wrapper.text-light .list-categories ul li a{
+	color: #ffffff !important;
+}
