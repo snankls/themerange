@@ -450,33 +450,46 @@ if( !function_exists('themerange_breadcrumbs') ){
 }
 
 if( !function_exists('themerange_banner') ){
-	function themerange_banner( $show_banner = false, $layout_view = false, $background_image = false, $show_page_title = false, $page_title = '', $page_breadcrumb = false, $parallex = '', $extra_class = ''){
+	function themerange_banner( $show_banner = false, $layout_view = false, $background_image = false, $show_page_title = false, $page_title = '', $page_breadcrumb = false, $parallex = '', $extra_class = 'class="page_title mb-0 text-white"'){
 		$tr_theme_options = themerange_get_theme_options();
 		if( $show_banner )
 		{
 			$bg_url = $tr_theme_options['tr_bg_breadcrumbs']['url'];
 			$breadcrumb_bg_option = !empty($bg_url) ? $bg_url : $background_image;
 			$breadcrumb_bg = '';
-			//$classes = array();
+			$classes = array();
+				
+			$classes[] = 'page-title breadcrumb-' . $tr_theme_options['tr_breadcrumb_layout'];
+			$classes[] = $show_banner?'':'no-breadcrumb';
+			$classes[] = $show_page_title?'':'no-title';
 			
-			// $classes[] = 'page-title';	
-			// $classes[] = 'breadcrumb-' . $tr_theme_options['tr_breadcrumb_layout'];
-			// $classes[] = $show_banner?'':'no-breadcrumb';
-			// $classes[] = $show_page_title?'':'no-title';
+			if( $breadcrumb_bg_option == '' )
+				$breadcrumb_bg = get_template_directory_uri() . '/assets/images/background/breadcrumb_'.$tr_theme_options['tr_breadcrumb_layout'].'.jpg';
+			else
+				$breadcrumb_bg = $breadcrumb_bg_option;
+					
+			$style = '';
+			if( $breadcrumb_bg != '' ){
+				$parallex = ($tr_theme_options['tr_bg_parallax'] != 0) ? $tr_theme_options['tr_bg_parallax'] : $parallex;
+				$style = 'style="background-image: url('. esc_url($breadcrumb_bg) .')"';
+				if( $parallex ){
+					$classes[] = 'tr-breadcrumb-parallax';
+				}
+			}
 			
 			if( $show_page_title ){
 				$page_title = '<h1 class="page_title mt-0 mb-0 text-white">' . $page_title . '</h1>';
 			}
 			
-			echo '<section class="page_banner_section text-center">
+			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" '.$style.'>
 				<div class="container">
 					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
 					'.$page_title;
 				
-				// $page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;
-				// if( $page_breadcrumb ){
-				// 	themerange_breadcrumbs();
-				// }
+				$page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;
+				if( $page_breadcrumb ){
+					themerange_breadcrumbs();
+				}
 			echo '</div>
 			</section>';
 		}
