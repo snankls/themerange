@@ -217,24 +217,17 @@ class TR_Elementor_Widget_Icon_Box extends TR_Elementor_Widget_Base{
         
 		<?php if ($layout == 'layout2') { ?>
         
-            <div class="tr-icon service-block_two">
-                <div class="service-block_two-inner">
-                    <h4 class="tr-title service-block_two-heading">
-                        
-                        <?php if( $link_attr ): ?>
-                        <a <?php echo implode(' ', $link_attr); ?>>
-                        <?php endif; ?>
-                        
-                        <?php echo wp_kses($title, $allowed_html); ?>
-                        
-                        <?php if( $link_attr ): ?>
-                        </a>
-                        <?php endif; ?>
-                        
-                    </h4>
-                    <p class="tr-text"><?php echo wp_kses($text, $allowed_html); ?></p>
-                </div>
-            </div>
+            <div class="iconbox_block">
+				<div class="iconbox_icon bg-warning-subtle tr-icon">
+					<?php \Elementor\Icons_Manager::render_icon($item['icon']); ?>
+				</div>
+				<div class="iconbox_content">
+					<h3 class="iconbox_title"><?php echo wp_kses($item['title'], $allowed_html); ?></h3>
+					<p class="mb-0">
+						<?php echo wp_kses($item['text'], $allowed_html); ?>
+					</p>
+				</div>
+			</div>
         
         <?php } else { ?>
         	

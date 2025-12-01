@@ -473,10 +473,10 @@ if( !function_exists('themerange_banner') ){
 					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
 					'.$page_title;
 				
-				$page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;
-				if( $page_breadcrumb ){
-					themerange_breadcrumbs();
-				}
+				// $page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;
+				// if( $page_breadcrumb ){
+				// 	themerange_breadcrumbs();
+				// }
 			echo '</div>
 			</section>';
 		}
