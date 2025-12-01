@@ -2282,13 +2282,13 @@ input[type=search]::-webkit-search-results-decoration {
 .page_banner_section {
   z-index: 1;
   position: relative;
-  padding: 130px 0 110px;
+  padding: 50px 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--bs-dark);
   background-position: center center; }
   .page_banner_section .heading_focus_text {
-    margin-bottom: 24px; }
+    margin-bottom: 10px; }
 
 .page_title {
   font-size: 55px;

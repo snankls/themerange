@@ -465,7 +465,7 @@ if( !function_exists('themerange_banner') ){
 			// $classes[] = $show_page_title?'':'no-title';
 			
 			if( $show_page_title ){
-				$page_title = '<h1 class="page_title mb-0 text-white">' . $page_title . '</h1>';
+				$page_title = '<h1 class="page_title mt-0 mb-0 text-white">' . $page_title . '</h1>';
 			}
 			
 			echo '<section class="page_banner_section text-center">

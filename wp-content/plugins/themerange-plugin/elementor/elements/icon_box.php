@@ -225,7 +225,7 @@ class TR_Elementor_Widget_Icon_Box extends TR_Elementor_Widget_Base{
 						<?php foreach($settings['icon_box'] as $index => $item) : ?>
 						<div class="col-lg-4">
 							<div class="iconbox_block">
-								<div class="iconbox_icon bg-warning-subtle tr-icon">
+								<div class="iconbox_icon tr-icon">
 									<?php \Elementor\Icons_Manager::render_icon($item['icon']); ?>
 								</div>
 								<div class="iconbox_content">
