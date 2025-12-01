@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/themeran/public_html/
-    - /bin/cp * $DEPLOYPATH
+    - DEPLOYPATH=/home/themeran/public_html/
+    - /bin/cp -r . "$DEPLOYPATH"
