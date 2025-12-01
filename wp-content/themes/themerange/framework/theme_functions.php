@@ -463,25 +463,25 @@ if( !function_exists('themerange_banner') ){
 			$classes[] = $show_banner?'':'no-breadcrumb';
 			$classes[] = $show_page_title?'':'no-title';
 			
-			if( $breadcrumb_bg_option == '' )
-				$style = get_template_directory_uri() . '/assets/images/background/page-banner.svg';
-			else
-				$breadcrumb_bg = $breadcrumb_bg_option;
+			//if( $breadcrumb_bg_option == '' )
+				$breadcrumb_bg = get_template_directory_uri() . '/assets/images/background/page-banner.svg';
+			// else
+			// 	$breadcrumb_bg = $breadcrumb_bg_option;
 					
-			$style = '';
-			if( $breadcrumb_bg != '' ){
-				$parallex = ($tr_theme_options['tr_bg_parallax'] != 0) ? $tr_theme_options['tr_bg_parallax'] : $parallex;
-				$style = 'style="background-image: url('. esc_url($breadcrumb_bg) .')"';
-				if( $parallex ){
-					$classes[] = 'tr-breadcrumb-parallax';
-				}
-			}
+			// $style = '';
+			// if( $breadcrumb_bg != '' ){
+			// 	$parallex = ($tr_theme_options['tr_bg_parallax'] != 0) ? $tr_theme_options['tr_bg_parallax'] : $parallex;
+			// 	$style = 'style="background-image: url('. esc_url($breadcrumb_bg) .')"';
+			// 	if( $parallex ){
+			// 		$classes[] = 'tr-breadcrumb-parallax';
+			// 	}
+			// }
 			
 			if( $show_page_title ){
 				$page_title = '<h1 class="page_title mt-0 mb-0 text-white">' . $page_title . '</h1>';
 			}
 			
-			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" '.$style.'>
+			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" style="background-image: url('. esc_url($breadcrumb_bg) .')">
 				<div class="container">
 					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
 					'.$page_title;
