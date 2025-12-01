@@ -450,7 +450,7 @@ if( !function_exists('themerange_breadcrumbs') ){
 }
 
 if( !function_exists('themerange_banner') ){
-	function themerange_banner( $show_banner = false, $layout_view = false, $background_image = false, $show_page_title = false, $page_title = '', $page_breadcrumb = false, $parallex = '', $extra_class = 'page_title mb-0 text-white'){
+	function themerange_banner( $show_banner = false, $layout_view = false, $background_image = false, $show_page_title = false, $page_title = '', $page_breadcrumb = false, $parallex = '', $extra_class = ''){
 		$tr_theme_options = themerange_get_theme_options();
 		if( $show_banner )
 		{
@@ -465,7 +465,7 @@ if( !function_exists('themerange_banner') ){
 			// $classes[] = $show_page_title?'':'no-title';
 			
 			if( $show_page_title ){
-				$page_title = '<h1 class="' . $extra_class . '">' . $page_title . '</h1>';
+				$page_title = '<h1 class="page_title mb-0 text-white">' . $page_title . '</h1>';
 			}
 			
 			echo '<section class="page_banner_section text-center">
