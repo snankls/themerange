@@ -36,36 +36,6 @@ function tr_register_taxonomy() {
 	register_taxonomy('services_cat', 'tr_services', $args);
 	
 	
-	//Team Taxonomy
-	$team_cat_name = !empty($themerange_theme_options['tr_team_cat_name']) ? $themerange_theme_options['tr_team_cat_name'] : __('Team Category', 'themerange');
-	$team_cat_slug = !empty($themerange_theme_options['tr_team_cat_slug']) ? $themerange_theme_options['tr_team_cat_slug'] : '';
-	$args = array(
-		'labels' => array(
-			'name'                => __( $team_cat_name, 'themerange' ),
-			'singular_name'       => __( $team_cat_name, 'themerange' ),
-			'menu_name'           => __( $team_cat_name, 'themerange' ),
-			'search_items'        => __( 'Search Categories', 'themerange' ),
-			'all_items'           => __( 'All Categories', 'themerange' ),
-			'parent_item'         => __( 'Parent Category', 'themerange' ),
-			'parent_item_colon'   => __( 'Parent Category:', 'themerange' ),
-			'edit_item'           => __( 'Edit Category', 'themerange' ),
-			'update_item'         => __( 'Update Category', 'themerange' ),
-			'add_new_item'        => __( 'Add New Category', 'themerange' ),
-			'new_item_name'       => __( 'New Category Name', 'themerange' ),
-		),
-		'public' 				=> true,
-		'hierarchical' 			=> true,
-		'show_ui' 				=> true,
-		'show_admin_column' 	=> true,
-		'query_var' 			=> true,
-		'show_in_nav_menus' 	=> false,
-		'show_tagcloud' 		=> false,
-		'rewrite'            	=> array( 'slug' => $team_cat_slug ),
-	);
-	
-	register_taxonomy('team_cat', 'tr_team', $args);
-	
-	
 	//Portfolio Taxonomy
 	$portfolio_cat_name = !empty($themerange_theme_options['tr_portfolio_cat_name']) ? $themerange_theme_options['tr_portfolio_cat_name'] : __('Portfolio Category', 'themerange');
 	$portfolio_cat_slug = !empty($themerange_theme_options['tr_portfolio_cat_slug']) ? $themerange_theme_options['tr_portfolio_cat_slug'] : '';
