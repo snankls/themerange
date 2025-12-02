@@ -483,7 +483,7 @@ if( !function_exists('themerange_banner') ){
 			
 			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" style="background-image: url('. esc_url($breadcrumb_bg) .')">
 				<div class="container">
-					<div class="heading_focus_text text-white">Our <span class="badge bg-secondary">Techco 😍</span></div>
+					<div class="heading_focus_text text-white"><span class="badge bg-secondary">ThemeRange</span> 😍</div>
 					'.$page_title;
 				
 				$page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;
