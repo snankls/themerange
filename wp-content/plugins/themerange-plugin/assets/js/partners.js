@@ -20,10 +20,10 @@
 					slidesPerView: 2,
 				},
 				768: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 				},
 				1025: {
-					slidesPerView: 7,
+					slidesPerView: 5,
 				},
 			},
 		});
