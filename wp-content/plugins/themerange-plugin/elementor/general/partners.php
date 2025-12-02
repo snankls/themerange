@@ -41,13 +41,6 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 			]
 		);
 		$repeater->add_control(
-			'text',
-			[
-				'label' => esc_html__('Text', 'themerange'),
-				'type' => Controls_Manager::TEXTAREA,
-			]
-		);
-		$repeater->add_control(
 			'icon',
 			[
 				'label' => esc_html__('Icon', 'themerange'),
@@ -96,7 +89,7 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 				<div class="section_space pt-0">
 					<div class="client_logo_carousel swiper">
 						<div class="swiper-wrapper">
-							<?php foreach($settings['icon_box'] as $index => $item) : ?>
+							<?php foreach($settings['partners'] as $index => $item) : ?>
 							<div class="swiper-slide">
 								<div class="client_logo_item">
 									<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
