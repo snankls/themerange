@@ -27,6 +27,9 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 	}
 	
 	protected function register_controls(){
+		//Background Image
+		$this->tr_add_background_image_controls();
+		
 		//Partners
 		$this->start_controls_section(
             'section_partners',
@@ -89,7 +92,7 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
         
 		<!-- Client Logo Section - Start
         ================================================== -->
-        <section class="client_logo_section section_space" style="background-image: url('assets/images/shapes/bg_pattern_1.svg');">
+        <section class="client_logo_section section_space" <?php if($pattern_image) : ?>style="background-image: url(<?php echo wp_get_attachment_url($pattern_image['id']); ?>)"<?php endif; ?>>
         	<div class="container">
 				<div class="section_space pt-0">
 					<div class="client_logo_carousel swiper">
