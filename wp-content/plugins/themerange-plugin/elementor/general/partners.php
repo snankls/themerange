@@ -49,7 +49,7 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 			]
 		);
 		$repeater->add_control(
-			'icon',
+			'image',
 			[
 				'label' => esc_html__('Icon', 'themerange'),
 				'type' => Controls_Manager::MEDIA,
