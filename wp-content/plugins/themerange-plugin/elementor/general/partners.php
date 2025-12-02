@@ -21,6 +21,11 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 		return 'tr-custom-icon';
 	}
 	
+	public function get_script_depends() {
+		wp_register_script( 'partners-carousels', THEMERANGE_URL . 'assets/js/partners.js', [ 'elementor-frontend' ], THEMERANGE_VERSION, true );
+		return [ 'partners-carousels' ];
+	}
+	
 	protected function register_controls(){
 		//Partners
 		$this->start_controls_section(
