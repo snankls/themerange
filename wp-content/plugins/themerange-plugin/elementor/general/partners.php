@@ -22,9 +22,6 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 	}
 	
 	protected function register_controls(){
-		//Layouts
-		$this->tr_add_layout_controls(2);
-		
 		//Partners
 		$this->start_controls_section(
             'section_partners',
@@ -54,7 +51,9 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 			'icon',
 			[
 				'label' => esc_html__('Icon', 'themerange'),
-				'type' => Controls_Manager::ICONS,
+				'type' => Controls_Manager::MEDIA,
+                'default' => array( 'id' => '', 'url' => '' ),
+                'description' => '',
 			]
 		);
 		$repeater->add_control(
@@ -74,7 +73,7 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 		$this->add_control(
 			'partners',
 			[
-				'label'       => __( 'Icon Box', 'themerange' ),
+				'label'       => __( 'Partners', 'themerange' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'title_field' => '{{{ title }}}',
