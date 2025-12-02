@@ -10,7 +10,7 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
     }
 	
 	public function get_title(){
-        return esc_html__( 'TR Icon Box', 'themerange' );
+        return esc_html__( 'TR Partners', 'themerange' );
     }
 	
 	public function get_categories(){
@@ -25,11 +25,11 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 		//Layouts
 		$this->tr_add_layout_controls(2);
 		
-		//Icon Box
+		//Partners
 		$this->start_controls_section(
             'section_partners',
             array(
-                'label' => esc_html__( 'Icon Box', 'themerange' ),
+                'label' => esc_html__( 'Partners', 'themerange' ),
                 'tab' => Controls_Manager::TAB_CONTENT
             )
         );
@@ -97,11 +97,13 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 				<div class="section_space pt-0">
 					<div class="client_logo_carousel swiper">
 						<div class="swiper-wrapper">
+							<?php foreach($settings['icon_box'] as $index => $item) : ?>
 							<div class="swiper-slide">
 								<div class="client_logo_item">
-								<img src="assets/images/clients/client_logo_1.webp" alt="Techco - Client Logo Image">
+									<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
 								</div>
 							</div>
+							<?php endforeach; ?>
 						</div>
 					</div>
 				</div>
