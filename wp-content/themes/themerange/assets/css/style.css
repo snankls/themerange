@@ -2654,7 +2654,6 @@ input[type=search]::-webkit-search-results-decoration {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: var(--bs-light);
   background-position: center center; }
 
 .client_logo_carousel .swiper-wrapper {

@@ -16,16 +16,36 @@
 				disableOnInteraction: true,
 			},
 			breakpoints: {
-				376: {
-					slidesPerView: 2,
+				'1600': {
+					slidesPerView: 1,
 				},
-				768: {
-					slidesPerView: 3,
+				'1200': {
+					slidesPerView: 1,
 				},
-				1025: {
-					slidesPerView: 5,
+				'992': {
+					slidesPerView: 1,
+				},
+				'768': {
+					slidesPerView: 1,
+				},
+				'576': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
 				},
 			},
+			// breakpoints: {
+			// 	376: {
+			// 		slidesPerView: 2,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 3,
+			// 	},
+			// 	1025: {
+			// 		slidesPerView: 5,
+			// 	},
+			// },
 		});
 		
 	};
