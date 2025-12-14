@@ -49,7 +49,7 @@ class TR_Elementor_Widget_Heading extends TR_Elementor_Widget_Base{
 	?>
         
         <?php if($subtitle_switcher or $highlighted_subtitle_switcher or $title_switcher) : ?>
-        <div class="heading_block mb-0 tr-title">
+        <div class="heading_block mb-0 tr-title tr-sub-heading">
             <div class="heading_focus_text">
                 <?php echo wp_kses($subtitle, $allowed_html); ?>
 				<span class="badge bg-secondary text-white"><?php echo wp_kses($highlighted_subtitle, $allowed_html); ?></span>
