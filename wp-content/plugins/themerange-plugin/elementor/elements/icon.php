@@ -21,9 +21,6 @@ class TR_Elementor_Widget_Icon extends TR_Elementor_Widget_Base{
 	}
 	
 	protected function register_controls(){
-		// Layouts
-		$this->tr_add_layout_controls(2);
-
 		// Icons
 		$this->start_controls_section(
             'section_icon',
@@ -37,13 +34,6 @@ class TR_Elementor_Widget_Icon extends TR_Elementor_Widget_Base{
             array(
                 'label' => esc_html__('Icon', 'themerange' ),
 				'type' => Controls_Manager::ICONS,
-            )
-        );
-		$this->add_control(
-            'text',
-            array(
-                'label' => esc_html__('Text', 'themerange' ),
-				'type' => Controls_Manager::TEXTAREA,
             )
         );
 		$this->add_control(
@@ -79,38 +69,11 @@ class TR_Elementor_Widget_Icon extends TR_Elementor_Widget_Base{
 		$settings = $this->get_settings_for_display();
 		extract( $settings );
 		$allowed_html = tr_allowed_html();
-		?>
+	?>
 
-		<?php if ($layout == 'layout2') { ?>
-
-			<div class="tr-icon">
-				<div class="side-icon"><?php \Elementor\Icons_Manager::render_icon($icon); ?></div>
-			</div>
-		
-		<?php } else { ?>
-
-			<div class="tr-icon-inner">
-				<div class="tr-icon">
-					<div class="about-three_image-certificate">
-						<?php $link_attr = $this->generate_link_attributes( $link );
-						if( $link_attr ): ?>
-						<a <?php echo implode(' ', $link_attr); ?>>
-						<?php endif; ?>
-						
-						<?php \Elementor\Icons_Manager::render_icon($icon); ?>
-						
-						<?php $link_attr = $this->generate_link_attributes( $link );
-						if( $link_attr ): ?>
-						</a>
-						<?php endif; ?>
-						
-						<p><?php echo wp_kses($text, $allowed_html); ?></p>
-					</div>
-					
-				</div>
-			</div>
-
-		<?php } ?>
+		<div class="funfact_icon tr-icon">
+			<div class="side-icon"><?php \Elementor\Icons_Manager::render_icon($icon); ?></div>
+		</div>
         
 		<?php
 	}
