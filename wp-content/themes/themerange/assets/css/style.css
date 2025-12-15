@@ -67,6 +67,53 @@
   --bs-heading-font-family: 'Axiforma Bold', sans-serif;
   --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.6;
+
+  /* Text */
+  --bs-body-color: #1E293B;
+  --bs-body-color-rgb: 30, 41, 59;
+
+  /* Brand Colors */
+  --bs-primary: #0044EB;     /* Tech Blue */
+  --bs-secondary: #2563EB;   /* Indigo (professional) */
+  --bs-dark: #020842;        /* Dark Navy */
+  --bs-light: #F5F9FF;       /* Clean light background */
+
+  /* System Colors */
+  --bs-info: #22C1C3;        /* Tech Cyan */
+  --bs-warning: #F3A338;
+  --bs-danger: #F26F4D;
+  --bs-success: #47B16A;
+
+  /* RGB */
+  --bs-primary-rgb: 0, 68, 235;
+  --bs-secondary-rgb: 37, 99, 235;
+  --bs-dark-rgb: 2, 8, 66;
+  --bs-light-rgb: 245, 249, 255;
+  --bs-info-rgb: 34, 193, 195;
+
+  /* Subtle Backgrounds */
+  --bs-primary-bg-subtle: rgba(0, 68, 235, 0.08);
+  --bs-secondary-bg-subtle: rgba(37, 99, 235, 0.08);
+  --bs-info-bg-subtle: rgba(34, 193, 195, 0.10);
+  --bs-warning-bg-subtle: rgba(243, 163, 56, 0.10);
+  --bs-danger-bg-subtle: rgba(242, 111, 77, 0.10);
+  --bs-success-bg-subtle: rgba(71, 177, 106, 0.10);
+
+  /* UI */
+  --bs-border-color: #E5EEFF;
+  --bs-border-color-translucent: rgba(229, 238, 255, 1);
+  --bs-border-radius: 10px;
+  --bs-border-radius-sm: 8px;
+  --bs-border-radius-pill: 50px;
+  --bs-transition: 300ms ease;
+}
+
+/* :root, [data-bs-theme=light] {
+  --bs-body-font-family: 'Axiforma Regular', sans-serif;
+  --bs-heading-font-family: 'Axiforma Bold', sans-serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #49515B;
   --bs-body-color-rgb: 73, 81, 91;
@@ -97,7 +144,7 @@
   --bs-border-radius: 10px;
   --bs-border-radius-sm: 20px;
   --bs-border-radius-pill: 50px;
-  --bs-transition: 300ms ease; }
+  --bs-transition: 300ms ease; } */
 
 /* 1.1 - Template Fonts - Start
 ================================================== */
