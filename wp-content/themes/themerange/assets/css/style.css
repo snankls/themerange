@@ -63,6 +63,8 @@
 /* Table Of Content - end
 ================================================== */
 :root, [data-bs-theme=light] {
+
+  /* Typography */
   --bs-body-font-family: 'Axiforma Regular', sans-serif;
   --bs-heading-font-family: 'Axiforma Bold', sans-serif;
   --bs-body-font-size: 16px;
@@ -70,42 +72,43 @@
   --bs-body-line-height: 1.6;
 
   /* Text */
-  --bs-body-color: #1E293B;
+  --bs-body-color: #1E293B;           /* Dark slate (better readability) */
   --bs-body-color-rgb: 30, 41, 59;
 
-  /* Brand Colors */
-  --bs-primary: #0044EB;     /* Tech Blue */
-  --bs-secondary: #2563EB;   /* Indigo (professional) */
-  --bs-dark: #020842;        /* Dark Navy */
-  --bs-light: #F5F9FF;       /* Clean light background */
+  /* BRAND COLORS – TECH FOCUSED */
+  --bs-primary: #2563EB;              /* Tech Blue (core brand) */
+  --bs-secondary: #0EA5E9;            /* Sky Blue (tech accent) */
+  --bs-dark: #020617;                 /* Near Black (headers/footer) */
+  --bs-light: #F8FAFC;                /* Clean SaaS background */
 
-  /* System Colors */
-  --bs-info: #22C1C3;        /* Tech Cyan */
-  --bs-warning: #F3A338;
-  --bs-danger: #F26F4D;
-  --bs-success: #47B16A;
+  /* STATUS COLORS */
+  --bs-info: #06B6D4;                 /* Cyan (APIs, cloud, info) */
+  --bs-warning: #F59E0B;
+  --bs-danger: #EF4444;
+  --bs-success: #22C55E;
 
-  /* RGB */
-  --bs-primary-rgb: 0, 68, 235;
-  --bs-secondary-rgb: 37, 99, 235;
-  --bs-dark-rgb: 2, 8, 66;
-  --bs-light-rgb: 245, 249, 255;
-  --bs-info-rgb: 34, 193, 195;
+  /* RGB VALUES */
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-secondary-rgb: 14, 165, 233;
+  --bs-dark-rgb: 2, 6, 23;
+  --bs-light-rgb: 248, 250, 252;
+  --bs-info-rgb: 6, 182, 212;
+  --bs-success-rgb: 34, 197, 94;
 
-  /* Subtle Backgrounds */
-  --bs-primary-bg-subtle: rgba(0, 68, 235, 0.08);
-  --bs-secondary-bg-subtle: rgba(37, 99, 235, 0.08);
-  --bs-info-bg-subtle: rgba(34, 193, 195, 0.10);
-  --bs-warning-bg-subtle: rgba(243, 163, 56, 0.10);
-  --bs-danger-bg-subtle: rgba(242, 111, 77, 0.10);
-  --bs-success-bg-subtle: rgba(71, 177, 106, 0.10);
+  /* SUBTLE BACKGROUNDS (SaaS style) */
+  --bs-primary-bg-subtle: rgba(37, 99, 235, 0.08);
+  --bs-secondary-bg-subtle: rgba(14, 165, 233, 0.08);
+  --bs-info-bg-subtle: rgba(6, 182, 212, 0.08);
+  --bs-warning-bg-subtle: rgba(245, 158, 11, 0.10);
+  --bs-danger-bg-subtle: rgba(239, 68, 68, 0.10);
+  --bs-success-bg-subtle: rgba(34, 197, 94, 0.10);
 
-  /* UI */
-  --bs-border-color: #E5EEFF;
-  --bs-border-color-translucent: rgba(229, 238, 255, 1);
-  --bs-border-radius: 10px;
+  /* UI / LAYOUT */
+  --bs-border-color: #E2E8F0;
+  --bs-border-color-translucent: rgba(226, 232, 240, 1);
+  --bs-border-radius: 12px;
   --bs-border-radius-sm: 8px;
-  --bs-border-radius-pill: 50px;
+  --bs-border-radius-pill: 999px;
   --bs-transition: 300ms ease;
 }
 
