@@ -48,20 +48,23 @@ class TR_Elementor_Widget_Heading extends TR_Elementor_Widget_Base{
 		$allowed_html = tr_allowed_html();
 	?>
         
-        <?php if($subtitle_switcher or $highlighted_subtitle_switcher or $title_switcher) : ?>
         <div class="heading_block mb-0 tr-title tr-sub-heading">
             <div class="heading_focus_text">
+				<?php if($settings['subtitle_switcher']) { ?>
                 <?php echo wp_kses($subtitle, $allowed_html); ?>
+				<?php } ?>
+
+				<?php if($settings['highlighted_subtitle_switcher']) { ?>
 				<span class="badge bg-secondary text-white"><?php echo wp_kses($highlighted_subtitle, $allowed_html); ?></span>
+				<?php } ?>
             </div>
 
-			<?php if($settings['title_tag']) { ?>
+			<?php if($settings['title_switcher']) { ?>
             <<?php echo esc_attr($settings['title_tag']); ?>>
 				<?php echo wp_kses($title, $allowed_html); ?>
             </<?php echo esc_attr($settings['title_tag']); ?>>
 			<?php } ?>
         </div>
-        <?php endif; ?>
         
 		<?php
 	}

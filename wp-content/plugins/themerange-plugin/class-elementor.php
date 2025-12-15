@@ -97,6 +97,7 @@ class TR_Elementor_Addons {
 			'image',
 			'listing',
 			'text',
+			'icon',
 			
 			/*
 			'form',
