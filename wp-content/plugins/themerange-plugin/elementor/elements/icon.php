@@ -75,7 +75,7 @@ class TR_Elementor_Widget_Icon extends TR_Elementor_Widget_Base{
 			<div class="side-icon"><?php \Elementor\Icons_Manager::render_icon($icon); ?></div>
 		</div>
         
-		<?php
+	<?php
 	}
 }
 
