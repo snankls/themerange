@@ -674,39 +674,51 @@ if( !function_exists('themerange_theme_favicon') ){
 }
 
 /*** Logo ***/
-if( !function_exists('themerange_theme_logo') ){
-	function themerange_theme_logo($logo){
+if ( ! function_exists( 'themerange_theme_logo' ) ) {
+
+	function themerange_theme_logo( $logo = 'normal' ) {
+
 		$tr_theme_options = themerange_get_theme_options();
-		$logo_image = is_array($tr_theme_options['tr_logo'])?$tr_theme_options['tr_logo']['url']:$tr_theme_options['tr_logo'];
-		$logo_image_mobile = is_array($tr_theme_options['tr_logo_mobile'])?$tr_theme_options['tr_logo_mobile']['url']:$tr_theme_options['tr_logo_mobile'];
-		$logo_text = $tr_theme_options['text_logo'];
-		
-		if( !$logo_image_mobile ){
+
+		$logo_image = ! empty( $tr_theme_options['tr_logo'] )
+			? ( is_array( $tr_theme_options['tr_logo'] ) ? $tr_theme_options['tr_logo']['url'] : $tr_theme_options['tr_logo'] )
+			: '';
+
+		$logo_image_mobile = ! empty( $tr_theme_options['tr_logo_mobile'] )
+			? ( is_array( $tr_theme_options['tr_logo_mobile'] ) ? $tr_theme_options['tr_logo_mobile']['url'] : $tr_theme_options['tr_logo_mobile'] )
+			: '';
+
+		$logo_text = ! empty( $tr_theme_options['text_logo'] )
+			? $tr_theme_options['text_logo']
+			: get_bloginfo( 'name' );
+
+		if ( ! $logo_image_mobile ) {
 			$logo_image_mobile = $logo_image;
 		}
-		if( !$logo_text ){
-			$logo_text = get_bloginfo('name');
-		}
 		?>
-		
-        <a href="<?php echo esc_url( home_url('/') ); ?>">
-        <?php if($logo == 'normal') :
-			if( $logo_image ): ?>
-            <img src="<?php echo esc_url($logo_image); ?>" alt="<?php echo esc_attr($logo_text); ?>" title="<?php echo esc_attr($logo_text); ?>" class="normal-logo" />
-        <?php endif;
-		endif; ?>
-        
-        <?php if($logo == 'mobile') :
-			if( $logo_image_mobile ): ?>
-            <img src="<?php echo esc_url($logo_image_mobile); ?>" alt="<?php echo esc_attr($logo_text); ?>" title="<?php echo esc_attr($logo_text); ?>" class="mobile-logo" />
-        <?php endif;
-		endif; ?>
-        
-        <?php if( !$logo_image ):
-            echo esc_html($logo_text);
-        endif; ?>
-        </a>
-        
+
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
+
+			<?php if ( $logo === 'normal' && $logo_image ) : ?>
+				<img src="<?php echo esc_url( $logo_image ); ?>"
+				     alt="<?php echo esc_attr( $logo_text ); ?>"
+				     title="<?php echo esc_attr( $logo_text ); ?>">
+			<?php endif; ?>
+
+			<?php if ( $logo === 'mobile' && $logo_image_mobile ) : ?>
+				<img src="<?php echo esc_url( $logo_image_mobile ); ?>"
+				     alt="<?php echo esc_attr( $logo_text ); ?>"
+				     title="<?php echo esc_attr( $logo_text ); ?>"
+				     class="mobile-logo">
+			<?php endif; ?>
+
+			<?php if ( ! $logo_image && ! $logo_image_mobile ) : ?>
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>"
+				     alt="<?php esc_attr_e( 'Logo', 'themerange' ); ?>">
+			<?php endif; ?>
+
+		</a>
+
 		<?php
 	}
 }
