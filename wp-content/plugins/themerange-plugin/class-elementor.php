@@ -63,7 +63,7 @@ class TR_Elementor_Addons {
 			//'slider',
 			'portfolio',
 			'partners',
-			'services',
+			//'services',
 			/*'facts_counter',
 			'marquee',
 			'video',
