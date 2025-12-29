@@ -151,7 +151,7 @@ function themerange_register_scripts(){
 	wp_enqueue_script( 'circularProgressBar', get_template_directory_uri() . '/assets/js/ajax-form.js', array(), $theme_version, true );
 	wp_enqueue_script( 'circularProgressBar', get_template_directory_uri() . '/assets/js/slider-init.js', array(), $theme_version, true );
 	wp_enqueue_script( 'circularProgressBar', get_template_directory_uri() . '/assets/js/tp-cursor.js', array(), $theme_version, true );
-	wp_enqueue_script( 'themerange-script', get_template_directory_uri() . ' /assets/js/script.js', array('jquery'), $theme_version, true );
+	wp_enqueue_script( 'themerange-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), $theme_version, true );
 	
 	//Preloader
 	if( themerange_enable_loading_screen() ){

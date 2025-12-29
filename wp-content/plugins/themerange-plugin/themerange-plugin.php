@@ -133,11 +133,11 @@ class ThemeRange_Plugin {
 		
 		wp_deregister_style( 'swiper' );
 		wp_dequeue_style( 'swiper' );
-		wp_enqueue_style( 'swiper', $css_dir . 'swiper-bundle.min.css', array(), THEMERANGE_VERSION );
+		wp_enqueue_style( 'swiper', $css_dir . 'swiper-bundle.css', array(), THEMERANGE_VERSION );
 		
 		wp_deregister_script( 'swiper' );
 		wp_dequeue_script( 'swiper' );
-		wp_enqueue_script( 'swiper-js', $js_dir . 'swiper-bundle.min.js', array(), THEMERANGE_VERSION );
+		wp_enqueue_script( 'swiper-js', $js_dir . 'swiper-bundle.js', array(), THEMERANGE_VERSION );
 	}
 	
 	function register_admin_scripts() {
