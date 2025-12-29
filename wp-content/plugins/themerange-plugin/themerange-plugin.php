@@ -128,8 +128,8 @@ class ThemeRange_Plugin {
 	}
 	
 	function register_scripts() {
+		$css_dir = THEMERANGE_URL . '/assets/css/';
 		$js_dir = THEMERANGE_URL . '/assets/js/';
-		$css_dir = get_template_directory_uri() . '/assets/css/';
 		
 		wp_deregister_style( 'swiper' );
 		wp_dequeue_style( 'swiper' );
