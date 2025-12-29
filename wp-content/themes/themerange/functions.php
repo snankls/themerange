@@ -164,16 +164,102 @@ function themerange_register_scripts(){
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
-	/* Load default google fonts */
-	wp_enqueue_style( 'themerange-google-fonts-Russo-One', '//fonts.googleapis.com/css?family=Russo+One&display=swap' );
-	wp_enqueue_style( 'themerange-google-fonts-Manrope', '//fonts.googleapis.com/css?family=Manrope:wght@300,400,500,600,700,800&display=swap' );
-	
 	/* Custom JS */
 	if( $custom_js = themerange_get_theme_options('tr_custom_javascript_code') ){
 		wp_add_inline_script( 'themerange-script', trim( $custom_js ) );
 	}
 }
 add_action('wp_enqueue_scripts', 'themerange_register_scripts', 1000);
+
+// Google Fonts
+function themerange_enqueue_google_fonts() {
+
+	wp_enqueue_style(
+		'themerange-font-funnel-display',
+		'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-kanit',
+		'https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-space-grotesk',
+		'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-teko',
+		'https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-dm-sans',
+		'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-inter',
+		'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-playfair',
+		'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-poppins',
+		'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-sora',
+		'https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-plus-jakarta-sans',
+		'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-familjen-grotesk',
+		'https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'themerange-font-phudu',
+		'https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap',
+		array(),
+		null
+	);
+
+}
+add_action( 'wp_enqueue_scripts', 'themerange_enqueue_google_fonts' );
 
 /* Loading Screen */
 function themerange_enable_loading_screen(){
