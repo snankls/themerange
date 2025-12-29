@@ -714,7 +714,7 @@ if ( ! function_exists( 'themerange_theme_logo' ) ) {
 
 			<?php if ( ! $logo_image && ! $logo_image_mobile ) : ?>
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>"
-				     alt="<?php esc_attr_e( 'Logo', 'themerange' ); ?>">
+				     alt="<?php esc_attr_e( 'Logo', 'themerange' ); ?>" data-width="150">
 			<?php endif; ?>
 
 		</a>
