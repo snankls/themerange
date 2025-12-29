@@ -15,7 +15,7 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
     }
 	
 	public function get_title(){
-        return esc_html__( 'TR About_Us', 'themerange' );
+        return esc_html__( 'TR About Us', 'themerange' );
     }
 	
 	public function get_icon(){
