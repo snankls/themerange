@@ -172,8 +172,8 @@ function themerange_register_scripts(){
 add_action('wp_enqueue_scripts', 'themerange_register_scripts', 1000);
 
 // Google Fonts
-function themerange_enqueue_google_fonts() {
-
+function themerange_enqueue_google_fonts()
+{
 	wp_enqueue_style(
 		'themerange-font-funnel-display',
 		'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap',
