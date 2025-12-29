@@ -7,7 +7,7 @@ $btn_link = $tr_theme_options['tr_header_button_link']; ?>
 <header>
 
   <!-- tp-header-area-start -->
-  <div id="header-sticky" class="tp-header-area pre-header sticky-white-bg tp-header-blur header-transparent tp-header-lg-spacing">
+  <div id="header-sticky" class="tp-header-area pre-header tp-header-wd-wrap sticky-white-bg tp-header-blur header-transparent tp-header-lg-spacing">
       <div class="container-fluid container-1800">
         <div class="row align-items-center">
             <div class="col-xl-3 col-6">
