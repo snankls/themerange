@@ -60,7 +60,7 @@ class TR_Elementor_Addons {
 		
 		// Shortcodes
 		$general_elements = array(
-			//'slider',
+			'slider',
 			'portfolio',
 			'partners',
 			//'services',
