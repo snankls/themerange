@@ -1,79 +1,3 @@
-/***************************************************
-==================== JS INDEX ======================
-****************************************************
-01. PreLoader Js
-02. Nice Select Js
-03. mobile menu Js
-04. Sticky Header Js
-05. Sidebar Js
-06. Search Js
-07. Common Js
-08. Smooth Scroll Js
-10. Masonary Js
-11. magnificPopup img view
-12. Counter 
-13. button hover animation
-14. webgl images hover animation
-15. portfolio animation start
-16. hover reveal start
-17. hover image-wrapper
-18. portfolio panel
-19. section-triger-slicer
-20. Button Move Animation
-21. tp-fixed-title-wrap
-22. Counter Animation
-23. Portfolio Animation
-24. backToTop
-25. tp-service-pp-panel
-26. Text Invert With Scroll 
-27. tp-btn-trigger
-28. zoom in
-29. scroll-scale-up-img
-30. tp-custom-accordion
-31. service__item-8
-32. portfolio-item-hover
-34. Split text into characters using SplitType
-35. scrool-rotate-img
-36. scroll with moving text
-37. scale animation
-38. has_fade_anim
-39. tp-skill-pb-panel
-40. tp-text-perspective
-41. fade-class-active
-42. has-scale-image
-43. Function Showcase Snap Slider
-44. text-scale-anim
-45. tp-hero-md-col-custom
-46. tp-funfact-panel
-47. text bounce animation
-48. rotate-text-anim
-49. atropos-component-active
-50. tp-text-revel-anim
-51. Text Effect Animation
-52. tp-video-img-wrap
-53. tp-awards-vp-move-thumbs-wrapper
-54. tp-service-vp-item
-55. tp-vimeo-video-init
-56. tp-vimeo-video-perspective
-57. tp-portfolio-revealing-slide
-58. perspective-slider animation
-59. tp-port-slider-title
-60. tp-porfolio-10-title-wrap
-61. portfolio item pin js
-62. Password Toggle Js
-63. E-commerce plus minus js  
-64. brand img animation
-65. tp-map-pin
-66. price toggle animation
-67. button effect
-68. hover reveal start
-69. watter effact here
-70. ar-service-item
-71. ar-scroll-image
-72. cnt-portfolio-ptb
-73. tp-gsap-bg
-****************************************************/
-
 (function ($) {
 	"use strict";
 
@@ -322,16 +246,20 @@
 
 	////////////////////////////////////////////////////
 	// 11. magnificPopup img view
-	$('.popup-image').magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		}
-	});
+	if($('.popup-image').length) {
+		$('.popup-image').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+	}
 
-	$(".popup-video").magnificPopup({
-		type: "iframe",
-	});
+	if($('.popup-video').length) {
+		$(".popup-video").magnificPopup({
+			type: "iframe",
+		});
+	}
 
 	////////////////////////////////////////////////////
 	// 12. Counter Js
@@ -2430,4 +2358,3 @@
 
 
 })(jQuery);
-

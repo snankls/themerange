@@ -1,5 +1,5 @@
-(function () {
-  "use strict";
+(function ($) {
+	"use strict";
 
   document.addEventListener("DOMContentLoaded", function () {
     const $progressPath = $(".scrollToTop path");
@@ -75,4 +75,5 @@
       return false;
     });
   });
-})();
+
+})(jQuery);
