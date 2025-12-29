@@ -250,162 +250,73 @@ class TR_Elementor_Widget_Services extends TR_Elementor_Widget_Base{
         <!-- Service Section - Start
 		================================================== -->
 		<section class="service_section section_space xb-hidden pb-0">
-		<div class="container">
-			<div class="heading_block text-center">
-			<div class="heading_focus_text">
-				Our 
-				<span class="badge bg-secondary text-white">Services</span>
-			</div>
-			<h2 class="heading_text mb-0">
-				Software & Web Development Solutions
-			</h2>
-			</div>
-
-			<div class="row">
-
-			<!-- WordPress Development -->
-			<div class="col-lg-6">
-				<div class="service_block">
-				<div class="service_image">
-					<img src="assets/images/services/service_image_1.webp" alt="WordPress Development">
-				</div>
-				<div class="service_content">
-					<h3 class="service_title">
-					<a href="service_details.html">
-						WordPress Development
-					</a>
-					</h3>
-					<div class="links_wrapper">
-					<ul class="category_btns_group unordered_list">
-						<li><a href="#!">Custom Themes</a></li>
-						<li><a href="#!">Plugins</a></li>
-						<li><a href="#!">Speed & SEO</a></li>
-					</ul>
-					<a class="icon_block" href="service_details.html">
-						<i class="fa-regular fa-arrow-up-right"></i>
-					</a>
+			<div class="container">
+				<div class="heading_block text-center">
+					<div class="heading_focus_text">
+						Our 
+						<span class="badge bg-secondary text-white">Services</span>
 					</div>
+					<h2 class="heading_text mb-0">
+						Software & Web Development Solutions
+					</h2>
 				</div>
-				</div>
-			</div>
 
-			<!-- PHP Development -->
-			<div class="col-lg-6">
-				<div class="service_block">
-				<div class="service_image">
-					<img src="assets/images/services/service_image_2.webp" alt="PHP Development">
-				</div>
-				<div class="service_content">
-					<h3 class="service_title">
-					<a href="service_details.html">
-						PHP & Backend Development
-					</a>
-					</h3>
-					<div class="links_wrapper">
-					<ul class="category_btns_group unordered_list">
-						<li><a href="#!">Laravel</a></li>
-						<li><a href="#!">APIs</a></li>
-						<li><a href="#!">Databases</a></li>
-					</ul>
-					<a class="icon_block" href="service_details.html">
-						<i class="fa-regular fa-arrow-up-right"></i>
-					</a>
+				<div class="row">
+
+					<?php while( $testimonials->have_posts() ){
+						$testimonials->the_post();
+						
+						if( $excerpt_words != -1 ){		
+							if( function_exists('avtar_the_excerpt_max_words') ){
+								$content = avtar_the_excerpt_max_words($excerpt_words, $post, true, '', false);
+							}
+							else{
+								$content = wp_trim_words( $post->post_content, $excerpt_words );
+							}
+						} 
+						
+						$designation = get_post_meta($post->ID, 'tr_designation', true);
+						$rating = get_post_meta($post->ID, 'tr_rating', true);
+					?>
+					<!-- WordPress Development -->
+					<div class="col-lg-6">
+						<div class="service_block">
+							<div class="service_image">
+								<img src="assets/images/services/service_image_1.webp" alt="WordPress Development">
+							</div>
+							<div class="service_content">
+								<h3 class="service_title">
+								<a href="service_details.html">
+									WordPress Development
+								</a>
+								</h3>
+								<div class="links_wrapper">
+								<ul class="category_btns_group unordered_list">
+									<li><a href="#!">Custom Themes</a></li>
+									<li><a href="#!">Plugins</a></li>
+									<li><a href="#!">Speed & SEO</a></li>
+								</ul>
+								<a class="icon_block" href="service_details.html">
+									<i class="fa-regular fa-arrow-up-right"></i>
+								</a>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				</div>
-			</div>
+					<?php }
+					wp_reset_postdata(); ?>
 
-			<!-- MERN Stack -->
-			<div class="col-lg-4">
-				<div class="service_block">
-				<div class="service_image">
-					<img src="assets/images/services/service_image_3.webp" alt="MERN Stack Development">
 				</div>
-				<div class="service_content">
-					<h3 class="service_title">
-					<a href="service_details.html">
-						MERN Stack Development
-					</a>
-					</h3>
-					<div class="links_wrapper">
-					<ul class="category_btns_group unordered_list">
-						<li><a href="#!">MongoDB</a></li>
-						<li><a href="#!">Express</a></li>
-						<li><a href="#!">React</a></li>
-						<li><a href="#!">Node.js</a></li>
-					</ul>
-					<a class="icon_block" href="service_details.html">
-						<i class="fa-regular fa-arrow-up-right"></i>
-					</a>
-					</div>
-				</div>
-				</div>
-			</div>
 
-			<!-- MEAN Stack -->
-			<div class="col-lg-4">
-				<div class="service_block">
-				<div class="service_image">
-					<img src="assets/images/services/service_image_4.webp" alt="MEAN Stack Development">
-				</div>
-				<div class="service_content">
-					<h3 class="service_title">
-					<a href="service_details.html">
-						MEAN Stack Development
+				<div class="btns_group pb-0">
+					<a class="btn btn-outline-light" href="service.html">
+						<span class="btn_label" data-text="View All Services">View All Services</span>
+						<span class="btn_icon">
+						<i class="fa-solid fa-arrow-up-right"></i>
+						</span>
 					</a>
-					</h3>
-					<div class="links_wrapper">
-					<ul class="category_btns_group unordered_list">
-						<li><a href="#!">MongoDB</a></li>
-						<li><a href="#!">Express</a></li>
-						<li><a href="#!">Angular</a></li>
-						<li><a href="#!">Node.js</a></li>
-					</ul>
-					<a class="icon_block" href="service_details.html">
-						<i class="fa-regular fa-arrow-up-right"></i>
-					</a>
-					</div>
-				</div>
 				</div>
 			</div>
-
-			<!-- UI/UX & Mobile -->
-			<div class="col-lg-4">
-				<div class="service_block">
-				<div class="service_image">
-					<img src="assets/images/services/service_image_5.webp" alt="UI UX & Mobile App Development">
-				</div>
-				<div class="service_content">
-					<h3 class="service_title">
-					<a href="service_details.html">
-						UI/UX & Mobile App Development
-					</a>
-					</h3>
-					<div class="links_wrapper">
-					<ul class="category_btns_group unordered_list">
-						<li><a href="#!">UI/UX Design</a></li>
-						<li><a href="#!">React Native</a></li>
-						<li><a href="#!">User Research</a></li>
-					</ul>
-					<a class="icon_block" href="service_details.html">
-						<i class="fa-regular fa-arrow-up-right"></i>
-					</a>
-					</div>
-				</div>
-				</div>
-			</div>
-
-			</div>
-
-			<div class="btns_group pb-0">
-			<a class="btn btn-outline-light" href="service.html">
-				<span class="btn_label" data-text="View All Services">View All Services</span>
-				<span class="btn_icon">
-				<i class="fa-solid fa-arrow-up-right"></i>
-				</span>
-			</a>
-			</div>
-		</div>
 		</section>
 		<!-- Service Section - End
 		================================================== -->

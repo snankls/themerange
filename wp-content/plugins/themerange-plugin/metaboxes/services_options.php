@@ -1,7 +1,7 @@
 <?php 
 $options = array();
 //Content
-$options[] = array(
+/*$options[] = array(
 	'id'		=> 'date_time',
 	'label'		=> esc_html__('Date & Time', 'themerange'),
 	'desc'		=> '',
@@ -9,7 +9,7 @@ $options[] = array(
 );
 
 //Social Icons
-/*$options[] = array(
+$options[] = array(
 	'label' => esc_html__('Social Icons', 'themerange'),
 	'id' => 'services-social-icons',
 	'type' => 'heading',
