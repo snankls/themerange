@@ -90,7 +90,7 @@ $social_icons = array(
 	'fa-youtube-square'			=> 'YouTube Square',
 );
 
-$logo_url			= get_template_directory_uri() . '/assets/images/logo.svg';
+$logo_url			= get_template_directory_uri() . '/assets/images/logo.png';
 $logo_light_url		= get_template_directory_uri() . '/assets/images/logo-3.png';
 $favicon_url		= get_template_directory_uri() . '/assets/images/favicon.png';
 $header_sidebar		= get_template_directory_uri() . '/assets/images/resource/about-1.jpg';
