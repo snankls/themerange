@@ -21,8 +21,6 @@
 	$theme_options = themerange_get_theme_options();
 	$page_options = themerange_get_page_options();
 ?>
-
-<div class="page-wrapper <?php echo esc_attr(themerange_get_page_options('tr_page_theme')); ?>">
 	
     <?php if($theme_options['tr_enable_pointer']) : ?>
     <!-- loading-area-start -->
@@ -65,5 +63,6 @@
     
 	<?php do_action('themerange_before_main_content'); ?>
 
-	<!-- Main Body - Start -->
-    <main class="page_content">
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        <main>
