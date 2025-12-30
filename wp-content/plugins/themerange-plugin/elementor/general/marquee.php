@@ -57,7 +57,7 @@ class TR_Elementor_Widget_Marquee extends TR_Elementor_Widget_Base{
 				'label'       => __( 'Marquee', 'themerange' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
-				'title_field' => '{{{ highlighted_title }}}',
+				'title_field' => '{{{ prefix_title }}}',
 			]
 		);
 		$this->end_controls_section();
