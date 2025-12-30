@@ -42,7 +42,7 @@ $btn_link = $tr_theme_options['tr_header_button_link']; ?>
             </div>
             <div class="col-xl-3 col-6">
               <div class="tp-header-right d-flex align-items-center justify-content-end">
-                <?php if($tr_theme_options['tr_header_enable_search']) : ?>
+                <?php if($tr_theme_options['tr_enable_search']) : ?>
                 <div class="tp-header-search">
                   <button class="tp-header-search-btn tp-search-click">
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
