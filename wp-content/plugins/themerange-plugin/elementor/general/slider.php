@@ -65,13 +65,13 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
             <div class="row">
                 <div class="col-xl-2 col-lg-3">
                   <div class="tp-hero-wd-text mb-30">
-                      <span class="d-inline-block mb-10">
-                        <svg width="110" height="12" viewBox="0 0 110 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect y="10" width="110" height="2" rx="1" fill="#030303" />
-                            <rect width="50" height="2" rx="1" fill="#999999" />
-                        </svg>
-                      </span>
-                      <p class="fw-400 fs-20"><span class="tp-text-common-black fw-500">We’re Tech Solutions,</span> building scalable digital products through strategy, design & engineering.</p>
+                    <span class="d-inline-block mb-10">
+                      <svg width="110" height="12" viewBox="0 0 110 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="10" width="110" height="2" rx="1" fill="#030303" />
+                        <rect width="50" height="2" rx="1" fill="#999999" />
+                      </svg>
+                    </span>
+                    <p class="fw-400 fs-20"><span class="tp-text-common-black fw-500">We’re Tech Solutions,</span> building scalable digital products through strategy & design.</p>
                   </div>
                 </div>
                 <div class="col-xxl-6 col-xl-7 col-lg-9">
@@ -89,7 +89,7 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                               <path d="M29.88 15.8569L39.552 9.01379C39.6896 8.90372 39.8026 8.75338 39.8808 8.57638C39.959 8.39937 40 8.20127 40 8C40 7.79873 39.959 7.60063 39.8808 7.42363C39.8026 7.24662 39.6896 7.09628 39.552 6.98621L29.88 0.143139C29.6915 0.0179054 29.4743 -0.0269382 29.2628 0.0156776C29.0512 0.0582934 28.8572 0.185945 28.7114 0.378507C28.5656 0.571069 28.4763 0.817589 28.4575 1.0792C28.4387 1.34081 28.4916 1.60264 28.6077 1.8234L31.4128 6.82663L0.958012 6.82663C0.70393 6.82663 0.460255 6.95026 0.280594 7.1703C0.100933 7.39035 0 7.6888 0 8C0 8.3112 0.100933 8.60965 0.280594 8.8297C0.460255 9.04975 0.70393 9.17337 0.958012 9.17337L31.4128 9.17337L28.6077 14.1766C28.4916 14.3974 28.4387 14.6592 28.4575 14.9208C28.4763 15.1824 28.5656 15.4289 28.7114 15.6215C28.8572 15.8141 29.0512 15.9417 29.2628 15.9843C29.4743 16.0269 29.6915 15.9821 29.88 15.8569Z" fill="#030303" />
                             </svg>
                           </span>
-                          Product<br>
+                          Tech<br>
                         </span>
                         Solutions.</h2>
                       <div class="tp-hero-wd-customer p-relative">
@@ -169,7 +169,7 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                       <div class="d-flex align-items-end justify-content-between">
                         <div>
                             <span class="tp-text-common-white fw-400 fs-18 mb-10 d-inline-block">We Recently Launched</span>
-                            <h5 class="fw-700 fs-25 tp-text-common-white"><a href="service-details-2-light.html" class="hover-text-white">Point of Sale Platform</a></h5>
+                            <h5 class="fw-700 fs-25 tp-text-common-white"><a href="service-details-2-light.html" class="hover-text-white">Revolutionizing Retail with Our POS Solution</a></h5>
                         </div>
                         <span class="tp-arrow-angle mb-10">
                           <svg class="tp-arrow-svg-top-right" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
