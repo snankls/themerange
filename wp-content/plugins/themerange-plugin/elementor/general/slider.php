@@ -210,6 +210,56 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
             </div>
           </div>
       </div>
+      <div class="tp-hero-wd-bottom p-relative scale-up-img z-index-1 fix">
+          <div class="box tp-hero-wd-bottom-bg">
+            <img data-speed=".8" class="img-cover scale-up" src="assets/img/hero/hero-3/bg.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="row">
+                <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+                  <div class="tp-hero-wd-bottom-info tp-bg-common-black">
+                      <h5 class="tp-hero-wd-bottom-title tp-ff-teko fw-500 fs-25 tp-text-common-white lh-30 mb-140">Making a Brand on the <span class="tp-text-theme-primary">Digital Marketplace!</span></h5>
+                      <div>
+                        <span class="tp-ff-teko fs-25 tp-text-grey-2">See Our Work</span>
+                        <span class="tp-hero-wd-bottom-border">
+                            <svg height="6" viewBox="0 0 252 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM247 3.5L252 5.88675V0.113249L247 2.5V3.5ZM4.5 3.5H247.5V2.5H4.5V3.5Z" fill="white" fill-opacity="0.15" />
+                            </svg>
+                        </span>
+                        <div class="tp-footer-social">
+                            <ul>
+                              <li>
+                                  <a href="#">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                    Dribbble
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                    <i class="fa-brands fa-behance"></i>
+                                    Behance
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                    <i class="fa-brands fa-pinterest"></i>
+                                    Pinterest
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                    LinkedIn
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
     </div>
     <!-- hero area end -->
     

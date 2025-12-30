@@ -37,9 +37,29 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
     );
 
     $this->add_control(
-      'image',
+      'image1',
       array(
-          'label' => esc_html__( 'Image', 'themerange' ),
+          'label' => esc_html__( 'Image 1', 'themerange' ),
+          'type' => Controls_Manager::MEDIA,
+          'default' => array( 'id' => '', 'url' => '' ),
+          'description' => '',
+      )
+    );
+
+    $this->add_control(
+      'image2',
+      array(
+          'label' => esc_html__( 'Image 2', 'themerange' ),
+          'type' => Controls_Manager::MEDIA,
+          'default' => array( 'id' => '', 'url' => '' ),
+          'description' => '',
+      )
+    );
+
+    $this->add_control(
+      'image3',
+      array(
+          'label' => esc_html__( 'Image 3', 'themerange' ),
           'type' => Controls_Manager::MEDIA,
           'default' => array( 'id' => '', 'url' => '' ),
           'description' => '',
@@ -47,79 +67,6 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
     );
 		
 		$this->end_controls_section();
-		
-		//Style Tab
-		$this->register_style_background_controls();
-	}
-	
-	/***********************************************
-						Style Tab
-	***********************************************/
-	protected function register_style_background_controls() {
-		//SubTitle
-		$this->start_controls_section(
-			'subtitle_tab',
-			array(
-				'label' => esc_html__('Sub Title', 'themerange'),
-				'tab' => Controls_Manager::TAB_STYLE,
-			)
-		);
-		//Title
-		$this->add_group_control(
-            Group_Control_Typography::get_type(),
-            array(
-                'name' => 'subtitle_typography',
-                'label' => __('Sub Title Typography', 'themerange'),
-                'selector' => '{{WRAPPER}} .tr-sub-heading',
-            )
-        );
-		$this->add_control(
-			'subtitle_color',
-			array(
-				'label' => esc_html__( 'Sub Title Color', 'themerange' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .tr-sub-heading' => 'color: {{VALUE}}',
-				],
-			)
-		);
-		$this->end_controls_section();
-		
-		//Title
-		$this->start_controls_section(
-			'title_tab',
-			array(
-				'label' => esc_html__('Title', 'themerange'),
-				'tab' => Controls_Manager::TAB_STYLE,
-			)
-		);
-		//Title
-		$this->add_group_control(
-            Group_Control_Typography::get_type(),
-            array(
-                'name' => 'title_typography',
-                'label' => __('Title Typography', 'themerange'),
-                'selector' => '{{WRAPPER}} .tr-heading',
-            )
-        );
-		$this->add_control(
-			'title_color',
-			array(
-				'label' => esc_html__( 'Title Color', 'themerange' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .tr-heading' => 'color: {{VALUE}}',
-					'{{WRAPPER}} .tr-heading span' => '-webkit-text-stroke-color: {{VALUE}}',
-				],
-			)
-		);
-		$this->end_controls_section();
-		
-		//Text
-		$this->add_text_style_controls();
-		
-		//Button
-		$this->add_button_style_controls();
 	}
 	
 	protected function render(){
@@ -179,7 +126,7 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="tp-about-wd-thumb-wrap mb-30 fix">
-                    <img class="myimg w-100" data-speed=".9" src="assets/img/about/wd/thumb.jpg" alt="" >
+                    <img class="myimg w-100" data-speed=".9" src="<?php echo wp_get_attachment_url($settings['image1']['id']); ?>" alt="About Us 1">
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
@@ -206,10 +153,10 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
               <div class="col-lg-4">
                 <div class="tp-about-wd-thumb2 p-relative mb-30">
                     <div class="tp-about-wd-thumb3 z-index-1" data-speed=".9">
-                      <img class="myimg" src="assets/img/about/wd/thumb-2.jpg" alt="" >
+                      <img class="myimg" src="<?php echo wp_get_attachment_url($settings['image2']['id']); ?>" alt="About Us 2">
                     </div>
                     <div class="tp-about-wd-thumb4">
-                      <img class="myimg" src="assets/img/about/wd/thumb-3.jpg" alt="" >
+                      <img class="myimg" src="<?php echo wp_get_attachment_url($settings['image3']['id']); ?>" alt="About Us 3">
                   </div>
                 </div>
               </div>
