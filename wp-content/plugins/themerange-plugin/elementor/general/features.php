@@ -96,7 +96,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                           <path d="M44.9609 30.8008C46.9336 29.0527 47.9883 27.0703 47.9883 25C47.9883 22.8906 46.875 20.8398 44.7754 19.043C46.8652 17.2559 47.9883 15.2148 47.9883 13.0762C47.9883 9.92187 45.5566 6.96289 41.1328 4.75586C36.7578 2.56836 30.9375 1.35742 24.7559 1.35742C18.5742 1.35742 12.7441 2.56836 8.36914 4.75586C3.94531 6.96289 1.51367 9.92187 1.51367 13.0762C1.51367 15.2148 2.62695 17.2559 4.72656 19.043C2.62695 20.8398 1.51367 22.8906 1.51367 25C1.51367 27.1387 2.62695 29.1797 4.72656 30.9668C2.62695 32.7637 1.51367 34.8145 1.51367 36.9238C1.51367 40.0781 3.94531 43.0371 8.36914 45.2441C12.7441 47.4316 18.5645 48.6426 24.7461 48.6426C30.9277 48.6426 36.748 47.4414 41.123 45.2441C41.8066 44.9023 42.4512 44.541 43.0371 44.1602C46.3281 42.1582 48.291 39.5898 48.291 36.7969C48.291 34.5996 47.0703 32.5488 44.9609 30.8008ZM1.9043 13.0762C1.9043 6.83594 12.1484 1.74805 24.7461 1.74805C37.3438 1.74805 47.5879 6.82617 47.5879 13.0762C47.5879 19.3164 37.3438 24.4043 24.7461 24.4043C12.1484 24.4043 1.9043 19.3164 1.9043 13.0762ZM24.7461 36.3281C12.1484 36.3281 1.9043 31.2402 1.9043 25C1.9043 22.9883 2.98828 21.0254 5.0293 19.2969C5.9668 20.0488 7.08008 20.7617 8.36914 21.3965C12.7441 23.584 18.5645 24.7949 24.7461 24.7949C30.9277 24.7949 36.748 23.5938 41.123 21.3965C42.4121 20.752 43.5254 20.0488 44.4629 19.2969C46.5039 21.0254 47.5879 22.998 47.5879 25C47.5879 31.2402 37.3438 36.3281 24.7461 36.3281Z" fill="#C4EE18" />
                       </svg>
                     </span>
-                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Professional <span class="tp-text-common-white">Expertise</span></h3>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">WordPress <span class="tp-text-common-white">Development</span></h3>
                     <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
                 </div>
               </div>
@@ -119,7 +119,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                           </defs>
                       </svg>
                     </span>
-                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Cutting-Edge <span class="tp-text-common-white">Technology</span></h3>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">PHP & <span class="tp-text-common-white">Backend Development</span></h3>
                     <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
                 </div>
               </div>
@@ -137,7 +137,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                           </defs>
                       </svg>
                     </span>
-                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Scalable  <span class="tp-text-common-white">Solutions</span></h3>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">MERN  <span class="tp-text-common-white">Stack Development</span></h3>
                     <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
                 </div>
               </div>
@@ -153,7 +153,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                           <path d="M44.9609 30.8008C46.9336 29.0527 47.9883 27.0703 47.9883 25C47.9883 22.8906 46.875 20.8398 44.7754 19.043C46.8652 17.2559 47.9883 15.2148 47.9883 13.0762C47.9883 9.92187 45.5566 6.96289 41.1328 4.75586C36.7578 2.56836 30.9375 1.35742 24.7559 1.35742C18.5742 1.35742 12.7441 2.56836 8.36914 4.75586C3.94531 6.96289 1.51367 9.92187 1.51367 13.0762C1.51367 15.2148 2.62695 17.2559 4.72656 19.043C2.62695 20.8398 1.51367 22.8906 1.51367 25C1.51367 27.1387 2.62695 29.1797 4.72656 30.9668C2.62695 32.7637 1.51367 34.8145 1.51367 36.9238C1.51367 40.0781 3.94531 43.0371 8.36914 45.2441C12.7441 47.4316 18.5645 48.6426 24.7461 48.6426C30.9277 48.6426 36.748 47.4414 41.123 45.2441C41.8066 44.9023 42.4512 44.541 43.0371 44.1602C46.3281 42.1582 48.291 39.5898 48.291 36.7969C48.291 34.5996 47.0703 32.5488 44.9609 30.8008ZM1.9043 13.0762C1.9043 6.83594 12.1484 1.74805 24.7461 1.74805C37.3438 1.74805 47.5879 6.82617 47.5879 13.0762C47.5879 19.3164 37.3438 24.4043 24.7461 24.4043C12.1484 24.4043 1.9043 19.3164 1.9043 13.0762ZM24.7461 36.3281C12.1484 36.3281 1.9043 31.2402 1.9043 25C1.9043 22.9883 2.98828 21.0254 5.0293 19.2969C5.9668 20.0488 7.08008 20.7617 8.36914 21.3965C12.7441 23.584 18.5645 24.7949 24.7461 24.7949C30.9277 24.7949 36.748 23.5938 41.123 21.3965C42.4121 20.752 43.5254 20.0488 44.4629 19.2969C46.5039 21.0254 47.5879 22.998 47.5879 25C47.5879 31.2402 37.3438 36.3281 24.7461 36.3281Z" fill="#C4EE18" />
                       </svg>
                     </span>
-                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Professional <span class="tp-text-common-white">Expertise</span></h3>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">MEAN <span class="tp-text-common-white">Stack Development</span></h3>
                     <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
                 </div>
               </div>
@@ -176,7 +176,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                           </defs>
                       </svg>
                     </span>
-                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Cutting-Edge <span class="tp-text-common-white">Technology</span></h3>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">UI/UX <span class="tp-text-common-white">Development</span></h3>
                     <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
                 </div>
               </div>
@@ -193,8 +193,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                             </clipPath>
                           </defs>
                       </svg>
-                    </span>
-                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Scalable  <span class="tp-text-common-white">Solutions</span></h3>
+                    </span>                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Android & IOS  <span class="tp-text-common-white">App Development</span></h3>
                     <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
                 </div>
               </div>
