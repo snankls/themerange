@@ -125,7 +125,7 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                 </div>
                 <div class="col-xxl-4 col-xl-3 col-lg-5">
                   <div class="tp-hero-wd-right mb-30">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/slider-shape.png" class="mb-150" alt="Slider Shape">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-1.png" class="mb-150" alt="Slider Shape">
                     <div>
                       <h4 class="tp-ff-teko fw-500 fs-35 mb-5">Awwwards</h4>
                       <p class="fw-400 fs-20">Recognized for digital excellence since 2012.</p>
@@ -144,12 +144,12 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                 <div class="tp-hero-bottom-height fix scale-up-img">
                   <img src="<?php echo esc_url(wp_get_attachment_url($settings['image']['id'])); ?>" alt="Slider" data-speed="0.8" class="img-cover w-100 h-100 scale-up" />
                 </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape.png" class="tp-hero-bottom-shape" alt="Shape">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-2.png" class="tp-hero-bottom-shape" alt="Shape">
               </div>
             </div>
             <div class="col-lg-3">
                 <div class="tp-hero-bottom-right h-100 tp-bg-common-black tp-left-right p-relative z-index-1 pb-50">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/grid-shape.png" class="tp-hero-customer-shape" alt="Shape">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-3.png" class="tp-hero-customer-shape" alt="Shape">
                   <div class="tp-hero-bottom-box">
                       <span class="tp-hero-bottom-icon d-inline-block mb-55">
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

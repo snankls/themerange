@@ -92,7 +92,7 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
               <div class="col-xl-8 col-lg-10">
                 <div class="tp-about-wd-title-wrap mb-50 tp_fade_anim" data-delay=".3">
                     <h2 class="tp-about-wd-title tp-ff-teko fw-600 fs-70 fs-sm-60 fs-xs-43 text-uppercase">We’re a Global Software &<br>
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-2.png" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-4.png" alt="Shape">
                       Technology Company.</h2>
                 </div>
                 <div class="tp-about-wd-para-wrap mb-75">
