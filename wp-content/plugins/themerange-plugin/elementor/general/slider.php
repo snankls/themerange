@@ -125,11 +125,11 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                 </div>
                 <div class="col-xxl-4 col-xl-3 col-lg-5">
                   <div class="tp-hero-wd-right mb-30">
-                      <img class="mb-150" src="assets/img/hero/hero-3/shape.png" alt="">
-                      <div>
-                        <h4 class="tp-ff-teko fw-500 fs-35 mb-5">Awwwards</h4>
-                        <p class="fw-400 fs-20">Top Contributor since 2019 to current.</p>
-                      </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/slider-shape.png" class="mb-150" alt="Slider Shape">
+                    <div>
+                      <h4 class="tp-ff-teko fw-500 fs-35 mb-5">Awwwards</h4>
+                      <p class="fw-400 fs-20">Top Contributor since 2019 to current.</p>
+                    </div>
                   </div>
                 </div>
             </div>
@@ -138,103 +138,53 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
 
       <div class="tp-hero-bottom pt-40">
         <div class="container-fluid p-0">
-            <div class="row">
-              <div class="col-lg-9">
-                <div class="tp-hero-bottom-thumb p-relative h-100 mr-40">
-                  <div class="tp-hero-bottom-height fix scale-up-img">
-                    <img src="<?php echo esc_url(wp_get_attachment_url($settings['image']['id'])); ?>" alt="Slider" data-speed="0.8" class="img-cover w-100 h-100 scale-up" />
-                  </div>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape.png" class="tp-hero-bottom-shape" alt="Shape">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="tp-hero-bottom-thumb p-relative h-100 mr-40">
+                <div class="tp-hero-bottom-height fix scale-up-img">
+                  <img src="<?php echo esc_url(wp_get_attachment_url($settings['image']['id'])); ?>" alt="Slider" data-speed="0.8" class="img-cover w-100 h-100 scale-up" />
                 </div>
-              </div>
-              <div class="col-lg-3">
-                  <div class="tp-hero-bottom-right h-100 tp-bg-common-black tp-left-right p-relative z-index-1 pb-50">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/grid-shape.png" class="tp-hero-customer-shape" alt="Shape">
-                    <div class="tp-hero-bottom-box">
-                        <span class="tp-hero-bottom-icon d-inline-block mb-55">
-                          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <mask id="mask0_68_30503" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
-                                <rect width="100" height="100" fill="#D9D9D9" />
-                              </mask>
-                              <g mask="url(#mask0_68_30503)">
-                                <path d="M72.72 0H50.08H49.84H22.8H0C0 26.4423 20.48 48.0769 46.4 50C20.48 51.9231 0 73.5577 0 100H22.8H49.92H50.16H72.72H100V72.6763V50.1603V49.8397V27.3237V0H72.72ZM50.08 95.3525V72.7564V50.2404V49.9199V27.3237V4.72756C52.32 29.0064 71.84 48.2372 96.24 50C71.92 51.8429 52.4 71.0737 50.08 95.3525Z" fill="#C4EE18" />
-                              </g>
-                          </svg>
-                        </span>
-                        <span class="tp-hero-bottom-border mb-15">
-                          <svg height="6" viewBox="0 0 380 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM375 3.5L380 5.88675V0.113249L375 2.5V3.5ZM4.5 3.5H375.5V2.5H4.5V3.5Z" fill="#EEEEEE" />
-                          </svg>
-                        </span>
-                        <div class="d-flex align-items-end justify-content-between">
-                          <div>
-                              <span class="tp-text-common-white fw-400 fs-18 mb-10 d-inline-block">We Recently Launched</span>
-                              <h5 class="fw-700 fs-25 tp-text-common-white"><a href="service-details-2-light.html" class="hover-text-white">Branding Design Particle</a></h5>
-                          </div>
-                          <span class="tp-arrow-angle mb-10">
-                              <svg class="tp-arrow-svg-top-right" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M0.943836 13.5C0.685616 13.5 0.45411 13.4021 0.276027 13.224C0.0979452 13.0459 0 12.8055 0 12.5562C0 12.3068 0.0979452 12.0664 0.276027 11.8884L9.76781 2.38767H2.02123C1.49589 2.38767 1.0774 1.96027 1.0774 1.44384C1.0774 0.927397 1.50479 0.5 2.03014 0.5H12.0562C12.1274 0.5 12.1986 0.508904 12.2788 0.526712L12.4034 0.562329L12.537 0.633562C12.5637 0.65137 12.5993 0.678082 12.626 0.69589C12.6973 0.749315 12.7507 0.80274 12.7952 0.856164C12.8219 0.891781 12.8575 0.927397 12.8842 0.989726L12.9555 1.1411L12.9822 1.22123C13 1.29247 13.0089 1.3726 13.0089 1.44384V11.4699C13.0089 11.9952 12.5815 12.4137 12.0651 12.4137C11.5486 12.4137 11.1212 11.9863 11.1212 11.4699V3.72329L1.62055 13.224C1.44247 13.4021 1.20205 13.5 0.943836 13.5Z" fill="white" />
-                                  <path d="M0.943836 13.5C0.685616 13.5 0.45411 13.4021 0.276027 13.224C0.0979452 13.0459 0 12.8055 0 12.5562C0 12.3068 0.0979452 12.0664 0.276027 11.8884L9.76781 2.38767H2.02123C1.49589 2.38767 1.0774 1.96027 1.0774 1.44384C1.0774 0.927397 1.50479 0.5 2.03014 0.5H12.0562C12.1274 0.5 12.1986 0.508904 12.2788 0.526712L12.4034 0.562329L12.537 0.633562C12.5637 0.65137 12.5993 0.678082 12.626 0.69589C12.6973 0.749315 12.7507 0.80274 12.7952 0.856164C12.8219 0.891781 12.8575 0.927397 12.8842 0.989726L12.9555 1.1411L12.9822 1.22123C13 1.29247 13.0089 1.3726 13.0089 1.44384V11.4699C13.0089 11.9952 12.5815 12.4137 12.0651 12.4137C11.5486 12.4137 11.1212 11.9863 11.1212 11.4699V3.72329L1.62055 13.224C1.44247 13.4021 1.20205 13.5 0.943836 13.5Z" fill="white" />
-                              </svg> 
-                          </span>
-                        </div>
-                    </div>
-                    <div class="tp-hero-bottom-line mt-100"></div>
-                  </div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape.png" class="tp-hero-bottom-shape" alt="Shape">
               </div>
             </div>
-        </div>
-      </div>
-      <!-- <div class="tp-hero-wd-bottom p-relative scale-up-img z-index-1 fix">
-        <div class="box tp-hero-wd-bottom-bg">
-          <img src="<?php //echo esc_url(wp_get_attachment_url($settings['image']['id'])); ?>" alt="Slider" data-speed=".8" class="img-cover scale-up" />
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8">
-                <div class="tp-hero-wd-bottom-info tp-bg-common-black">
-                    <h5 class="tp-hero-wd-bottom-title tp-ff-teko fw-500 fs-25 tp-text-common-white lh-30 mb-140">Making a Brand on the <span class="tp-text-theme-primary">Digital Marketplace!</span></h5>
-                    <div>
-                      <span class="tp-ff-teko fs-25 tp-text-grey-2">See Our Work</span>
-                      <span class="tp-hero-wd-bottom-border">
-                          <svg height="6" viewBox="0 0 252 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM247 3.5L252 5.88675V0.113249L247 2.5V3.5ZM4.5 3.5H247.5V2.5H4.5V3.5Z" fill="white" fill-opacity="0.15" />
-                          </svg>
+            <div class="col-lg-3">
+                <div class="tp-hero-bottom-right h-100 tp-bg-common-black tp-left-right p-relative z-index-1 pb-50">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/grid-shape.png" class="tp-hero-customer-shape" alt="Shape">
+                  <div class="tp-hero-bottom-box">
+                      <span class="tp-hero-bottom-icon d-inline-block mb-55">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_68_30503" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+                              <rect width="100" height="100" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_68_30503)">
+                              <path d="M72.72 0H50.08H49.84H22.8H0C0 26.4423 20.48 48.0769 46.4 50C20.48 51.9231 0 73.5577 0 100H22.8H49.92H50.16H72.72H100V72.6763V50.1603V49.8397V27.3237V0H72.72ZM50.08 95.3525V72.7564V50.2404V49.9199V27.3237V4.72756C52.32 29.0064 71.84 48.2372 96.24 50C71.92 51.8429 52.4 71.0737 50.08 95.3525Z" fill="#C4EE18" />
+                            </g>
+                        </svg>
                       </span>
-                      <div class="tp-footer-social">
-                          <ul>
-                            <li>
-                                <a href="#">
-                                  <i class="fa-brands fa-dribbble"></i>
-                                  Dribbble
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                  <i class="fa-brands fa-behance"></i>
-                                  Behance
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                  <i class="fa-brands fa-pinterest"></i>
-                                  Pinterest
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                  <i class="fa-brands fa-dribbble"></i>
-                                  LinkedIn
-                                </a>
-                            </li>
-                          </ul>
+                      <span class="tp-hero-bottom-border mb-15">
+                        <svg height="6" viewBox="0 0 380 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM375 3.5L380 5.88675V0.113249L375 2.5V3.5ZM4.5 3.5H375.5V2.5H4.5V3.5Z" fill="#EEEEEE" />
+                        </svg>
+                      </span>
+                      <div class="d-flex align-items-end justify-content-between">
+                        <div>
+                            <span class="tp-text-common-white fw-400 fs-18 mb-10 d-inline-block">We Recently Launched</span>
+                            <h5 class="fw-700 fs-25 tp-text-common-white"><a href="service-details-2-light.html" class="hover-text-white">Branding Design Particle</a></h5>
+                        </div>
+                        <span class="tp-arrow-angle mb-10">
+                          <svg class="tp-arrow-svg-top-right" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.943836 13.5C0.685616 13.5 0.45411 13.4021 0.276027 13.224C0.0979452 13.0459 0 12.8055 0 12.5562C0 12.3068 0.0979452 12.0664 0.276027 11.8884L9.76781 2.38767H2.02123C1.49589 2.38767 1.0774 1.96027 1.0774 1.44384C1.0774 0.927397 1.50479 0.5 2.03014 0.5H12.0562C12.1274 0.5 12.1986 0.508904 12.2788 0.526712L12.4034 0.562329L12.537 0.633562C12.5637 0.65137 12.5993 0.678082 12.626 0.69589C12.6973 0.749315 12.7507 0.80274 12.7952 0.856164C12.8219 0.891781 12.8575 0.927397 12.8842 0.989726L12.9555 1.1411L12.9822 1.22123C13 1.29247 13.0089 1.3726 13.0089 1.44384V11.4699C13.0089 11.9952 12.5815 12.4137 12.0651 12.4137C11.5486 12.4137 11.1212 11.9863 11.1212 11.4699V3.72329L1.62055 13.224C1.44247 13.4021 1.20205 13.5 0.943836 13.5Z" fill="white" />
+                            <path d="M0.943836 13.5C0.685616 13.5 0.45411 13.4021 0.276027 13.224C0.0979452 13.0459 0 12.8055 0 12.5562C0 12.3068 0.0979452 12.0664 0.276027 11.8884L9.76781 2.38767H2.02123C1.49589 2.38767 1.0774 1.96027 1.0774 1.44384C1.0774 0.927397 1.50479 0.5 2.03014 0.5H12.0562C12.1274 0.5 12.1986 0.508904 12.2788 0.526712L12.4034 0.562329L12.537 0.633562C12.5637 0.65137 12.5993 0.678082 12.626 0.69589C12.6973 0.749315 12.7507 0.80274 12.7952 0.856164C12.8219 0.891781 12.8575 0.927397 12.8842 0.989726L12.9555 1.1411L12.9822 1.22123C13 1.29247 13.0089 1.3726 13.0089 1.44384V11.4699C13.0089 11.9952 12.5815 12.4137 12.0651 12.4137C11.5486 12.4137 11.1212 11.9863 11.1212 11.4699V3.72329L1.62055 13.224C1.44247 13.4021 1.20205 13.5 0.943836 13.5Z" fill="white" />
+                          </svg> 
+                        </span>
                       </div>
-                    </div>
+                  </div>
+                  <div class="tp-hero-bottom-line mt-100"></div>
                 </div>
-              </div>
+            </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
     <!-- hero area end -->
     
