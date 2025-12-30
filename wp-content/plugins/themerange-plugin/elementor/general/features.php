@@ -1,0 +1,174 @@
+<?php
+use Elementor\Controls_Manager;
+use Elementor\Controls_Stack;
+use Elementor\Group_Control_Typography;
+use Elementor\Group_Control_Border;
+use Elementor\Repeater;
+use Elementor\Widget_Base;
+use Elementor\Utils;
+use Elementor\Plugin;
+use Elementor\Modules\DynamicTags\Module as TagsModule;
+
+class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
+	public function get_name(){
+        return 'tr-features';
+    }
+	
+	public function get_title(){
+        return esc_html__( 'TR Features', 'themerange' );
+    }
+	
+	public function get_icon(){
+		return 'tr-custom-icon';
+	}
+	
+	public function get_categories(){
+        return array( 'tr-elements', 'themerange' );
+    }
+	
+	protected function register_controls(){
+		//Features
+		$this->start_controls_section(
+      'features_tab',
+      array(
+      'label' => esc_html__( 'Features', 'themerange' ),
+      'tab' => Controls_Manager::TAB_CONTENT,
+      )
+    );
+
+    $this->add_control(
+      'image1',
+      array(
+          'label' => esc_html__( 'Image 1', 'themerange' ),
+          'type' => Controls_Manager::MEDIA,
+          'default' => array( 'id' => '', 'url' => '' ),
+          'description' => '',
+      )
+    );
+
+    $this->add_control(
+      'image2',
+      array(
+          'label' => esc_html__( 'Image 2', 'themerange' ),
+          'type' => Controls_Manager::MEDIA,
+          'default' => array( 'id' => '', 'url' => '' ),
+          'description' => '',
+      )
+    );
+
+    $this->add_control(
+      'image3',
+      array(
+          'label' => esc_html__( 'Image 3', 'themerange' ),
+          'type' => Controls_Manager::MEDIA,
+          'default' => array( 'id' => '', 'url' => '' ),
+          'description' => '',
+      )
+    );
+		
+		$this->end_controls_section();
+	}
+	
+	protected function render(){
+		$settings = $this->get_settings_for_display();
+		extract( $settings );
+		$allowed_html = tr_allowed_html();
+	?>
+    
+    <!-- tp-skill-area-start -->
+    <div class="tp-skill-area bg-position pt-100 pb-95" data-background="assets/img/skill/bg.jpg">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                <div class="text-center mb-60">
+                    <h2 class="tp-ff-teko tp-text-perspective fw-600 fs-70 fs-sm-60 fs-xs-42 text-uppercase tp-text-common-white lh-1">Proven Experience <br> on Digital Platform.</h2>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="tp-skill-wd-item tpshake-wrap p-relative pb-50 pt-50 tp_fade_anim" data-delay=".4" data-fade-from="left">
+                    <span class="tp-skill-wd-border">
+                      <svg width="6" height="330" viewBox="0 0 6 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.5 5L5.88675 0H0.113249L2.5 5H3.5ZM2.5 325L0.113249 330H5.88675L3.5 325H2.5ZM2.5 4.5V325.5H3.5V4.5H2.5Z" fill="white" fill-opacity="0.1" />
+                      </svg>
+                    </span>
+                    <span class="tp-skill-wd-icon mb-35">
+                      <svg class="tpshake" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M44.9609 30.8008C46.9336 29.0527 47.9883 27.0703 47.9883 25C47.9883 22.8906 46.875 20.8398 44.7754 19.043C46.8652 17.2559 47.9883 15.2148 47.9883 13.0762C47.9883 9.92187 45.5566 6.96289 41.1328 4.75586C36.7578 2.56836 30.9375 1.35742 24.7559 1.35742C18.5742 1.35742 12.7441 2.56836 8.36914 4.75586C3.94531 6.96289 1.51367 9.92187 1.51367 13.0762C1.51367 15.2148 2.62695 17.2559 4.72656 19.043C2.62695 20.8398 1.51367 22.8906 1.51367 25C1.51367 27.1387 2.62695 29.1797 4.72656 30.9668C2.62695 32.7637 1.51367 34.8145 1.51367 36.9238C1.51367 40.0781 3.94531 43.0371 8.36914 45.2441C12.7441 47.4316 18.5645 48.6426 24.7461 48.6426C30.9277 48.6426 36.748 47.4414 41.123 45.2441C41.8066 44.9023 42.4512 44.541 43.0371 44.1602C46.3281 42.1582 48.291 39.5898 48.291 36.7969C48.291 34.5996 47.0703 32.5488 44.9609 30.8008ZM1.9043 13.0762C1.9043 6.83594 12.1484 1.74805 24.7461 1.74805C37.3438 1.74805 47.5879 6.82617 47.5879 13.0762C47.5879 19.3164 37.3438 24.4043 24.7461 24.4043C12.1484 24.4043 1.9043 19.3164 1.9043 13.0762ZM24.7461 36.3281C12.1484 36.3281 1.9043 31.2402 1.9043 25C1.9043 22.9883 2.98828 21.0254 5.0293 19.2969C5.9668 20.0488 7.08008 20.7617 8.36914 21.3965C12.7441 23.584 18.5645 24.7949 24.7461 24.7949C30.9277 24.7949 36.748 23.5938 41.123 21.3965C42.4121 20.752 43.5254 20.0488 44.4629 19.2969C46.5039 21.0254 47.5879 22.998 47.5879 25C47.5879 31.2402 37.3438 36.3281 24.7461 36.3281Z" fill="#C4EE18" />
+                      </svg>
+                    </span>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Professional <span class="tp-text-common-white">Expertise</span></h3>
+                    <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="tp-skill-wd-item tpshake-wrap p-relative pb-50 pt-50 ml-30 tp_fade_anim" data-delay=".4" data-fade-from="bottom">
+                    <span class="tp-skill-wd-border borders-2">
+                      <svg width="6" height="330" viewBox="0 0 6 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.5 5L5.88675 0H0.113249L2.5 5H3.5ZM2.5 325L0.113249 330H5.88675L3.5 325H2.5ZM2.5 4.5V325.5H3.5V4.5H2.5Z" fill="white" fill-opacity="0.1" />
+                      </svg>
+                    </span>
+                    <span class="tp-skill-wd-icon mb-35">
+                      <svg class="tpshake" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_63_29647)">
+                            <path d="M48.5851 1.35043C47.379 1.0824 45.8018 0.700985 44.1833 0.0618517L44.039 0L43.9462 0.123703C40.699 4.42239 37.4003 6.72121 34.2046 8.93756C33.916 9.14373 33.6273 9.3396 33.3387 9.54577C30.1327 11.7106 26.3598 14.4424 22.6487 18.205C19.6385 21.1842 16.5769 24.9159 13.6183 28.5239C13.072 29.194 12.5153 29.864 11.9689 30.5341C8.19599 35.0183 4.80446 38.7913 1.41293 39.5747L1.2583 39.616V42.255L1.28923 42.3065C2.49533 44.461 4.09317 47.265 5.72193 49.873L5.83532 50.0586L6.01057 49.9349C9.29901 47.7185 12.6287 43.3683 15.8553 39.1727C16.1439 38.7913 16.4326 38.4099 16.7315 38.0388C19.9169 33.8225 23.6795 29.0187 27.3803 25.3592C30.3698 22.3387 33.4212 19.9575 36.3694 17.6586C36.9158 17.2257 37.4724 16.803 38.0291 16.3598C41.833 13.2775 45.2657 10.2261 48.7397 4.08221L48.7707 4.03066V1.38135L48.5851 1.35043ZM12.2782 30.8021C12.8246 30.1321 13.3812 29.462 13.9276 28.7919C16.8758 25.1942 19.9272 21.4625 22.927 18.5039C26.6175 14.7619 30.3698 12.0611 33.5655 9.89626C33.8541 9.69009 34.1428 9.49423 34.4417 9.28805C37.6374 7.0717 40.9361 4.77288 44.1833 0.505122C45.6472 1.0824 47.0904 1.4432 48.2243 1.70092C44.8328 7.62837 41.4722 10.6076 37.7508 13.6177C37.2044 14.0506 36.6477 14.4836 36.1014 14.9062C33.1428 17.2154 30.0812 19.5967 27.0711 22.6377C23.36 26.3076 19.587 31.1217 16.3913 35.3585C16.1027 35.7399 15.8141 36.111 15.5151 36.4925C12.371 40.5953 9.12377 44.8321 5.94872 47.0485C4.42304 44.595 2.9283 41.9766 1.76342 39.9149C5.19619 38.9665 8.5568 35.2245 12.2782 30.8021ZM5.68069 49.0277C4.19625 46.6258 2.77367 44.1105 1.66034 42.1416V40.5644C2.80459 42.5952 4.22718 45.0692 5.68069 47.399V49.0277Z" fill="#C4EE18" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_63_29647">
+                              <rect width="50" height="50" fill="white" />
+                            </clipPath>
+                          </defs>
+                      </svg>
+                    </span>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Cutting-Edge <span class="tp-text-common-white">Technology</span></h3>
+                    <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="tp-skill-wd-item tpshake-wrap p-relative pb-50 pt-50 ml-60 tp_fade_anim" data-delay=".4" data-fade-from="right">
+                    <span class="tp-skill-wd-icon mb-35">
+                      <svg class="tpshake" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_63_29639)">
+                            <path d="M37.604 12.3967C37.4904 5.53719 31.8809 0 25.0007 0C18.1206 0 12.5111 5.54752 12.3974 12.3967C9.24661 12.4483 6.28173 13.6467 3.96768 15.8161C1.51934 18.1198 0.104048 21.25 0.000742309 24.6074C-0.102563 27.9649 1.10611 31.1777 3.42016 33.626C5.72388 36.0744 8.85405 37.4897 12.2115 37.593H12.3871C12.4388 40.7438 13.6371 43.719 15.8065 46.0227C18.1102 48.4711 21.2404 49.8864 24.5979 49.9897C24.7321 49.9897 24.8664 50 24.9904 50C28.2136 50 31.2611 48.7913 33.6164 46.5806C36.0648 44.2769 37.4801 41.1467 37.5834 37.7893V37.6136C44.4429 37.5 49.9801 31.8905 49.9801 25.0103C50.0007 18.1198 44.4532 12.5103 37.604 12.3967ZM25.0007 0.413223C31.6536 0.413223 37.0772 5.77479 37.1908 12.3967C31.1164 12.4897 26.0751 16.9112 25.0007 22.6963C24.5669 20.3409 23.4718 18.1508 21.7879 16.3636C19.4842 13.9153 16.354 12.5 12.9966 12.3967H12.821C12.9243 5.77479 18.3478 0.413223 25.0007 0.413223ZM12.3974 37.1901H12.2321C8.97801 37.0868 5.95116 35.7335 3.73008 33.3574C1.49868 30.9814 0.32099 27.8822 0.424296 24.6281C0.527602 21.374 1.88091 18.3471 4.25694 16.126C6.48835 14.0289 9.36025 12.8616 12.3974 12.8202C12.4904 18.8946 16.9119 23.936 22.697 25.0103C20.3417 25.4442 18.1516 26.5393 16.354 28.2231C13.9057 30.5269 12.4904 33.657 12.3871 37.0145C12.3974 37.0661 12.3974 37.1281 12.3974 37.1901ZM37.1908 37.7686C37.0875 41.0227 35.7342 44.0496 33.3582 46.2707C30.9821 48.5021 27.883 49.6694 24.6288 49.5764C21.3747 49.4731 18.3479 48.1198 16.1268 45.7438C14.0297 43.5124 12.8623 40.6405 12.821 37.6033C15.9718 37.5517 18.947 36.3533 21.2507 34.1839C23.2342 32.3244 24.5255 29.9277 25.0111 27.2934C26.0855 33.0888 31.1268 37.5 37.2012 37.6033C37.1908 37.655 37.1908 37.7169 37.1908 37.7686ZM37.604 37.1901C37.5524 34.0393 36.354 31.064 34.1846 28.7603C32.3251 26.7769 29.9284 25.4855 27.2941 25C33.0896 23.9256 37.5007 18.8843 37.604 12.8099C44.2363 12.9236 49.5875 18.3471 49.5875 25C49.5875 31.6529 44.2259 37.0764 37.604 37.1901Z" fill="#C4EE18" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_63_29639">
+                              <rect width="50" height="50" fill="white" />
+                            </clipPath>
+                          </defs>
+                      </svg>
+                    </span>
+                    <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20">Scalable  <span class="tp-text-common-white">Solutions</span></h3>
+                    <p class="fs-18 tp-text-grey-2">Web design agencies bring a team of skilled professionals in design & development</p>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="tp-skill-wd-bottom text-center mt-35 tp_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
+                    <p class="tp-skill-wd-para fw-500 fs-18 tp-text-common-white">Don’t hesitate collaborate with expertise- 
+                      <a href="contact-dark.html" class="ml-40 d-inline-block lh-0 tp-round-26 fs-15 text-uppercase ls-0 tp-btn-switch-animation tp-text-theme-primary tp-ff-heading fw-500">
+                          <span class="d-flex align-items-center justify-content-center">
+                            <span class="btn-text">Let’s Talk</span>
+                            <span class="btn-icon">
+                                <svg width="25" height="10" viewBox="0 0 25 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M18.675 9.91054L24.72 5.63362C24.806 5.56483 24.8766 5.47086 24.9255 5.36023C24.9744 5.2496 25 5.12579 25 5C25 4.87421 24.9744 4.7504 24.9255 4.63977C24.8766 4.52914 24.806 4.43518 24.72 4.36638L18.675 0.0894619C18.5572 0.0111909 18.4215 -0.0168364 18.2892 0.00979851C18.157 0.0364334 18.0358 0.116215 17.9446 0.236567C17.8535 0.356918 17.7977 0.510993 17.7859 0.674501C17.7742 0.838009 17.8072 1.00165 17.8798 1.13963L19.633 4.26665L0.598757 4.26665C0.439957 4.26665 0.287661 4.34391 0.175371 4.48144C0.0630817 4.61897 0 4.8055 0 5C0 5.1945 0.0630817 5.38103 0.175371 5.51856C0.287661 5.65609 0.439957 5.73335 0.598757 5.73335L19.633 5.73335L17.8798 8.86038C17.8072 8.99835 17.7742 9.16199 17.7859 9.3255C17.7977 9.48901 17.8535 9.64308 17.9446 9.76343C18.0358 9.88378 18.157 9.96357 18.2892 9.9902C18.4215 10.0168 18.5572 9.98881 18.675 9.91054Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                            <span class="btn-icon">
+                                <svg width="25" height="10" viewBox="0 0 25 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M18.675 9.91054L24.72 5.63362C24.806 5.56483 24.8766 5.47086 24.9255 5.36023C24.9744 5.2496 25 5.12579 25 5C25 4.87421 24.9744 4.7504 24.9255 4.63977C24.8766 4.52914 24.806 4.43518 24.72 4.36638L18.675 0.0894619C18.5572 0.0111909 18.4215 -0.0168364 18.2892 0.00979851C18.157 0.0364334 18.0358 0.116215 17.9446 0.236567C17.8535 0.356918 17.7977 0.510993 17.7859 0.674501C17.7742 0.838009 17.8072 1.00165 17.8798 1.13963L19.633 4.26665L0.598757 4.26665C0.439957 4.26665 0.287661 4.34391 0.175371 4.48144C0.0630817 4.61897 0 4.8055 0 5C0 5.1945 0.0630817 5.38103 0.175371 5.51856C0.287661 5.65609 0.439957 5.73335 0.598757 5.73335L19.633 5.73335L17.8798 8.86038C17.8072 8.99835 17.7742 9.16199 17.7859 9.3255C17.7977 9.48901 17.8535 9.64308 17.9446 9.76343C18.0358 9.88378 18.157 9.96357 18.2892 9.9902C18.4215 10.0168 18.5572 9.98881 18.675 9.91054Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span> 
+                      </a>
+                    </p>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- tp-skill-area-end -->
+    
+	<?php
+	}
+}
+
+$widgets_manager->register( new TR_Elementor_Widget_Features() );
