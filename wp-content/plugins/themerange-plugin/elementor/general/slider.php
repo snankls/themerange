@@ -149,7 +149,7 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
               </div>
               <div class="col-lg-3">
                   <div class="tp-hero-bottom-right h-100 tp-bg-common-black tp-left-right p-relative z-index-1 pb-50">
-                    <img class="tp-hero-customer-shape" src="assets/img/hero/grid-shape.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/grid-shape.png" class="tp-hero-customer-shape" alt="Shape">
                     <div class="tp-hero-bottom-box">
                         <span class="tp-hero-bottom-icon d-inline-block mb-55">
                           <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
