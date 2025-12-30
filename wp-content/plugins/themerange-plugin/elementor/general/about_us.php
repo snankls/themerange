@@ -91,21 +91,21 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
           <div class="row">
               <div class="col-xl-8 col-lg-10">
                 <div class="tp-about-wd-title-wrap mb-50 tp_fade_anim" data-delay=".3">
-                    <h2 class="tp-about-wd-title tp-ff-teko fw-600 fs-70 fs-sm-60 fs-xs-43 text-uppercase">We’re Global Brand<br>
-                      <img src="assets/img/about/wd/shape.png" alt="">
-                      Design Agency.</h2>
+                    <h2 class="tp-about-wd-title tp-ff-teko fw-600 fs-70 fs-sm-60 fs-xs-43 text-uppercase">We’re a Global Software &<br>
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-2.png" alt="">
+                      Technology Company.</h2>
                 </div>
                 <div class="tp-about-wd-para-wrap mb-75">
                     <div class="row">
                       <div class="col-lg-6">
                           <div class="tp-about-wd-para mb-30 tp_fade_anim" data-delay=".5">
-                            <p class="fs-18 fw-500">We believe a website isn’t just a<br> digital presence— <span class="tp-text-common-black">it’s a powerful tool<br> that tells your story.</span></p>
+                            <p class="fs-18 fw-500">We believe software isn’t <br> just a tool— <span class="tp-text-common-black">it’s a solution that drives growth and innovation.</span></p>
                           </div>
                       </div>
                       <div class="col-lg-6">
-                          <div class="tp-about-wd-para mb-30 tp_fade_anim" data-delay=".7">
-                            <p class="fs-18">We’re a team of passionate designers, developers, and strategists dedicated to creating stunning, functional websites that align with your unique business goals.</p>
-                          </div>
+                        <div class="tp-about-wd-para mb-30 tp_fade_anim" data-delay=".7">
+                          <p class="fs-18">We’re a team of skilled developers, designers, and strategists dedicated to creating scalable, efficient, and cutting-edge digital solutions that align with your business goals.</p>
+                        </div>
                       </div>
                     </div>
                 </div>
