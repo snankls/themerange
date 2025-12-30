@@ -39,7 +39,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
 			'title',
 			[
 				'label' => esc_html__('Title', 'themerange'),
-				'type' => Controls_Manager::TEXT,
+				'type' => Controls_Manager::TEXTAREA,
 			]
 		);
     $this->add_control(
