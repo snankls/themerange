@@ -31,10 +31,12 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
 		$this->start_controls_section(
       'features_tab',
       array(
-      'label' => esc_html__( 'Features', 'themerange' ),
-      'tab' => Controls_Manager::TAB_CONTENT,
+        'label' => esc_html__( 'Features', 'themerange' ),
+        'tab' => Controls_Manager::TAB_CONTENT,
       )
     );
+
+    $repeater = new Repeater();
     $repeater->add_control(
 			'highlighted_title',
 			[
