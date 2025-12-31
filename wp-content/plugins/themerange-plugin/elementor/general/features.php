@@ -147,7 +147,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                 </svg>
               </span>
               <span class="tp-skill-wd-icon mb-35">
-                <?php echo wp_kses($item['icon_tag'], true); ?>
+                <?php echo $item['icon_tag']; ?>
               </span>
               <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20"><?php echo wp_kses($item['highlighted_title'], true); ?> <span class="tp-text-common-white"><?php echo wp_kses($item['normal_title'], true); ?></span></h3>
               <p class="fs-18 tp-text-grey-2"><?php echo wp_kses($item['text'], true); ?></p>
