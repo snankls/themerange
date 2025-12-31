@@ -98,7 +98,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
 			'icon_tag',
 			[
 				'label' => esc_html__('Icon Tag', 'themerange'),
-				'type' => Controls_Manager::TEXT,
+				'type' => Controls_Manager::TEXTAREA,
 			]
 		);
     $repeater->add_control(
