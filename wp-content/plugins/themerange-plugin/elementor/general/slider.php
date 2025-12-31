@@ -153,12 +153,12 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                   <div class="tp-hero-bottom-box">
                       <span class="tp-hero-bottom-icon d-inline-block mb-55">
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <mask id="mask0_68_30503" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
-                              <rect width="100" height="100" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_68_30503)">
-                              <path d="M72.72 0H50.08H49.84H22.8H0C0 26.4423 20.48 48.0769 46.4 50C20.48 51.9231 0 73.5577 0 100H22.8H49.92H50.16H72.72H100V72.6763V50.1603V49.8397V27.3237V0H72.72ZM50.08 95.3525V72.7564V50.2404V49.9199V27.3237V4.72756C52.32 29.0064 71.84 48.2372 96.24 50C71.92 51.8429 52.4 71.0737 50.08 95.3525Z" fill="#C4EE18" />
-                            </g>
+                          <mask id="mask0_68_30503" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+                            <rect width="100" height="100" fill="#D9D9D9" />
+                          </mask>
+                          <g mask="url(#mask0_68_30503)">
+                            <path d="M72.72 0H50.08H49.84H22.8H0C0 26.4423 20.48 48.0769 46.4 50C20.48 51.9231 0 73.5577 0 100H22.8H49.92H50.16H72.72H100V72.6763V50.1603V49.8397V27.3237V0H72.72ZM50.08 95.3525V72.7564V50.2404V49.9199V27.3237V4.72756C52.32 29.0064 71.84 48.2372 96.24 50C71.92 51.8429 52.4 71.0737 50.08 95.3525Z" fill="#C4EE18" />
+                          </g>
                         </svg>
                       </span>
                       <span class="tp-hero-bottom-border mb-15">
@@ -168,8 +168,8 @@ class TR_Elementor_Widget_Slider extends TR_Elementor_Widget_Base{
                       </span>
                       <div class="d-flex align-items-end justify-content-between">
                         <div>
-                            <span class="tp-text-common-white fw-400 fs-18 mb-10 d-inline-block">We Recently Launched</span>
-                            <h5 class="fw-700 fs-25 tp-text-common-white"><a href="service-details-2-light.html" class="hover-text-white">Revolutionizing Retail with Our POS Solution</a></h5>
+                          <span class="tp-text-common-white fw-400 fs-18 mb-10 d-inline-block">We Recently Launched</span>
+                          <h5 class="fw-700 fs-25 tp-text-common-white"><a href="service-details-2-light.html" class="hover-text-white">Revolutionizing Retail with Our POS Solution</a></h5>
                         </div>
                         <span class="tp-arrow-angle mb-10">
                           <svg class="tp-arrow-svg-top-right" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">

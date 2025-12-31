@@ -91,6 +91,30 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
       )
     );
 		$this->end_controls_section();
+
+    //Expereience
+		$this->start_controls_section(
+      'experience_tab',
+      array(
+        'label' => esc_html__( 'Expereience', 'themerange' ),
+        'tab' => Controls_Manager::TAB_CONTENT,
+      )
+    );
+    $this->add_control(
+      'year',
+      array(
+        'label' => esc_html__( 'Year', 'themerange' ),
+				'type' => Controls_Manager::TEXT,
+      )
+    );
+    $this->add_control(
+      'experience',
+      array(
+        'label' => esc_html__( 'Experience', 'themerange' ),
+				'type' => Controls_Manager::TEXTAREA,
+      )
+    );
+		$this->end_controls_section();
     
     //Button
 		$this->start_controls_section(
@@ -118,30 +142,6 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
         'dynamic'  => array( 'active' => true ),
         'default' => array( 'url' => '' ),
       ]
-    );
-		$this->end_controls_section();
-
-    //Expereience
-		$this->start_controls_section(
-      'experience_tab',
-      array(
-        'label' => esc_html__( 'Expereience', 'themerange' ),
-        'tab' => Controls_Manager::TAB_CONTENT,
-      )
-    );
-    $this->add_control(
-      'year',
-      array(
-        'label' => esc_html__( 'Year', 'themerange' ),
-				'type' => Controls_Manager::TEXT,
-      )
-    );
-    $this->add_control(
-      'expereience',
-      array(
-        'label' => esc_html__( 'Experience', 'themerange' ),
-				'type' => Controls_Manager::TEXTAREA,
-      )
     );
 		$this->end_controls_section();
 	}
@@ -209,8 +209,8 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
               <div class="col-lg-3 col-md-6">
                 <div class="tp-rounded-btn-wrap tp-about-wd-btn tp-rounded-btn-wd mt-100 text-md-end mr-40 mb-30 tp_fade_anim" data-delay=".9" data-fade-from="top" data-ease="bounce">
                     <div class="btn_wrapper d-inline-block">
-                      <a href="about-modern-light.html" class="tp-btn-rounded tp-ff-teko btn-item">
-                        Discover<br> More
+                      <a <?php echo implode(' ', $link_attr); ?> class="tp-btn-rounded tp-ff-teko btn-item">
+                        <?php echo wp_kses($settings['btn_name'], true); ?>
                         <span class="d-block mt-10">
                           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3791 3.0269C14.6431 2.80336 18.8916 1.42595 21.9998 0C20.5732 3.10763 19.1953 7.35556 18.9723 10.6196L16.8276 6.04382L1.05193 21.82C0.936264 21.9354 0.779526 22.0001 0.616152 22C0.494263 22 0.375118 21.9638 0.273781 21.8961C0.172441 21.8284 0.0934544 21.7321 0.046814 21.6195C0.000171661 21.5069 -0.0120335 21.383 0.0117397 21.2634C0.035511 21.1439 0.0941944 21.034 0.18037 20.9478L15.956 5.17221L11.3791 3.0269Z" fill="currentColor" />
