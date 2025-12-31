@@ -51,9 +51,10 @@ class TR_Elementor_Widget_Technology extends TR_Elementor_Widget_Base{
 				'label'       => __( 'Technology', 'themerange' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
-				'title_field' => '{{{ highlighted_title }}}',
+				'title_field' => '{{{ title }}}',
 			]
 		);
+
 		$this->end_controls_section();
 	}
 	
