@@ -95,6 +95,13 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
 			]
 		);
     $repeater->add_control(
+			'icon_tag',
+			[
+				'label' => esc_html__('Icon Tag', 'themerange'),
+				'type' => Controls_Manager::TEXT,
+			]
+		);
+    $repeater->add_control(
       'icon',
       array(
           'label' => esc_html__( 'Icon', 'themerange' ),
@@ -149,7 +156,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
                 </svg>
               </span>
               <span class="tp-skill-wd-icon mb-35">
-                <?php \Elementor\Icons_Manager::render_icon($item['icon']); ?>
+                <?php echo wp_kses($item['icon_tag'], true); ?><?php //\Elementor\Icons_Manager::render_icon($item['icon']); ?>
               </span>
               <h3 class="tp-ff-teko fw-600 fs-35 fs-lg-30 tp-text-theme-primary mb-20"><?php echo wp_kses($item['highlighted_title'], true); ?> <span class="tp-text-common-white"><?php echo wp_kses($item['normal_title'], true); ?></span></h3>
               <p class="fs-18 tp-text-grey-2"><?php echo wp_kses($item['text'], true); ?></p>

@@ -79,12 +79,12 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
     <div id="about" class="tp-about-area pt-130 pb-110 p-relative z-index-1">
         <span class="tp-about-wd-shape-2">
           <svg width="452" height="382" viewBox="0 0 452 382" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_246_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="452" height="382">
-                <rect x="-0.5" y="0.5" width="451" height="381" transform="matrix(-1 0 0 1 451 0)" fill="#D9D9D9" stroke="black" />
-              </mask>
-              <g mask="url(#mask0_246_150)">
-                <circle cx="465.95" cy="465.95" r="405.95" transform="matrix(-1 0 0 1 923.516 0)" stroke="#F0F0F0" stroke-width="120" />
-              </g>
+            <mask id="mask0_246_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="452" height="382">
+              <rect x="-0.5" y="0.5" width="451" height="381" transform="matrix(-1 0 0 1 451 0)" fill="#D9D9D9" stroke="black" />
+            </mask>
+            <g mask="url(#mask0_246_150)">
+              <circle cx="465.95" cy="465.95" r="405.95" transform="matrix(-1 0 0 1 923.516 0)" stroke="#F0F0F0" stroke-width="120" />
+            </g>
           </svg>
         </span>
         <div class="container">
@@ -99,7 +99,7 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
                     <div class="row">
                       <div class="col-lg-6">
                           <div class="tp-about-wd-para mb-30 tp_fade_anim" data-delay=".5">
-                            <p class="fs-18 fw-500">We believe software isn’t <br> just a tool— <span class="tp-text-common-black">it’s a solution that drives growth and innovation.</span></p>
+                            <p class="fs-18 fw-500">We believe software isn’t <br> just a tool— <span class="tp-text-common-black">it’s a solution that drives<br> growth and innovation.</span></p>
                           </div>
                       </div>
                       <div class="col-lg-6">
@@ -133,13 +133,13 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
                 <div class="tp-rounded-btn-wrap tp-about-wd-btn tp-rounded-btn-wd mt-100 text-md-end mr-40 mb-30 tp_fade_anim" data-delay=".9" data-fade-from="top" data-ease="bounce">
                     <div class="btn_wrapper d-inline-block">
                       <a href="about-modern-light.html" class="tp-btn-rounded tp-ff-teko btn-item">
-                          Discover<br> More
-                          <span class="d-block mt-10">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3791 3.0269C14.6431 2.80336 18.8916 1.42595 21.9998 0C20.5732 3.10763 19.1953 7.35556 18.9723 10.6196L16.8276 6.04382L1.05193 21.82C0.936264 21.9354 0.779526 22.0001 0.616152 22C0.494263 22 0.375118 21.9638 0.273781 21.8961C0.172441 21.8284 0.0934544 21.7321 0.046814 21.6195C0.000171661 21.5069 -0.0120335 21.383 0.0117397 21.2634C0.035511 21.1439 0.0941944 21.034 0.18037 20.9478L15.956 5.17221L11.3791 3.0269Z" fill="currentColor" />
-                            </svg>
-                          </span>
-                          <i class="tp-btn-circle-dot"></i>
+                        Discover<br> More
+                        <span class="d-block mt-10">
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3791 3.0269C14.6431 2.80336 18.8916 1.42595 21.9998 0C20.5732 3.10763 19.1953 7.35556 18.9723 10.6196L16.8276 6.04382L1.05193 21.82C0.936264 21.9354 0.779526 22.0001 0.616152 22C0.494263 22 0.375118 21.9638 0.273781 21.8961C0.172441 21.8284 0.0934544 21.7321 0.046814 21.6195C0.000171661 21.5069 -0.0120335 21.383 0.0117397 21.2634C0.035511 21.1439 0.0941944 21.034 0.18037 20.9478L15.956 5.17221L11.3791 3.0269Z" fill="currentColor" />
+                          </svg>
+                        </span>
+                        <i class="tp-btn-circle-dot"></i>
                       </a>
                     </div>
                 </div>
