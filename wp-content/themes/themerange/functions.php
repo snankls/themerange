@@ -149,6 +149,8 @@ function themerange_register_scripts(){
 	wp_enqueue_script( 'ajax-form', get_template_directory_uri() . '/assets/js/ajax-form.js', array(), $theme_version, true );
 	wp_enqueue_script( 'slider-init', get_template_directory_uri() . '/assets/js/slider-init.js', array(), $theme_version, true );
 	wp_enqueue_script( 'tp-cursor', get_template_directory_uri() . '/assets/js/tp-cursor.js', array(), $theme_version, true );
+	wp_enqueue_script( 'matter', get_template_directory_uri() . '/assets/js/matter.js', array(), $theme_version, true );
+	wp_enqueue_script( 'throwable', get_template_directory_uri() . '/assets/js/throwable.js', array(), $theme_version, true );
 	wp_enqueue_script( 'themerange-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), $theme_version, true );
 	
 	//Preloader
@@ -245,13 +247,6 @@ function themerange_enqueue_google_fonts()
 	wp_enqueue_style(
 		'themerange-font-familjen-grotesk',
 		'https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap',
-		array(),
-		null
-	);
-
-	wp_enqueue_style(
-		'themerange-font-phudu',
-		'https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap',
 		array(),
 		null
 	);
