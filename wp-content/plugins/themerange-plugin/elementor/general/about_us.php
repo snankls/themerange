@@ -27,11 +27,11 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
     }
 	
 	protected function register_controls(){
-		//About_Us
+		//About Us
 		$this->start_controls_section(
       'about_us_tab',
       array(
-      'label' => esc_html__( 'About_Us', 'themerange' ),
+      'label' => esc_html__( 'About Us', 'themerange' ),
       'tab' => Controls_Manager::TAB_CONTENT,
       )
     );
@@ -53,20 +53,13 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
       'left_text',
       array(
           'label' => esc_html__( 'Left Text', 'themerange' ),
-				'type' => Controls_Manager::TEXT,
+				'type' => Controls_Manager::TEXTAREA,
       )
     );
     $this->add_control(
       'middle_text',
       array(
           'label' => esc_html__( 'Middle Text', 'themerange' ),
-				'type' => Controls_Manager::TEXTAREA,
-      )
-    );
-    $this->add_control(
-      'expereience',
-      array(
-          'label' => esc_html__( 'Expereience', 'themerange' ),
 				'type' => Controls_Manager::TEXTAREA,
       )
     );
@@ -97,6 +90,16 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
           'description' => '',
       )
     );
+		$this->end_controls_section();
+    
+    //Button
+		$this->start_controls_section(
+      'button_tab',
+      array(
+        'label' => esc_html__( 'Button', 'themerange' ),
+        'tab' => Controls_Manager::TAB_CONTENT,
+      )
+    );
 		$this->add_control(
       'btn_name',
       [
@@ -115,6 +118,30 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
         'dynamic'  => array( 'active' => true ),
         'default' => array( 'url' => '' ),
       ]
+    );
+		$this->end_controls_section();
+
+    //Expereience
+		$this->start_controls_section(
+      'experience_tab',
+      array(
+        'label' => esc_html__( 'Expereience', 'themerange' ),
+        'tab' => Controls_Manager::TAB_CONTENT,
+      )
+    );
+    $this->add_control(
+      'year',
+      array(
+        'label' => esc_html__( 'Year', 'themerange' ),
+				'type' => Controls_Manager::TEXT,
+      )
+    );
+    $this->add_control(
+      'expereience',
+      array(
+        'label' => esc_html__( 'Experience', 'themerange' ),
+				'type' => Controls_Manager::TEXT,
+      )
     );
 		$this->end_controls_section();
 	}
@@ -141,20 +168,20 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
           <div class="row">
               <div class="col-xl-8 col-lg-10">
                 <div class="tp-about-wd-title-wrap mb-50 tp_fade_anim" data-delay=".3">
-                    <h2 class="tp-about-wd-title tp-ff-teko fw-600 fs-70 fs-sm-60 fs-xs-43 text-uppercase">We’re a Global Software &<br>
+                    <h2 class="tp-about-wd-title tp-ff-teko fw-600 fs-70 fs-sm-60 fs-xs-43 text-uppercase"><?php echo wp_kses($settings['title1'], true); ?><br>
                       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-4.png" alt="Shape">
-                      Technology Company.</h2>
+                      <?php echo wp_kses($settings['title2'], true); ?></h2>
                 </div>
                 <div class="tp-about-wd-para-wrap mb-75">
                     <div class="row">
                       <div class="col-lg-6">
                           <div class="tp-about-wd-para mb-30 tp_fade_anim" data-delay=".5">
-                            <p class="fs-18 fw-500">We believe software isn’t <br> just a tool— <span class="tp-text-common-black">it’s a solution that drives<br> growth and innovation.</span></p>
+                            <p class="fs-18 fw-500"><?php echo wp_kses($settings['left_text'], true); ?></p>
                           </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="tp-about-wd-para mb-30 tp_fade_anim" data-delay=".7">
-                          <p class="fs-18">We’re a team of skilled developers, designers, and strategists dedicated to creating scalable, efficient, and cutting-edge digital solutions that align with your business goals.</p>
+                          <p class="fs-18"><?php echo wp_kses($settings['middle_text'], true); ?></p>
                         </div>
                       </div>
                     </div>
@@ -196,7 +223,7 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
               </div>
               <div class="col-lg-2">
                 <div class="tp-about-expreance tp-about-wd-expreance d-flex align-items-end mb-30 tp_fade_anim" data-delay=".9">
-                    <h2 class="tp-ff-teko fw-600 fs-100 p-relative d-inline-block mb-0 lh-1">12 <span class="plus fs-25">+</span></h2>
+                    <h2 class="tp-ff-teko fw-600 fs-100 p-relative d-inline-block mb-0 lh-1"><?php echo wp_kses($settings['experience'], true); ?> <span class="plus fs-25">+</span></h2>
                     <span class="fs-18 fw-500 lh-22 tp-text-common-black mb-15 ml-35">Years of<br> Experience</span>
                 </div>
               </div>
