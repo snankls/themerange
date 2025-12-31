@@ -149,6 +149,8 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
 	protected function render(){
 		$settings = $this->get_settings_for_display();
 		extract( $settings );
+    
+    $link_attr = $this->generate_link_attributes( $btn_link );
 		$allowed_html = tr_allowed_html();
 	?>
     
