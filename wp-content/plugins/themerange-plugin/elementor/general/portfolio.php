@@ -206,100 +206,98 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 	?>
         
         <!-- tp-portfolio-area-start -->
-		<div class="tp-portfolio-area pre-header tp-bg-common-black-5 tp-portfolio-showcase-full-bg bg-position tp-image-distortion z-index-1" data-background="assets/img/cta/ai/bg.jpg">
-			<div class="container-fluid container-1824 containers">
-				<div class="row justify-content-center">
+		<div class="tp-portfolio-area pt-115">
+			<div class="container-fluid container-1800">
+				<div class="row">
 					<div class="col-12">
-						<div class="tp-cta-ai-wrap text-center">
-							<span class="tp-portfolio-showcase-full-subtitle">Best-in-class local <br> benefits for everyone, everywhere</span>
-							<h2 class="tp-hero-vp-title tp-ff-morganite-bold text-uppercase tp-text-common-white ls-0 text-scale-anim-bottom">Our Portfolio</h2>
+					<div class="tp-portfolio-wd-title-wrap text-center mb-70">
+						<h2 class="tp-portfolio-wd-title tp-ff-teko fw-600 text-uppercase tp-text-perspective">Latest Work</h2>
+						<div class="tp-portfolio-tag tp-portfolio-wd-tag ml-200 tp_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
+							<svg class="mr-30" height="6" viewBox="0 0 153 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM148 3.5L153 5.88675V0.113249L148 2.5V3.5ZM4.5 3.5H148.5V2.5H4.5V3.5Z" fill="#030303" />
+							</svg>
+							<span>Dribbble</span>
+							<span>99Design</span>
+							<span>Behance</span>
+							<span>GitHub</span>
 						</div>
+					</div>
+					<div class="tp-portfolio-wd-wrap des-portfolio-wrap">
+						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+							<a class="cursor-hide" href="portfolio-details-light.html">
+								<div class="tp-portfolio-wd-thumb p-relative">
+								<img src="assets/img/portfolio/wd/thumb.jpg" alt="">
+								</div>
+								<div class="tp-portfolio-wd-category">
+								<span>Research</span>
+								<span>Development</span>
+								</div>
+								<div class="tp-portfolio-wd-category portfolio-meta">
+								<span>2025</span>
+								</div>
+							</a>
+							<div class="tp-portfolio-wd-content">
+								<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-light.html">Polygona Arct Design</a></h2>
+							</div>
+						</div>
+						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+							<a class="cursor-hide" href="portfolio-details-light.html">
+								<div class="tp-portfolio-wd-thumb p-relative">
+									<img src="assets/img/portfolio/wd/thumb-2.jpg" alt="">
+								</div>
+								<div class="tp-portfolio-wd-category">
+									<span>Research</span>
+									<span>Development</span>
+								</div>
+								<div class="tp-portfolio-wd-category portfolio-meta">
+									<span>2025</span>
+								</div>
+							</a>
+							<div class="tp-portfolio-wd-content">
+								<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-light.html">Epic Strategy App</a></h2>
+							</div>
+						</div>
+						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+							<a class="cursor-hide" href="portfolio-details-light.html">
+								<div class="tp-portfolio-wd-thumb p-relative">
+									<img src="assets/img/portfolio/wd/thumb-3.jpg" alt="">
+								</div>
+								<div class="tp-portfolio-wd-category">
+									<span>Research</span>
+									<span>Development</span>
+								</div>
+								<div class="tp-portfolio-wd-category portfolio-meta">
+									<span>2025</span>
+								</div>
+							</a>
+							<div class="tp-portfolio-wd-content">
+								<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-light.html">Making Brands Shine</a></h2>
+							</div>
+						</div>
+						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+							<a class="cursor-hide" href="portfolio-details-light.html">
+								<div class="tp-portfolio-wd-thumb p-relative">
+									<img src="assets/img/portfolio/wd/thumb-4.jpg" alt="">
+								</div>
+								<div class="tp-portfolio-wd-category">
+									<span>Research</span>
+									<span>Development</span>
+								</div>
+								<div class="tp-portfolio-wd-category portfolio-meta">
+									<span>2025</span>
+								</div>
+							</a>
+							<div class="tp-portfolio-wd-content">
+								<h2 class="ttp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-light.html">Creating Impact Online</a></h2>
+							</div>
+						</div>
+					</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- tp-portfolio-area-end -->
 
-		<!-- tp-portfolio-area-start -->
-		<div class="tp-portfolio-area pt-140">
-			<div class="container-fluid container-1800">
-				<div class="row">
-					<div class="col-12">
-						<div class="tp-portfolio-wd-wrap des-portfolio-wrap">
-							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
-								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
-									<div class="tp-portfolio-wd-thumb p-relative">
-									<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
-									</div>
-									<div class="tp-portfolio-wd-category">
-									<span>Research</span>
-									<span>Development</span>
-									</div>
-									<div class="tp-portfolio-wd-category portfolio-meta">
-									<span>2025</span>
-									</div>
-								</a>
-								<div class="tp-portfolio-wd-content">
-									<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Polygona Arct Design</a></h2>
-								</div>
-							</div>
-							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
-								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
-									<div class="tp-portfolio-wd-thumb p-relative">
-										<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
-									</div>
-									<div class="tp-portfolio-wd-category">
-										<span>Research</span>
-										<span>Development</span>
-									</div>
-									<div class="tp-portfolio-wd-category portfolio-meta">
-										<span>2025</span>
-									</div>
-								</a>
-								<div class="tp-portfolio-wd-content">
-									<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Epic Strategy App</a></h2>
-								</div>
-							</div>
-							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
-								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
-									<div class="tp-portfolio-wd-thumb p-relative">
-										<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
-									</div>
-									<div class="tp-portfolio-wd-category">
-										<span>Research</span>
-										<span>Development</span>
-									</div>
-									<div class="tp-portfolio-wd-category portfolio-meta">
-										<span>2025</span>
-									</div>
-								</a>
-								<div class="tp-portfolio-wd-content">
-									<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Making Brands Shine</a></h2>
-								</div>
-							</div>
-							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
-								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
-									<div class="tp-portfolio-wd-thumb p-relative">
-										<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
-									</div>
-									<div class="tp-portfolio-wd-category">
-										<span>Research</span>
-										<span>Development</span>
-									</div>
-									<div class="tp-portfolio-wd-category portfolio-meta">
-										<span>2025</span>
-									</div>
-								</a>
-								<div class="tp-portfolio-wd-content">
-									<h2 class="ttp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Creating Impact Online</a></h2>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- tp-portfolio-area-end -->
         
 	<?php }
 	}
