@@ -35,7 +35,41 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
       'tab' => Controls_Manager::TAB_CONTENT,
       )
     );
-
+    $this->add_control(
+      'title1',
+      array(
+        'label' => esc_html__( 'Title 1', 'themerange' ),
+				'type' => Controls_Manager::TEXT,
+      )
+    );
+    $this->add_control(
+      'title2',
+      array(
+          'label' => esc_html__( 'Title 2', 'themerange' ),
+				'type' => Controls_Manager::TEXT,
+      )
+    );
+    $this->add_control(
+      'left_text',
+      array(
+          'label' => esc_html__( 'Left Text', 'themerange' ),
+				'type' => Controls_Manager::TEXT,
+      )
+    );
+    $this->add_control(
+      'middle_text',
+      array(
+          'label' => esc_html__( 'Middle Text', 'themerange' ),
+				'type' => Controls_Manager::TEXTAREA,
+      )
+    );
+    $this->add_control(
+      'expereience',
+      array(
+          'label' => esc_html__( 'Expereience', 'themerange' ),
+				'type' => Controls_Manager::TEXTAREA,
+      )
+    );
     $this->add_control(
       'image1',
       array(
@@ -45,7 +79,6 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
           'description' => '',
       )
     );
-
     $this->add_control(
       'image2',
       array(
@@ -55,7 +88,6 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
           'description' => '',
       )
     );
-
     $this->add_control(
       'image3',
       array(
@@ -65,7 +97,25 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
           'description' => '',
       )
     );
-		
+		$this->add_control(
+      'btn_name',
+      [
+        'label' => __( 'Name', 'themerange' ),
+        'type' => Controls_Manager::TEXT,
+        'default' => __( 'Read More', 'themerange' ),
+      ]
+    );
+    $this->add_control(
+      'btn_link',
+      [
+        'label' => __( 'Link', 'themerange' ),
+        'type' => Controls_Manager::URL,
+        'placeholder' => __( 'https://your-link.com', 'themerange' ),
+        'show_external' => true,
+        'dynamic'  => array( 'active' => true ),
+        'default' => array( 'url' => '' ),
+      ]
+    );
 		$this->end_controls_section();
 	}
 	

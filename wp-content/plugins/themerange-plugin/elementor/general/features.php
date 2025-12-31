@@ -67,7 +67,7 @@ class TR_Elementor_Widget_Features extends TR_Elementor_Widget_Base{
         'dynamic'  => array( 'active' => true ),
         'default' => array( 'url' => '' ),
       ]
-      );
+    );
 		$this->end_controls_section();
 
 		//Features
