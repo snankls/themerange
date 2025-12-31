@@ -216,17 +216,13 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 							<svg class="mr-30" height="6" viewBox="0 0 153 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM148 3.5L153 5.88675V0.113249L148 2.5V3.5ZM4.5 3.5H148.5V2.5H4.5V3.5Z" fill="#030303" />
 							</svg>
-							<span>Dribbble</span>
-							<span>99Design</span>
-							<span>Behance</span>
-							<span>GitHub</span>
 						</div>
 					</div>
 					<div class="tp-portfolio-wd-wrap des-portfolio-wrap">
 						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 							<a class="cursor-hide" href="portfolio-details-light.html">
 								<div class="tp-portfolio-wd-thumb p-relative">
-								<img src="assets/img/portfolio/wd/thumb.jpg" alt="">
+								<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 								</div>
 								<div class="tp-portfolio-wd-category">
 								<span>Research</span>
@@ -243,7 +239,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 							<a class="cursor-hide" href="portfolio-details-light.html">
 								<div class="tp-portfolio-wd-thumb p-relative">
-									<img src="assets/img/portfolio/wd/thumb-2.jpg" alt="">
+									<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 								</div>
 								<div class="tp-portfolio-wd-category">
 									<span>Research</span>
@@ -260,7 +256,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 							<a class="cursor-hide" href="portfolio-details-light.html">
 								<div class="tp-portfolio-wd-thumb p-relative">
-									<img src="assets/img/portfolio/wd/thumb-3.jpg" alt="">
+									<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 								</div>
 								<div class="tp-portfolio-wd-category">
 									<span>Research</span>
@@ -277,7 +273,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 						<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 							<a class="cursor-hide" href="portfolio-details-light.html">
 								<div class="tp-portfolio-wd-thumb p-relative">
-									<img src="assets/img/portfolio/wd/thumb-4.jpg" alt="">
+									<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 								</div>
 								<div class="tp-portfolio-wd-category">
 									<span>Research</span>
