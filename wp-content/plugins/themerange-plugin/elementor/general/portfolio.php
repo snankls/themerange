@@ -229,7 +229,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
 									<div class="tp-portfolio-wd-thumb p-relative">
-									<img src="assets/img/portfolio/wd/thumb.jpg" alt="">
+									<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 									</div>
 									<div class="tp-portfolio-wd-category">
 									<span>Research</span>
@@ -246,7 +246,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
 									<div class="tp-portfolio-wd-thumb p-relative">
-										<img src="assets/img/portfolio/wd/thumb-2.jpg" alt="">
+										<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 									</div>
 									<div class="tp-portfolio-wd-category">
 										<span>Research</span>
@@ -263,7 +263,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
 									<div class="tp-portfolio-wd-thumb p-relative">
-										<img src="assets/img/portfolio/wd/thumb-3.jpg" alt="">
+										<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 									</div>
 									<div class="tp-portfolio-wd-category">
 										<span>Research</span>
@@ -280,7 +280,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
 								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
 									<div class="tp-portfolio-wd-thumb p-relative">
-										<img src="assets/img/portfolio/wd/thumb-4.jpg" alt="">
+										<img src="https://html.aqlova.com/aleric-prev/aleric/assets/img/portfolio/wd/thumb.jpg" alt="">
 									</div>
 									<div class="tp-portfolio-wd-category">
 										<span>Research</span>
