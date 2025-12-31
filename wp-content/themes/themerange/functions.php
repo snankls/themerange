@@ -256,6 +256,13 @@ function themerange_enqueue_google_fonts()
 		null
 	);
 
+	wp_enqueue_style(
+		'themerange-font-phudu',
+		'https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap',
+		array(),
+		null
+	);
+
 }
 add_action( 'wp_enqueue_scripts', 'themerange_enqueue_google_fonts' );
 
