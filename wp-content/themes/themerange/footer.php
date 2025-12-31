@@ -7,12 +7,7 @@
 		<div class="clear"></div>
 		
 		<?php
-			// Check if a specific footer block is set in page options
-			if (!empty($page_options['tr_footer_block'])) {
-				themerange_get_footer_content($page_options['tr_footer_block']);
-			}
-			// Check if a specific footer block is set in theme options
-			else if (!empty($theme_options['el_footer_block'])) {
+			if (!empty($theme_options['el_footer_block'])) {
 				themerange_get_footer_content($theme_options['el_footer_block']);
 			}
 			// Include the default footer if no specific footer block is set
