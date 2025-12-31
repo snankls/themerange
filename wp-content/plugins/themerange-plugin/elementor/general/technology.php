@@ -1,5 +1,6 @@
 <?php
 use Elementor\Controls_Manager;
+use Elementor\Repeater;
 use Elementor\Utils;
 use Elementor\Group_Control_Typography;
 
