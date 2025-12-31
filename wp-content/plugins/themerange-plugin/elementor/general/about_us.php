@@ -140,7 +140,7 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
       'expereience',
       array(
         'label' => esc_html__( 'Experience', 'themerange' ),
-				'type' => Controls_Manager::TEXT,
+				'type' => Controls_Manager::TEXTAREA,
       )
     );
 		$this->end_controls_section();
@@ -223,8 +223,8 @@ class TR_Elementor_Widget_About_Us extends TR_Elementor_Widget_Base{
               </div>
               <div class="col-lg-2">
                 <div class="tp-about-expreance tp-about-wd-expreance d-flex align-items-end mb-30 tp_fade_anim" data-delay=".9">
-                    <h2 class="tp-ff-teko fw-600 fs-100 p-relative d-inline-block mb-0 lh-1"><?php echo wp_kses($settings['experience'], true); ?> <span class="plus fs-25">+</span></h2>
-                    <span class="fs-18 fw-500 lh-22 tp-text-common-black mb-15 ml-35">Years of<br> Experience</span>
+                    <h2 class="tp-ff-teko fw-600 fs-100 p-relative d-inline-block mb-0 lh-1"><?php echo wp_kses($settings['year'], true); ?> <span class="plus fs-25">+</span></h2>
+                    <span class="fs-18 fw-500 lh-22 tp-text-common-black mb-15 ml-35"><?php echo wp_kses($settings['experience'], true); ?></span>
                 </div>
               </div>
               <div class="col-lg-4">
