@@ -204,73 +204,102 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 		
 		if($portfolio->have_posts()) {
 	?>
-    
-    	<?php ob_start();
-        $data_posts = '';
-		$fliteration = array();
-		while($portfolio->have_posts() ): $portfolio->the_post();
-			global $post;
-			$post_terms = get_the_terms( get_the_id(), 'portfolio_cat');
-			foreach( (array)$post_terms as $pos_term )
-				$fliteration[$pos_term->term_id] = $pos_term;
-				$temp_category = get_the_term_list(get_the_id(), 'portfolio_cat', '', ', ');
-				
-				$post_terms = wp_get_post_terms( get_the_id(), 'portfolio_cat');
-				$term_slug = '';
-				
-				if($post_terms)
-					foreach($post_terms as $p_term)
-						$term_slug .= $p_term->slug.' ';
-						$term_list = wp_get_post_terms(get_the_id(), 'portfolio_cat', array("fields" => "names"));
-					?>
-					
-					<div class="col-lg-4 <?php echo esc_attr($term_slug); ?>">
-						<div class="portfolio_block portfolio_layout_2">
-							<div class="portfolio_image">
-                            	<span><?php echo wp_kses(get_post_meta($post->ID, 'tr_price', true), $allowed_html); ?></span>
-								<a href="<?php echo esc_url(get_permalink(get_the_id())); ?>" class="portfolio_image_wrap bg-light">
-									<?php echo get_the_post_thumbnail(); ?>
+        
+        <!-- tp-portfolio-area-start -->
+		<div class="tp-portfolio-area pre-header tp-bg-common-black-5 tp-portfolio-showcase-full-bg bg-position tp-image-distortion z-index-1" data-background="assets/img/cta/ai/bg.jpg">
+			<div class="container-fluid container-1824 containers">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<div class="tp-cta-ai-wrap text-center">
+							<span class="tp-portfolio-showcase-full-subtitle">Best-in-class local <br> benefits for everyone, everywhere</span>
+							<h2 class="tp-hero-vp-title tp-ff-morganite-bold text-uppercase tp-text-common-white ls-0 text-scale-anim-bottom">Our Portfolio</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- tp-portfolio-area-end -->
+
+		<!-- tp-portfolio-area-start -->
+		<div class="tp-portfolio-area pt-140">
+			<div class="container-fluid container-1800">
+				<div class="row">
+					<div class="col-12">
+						<div class="tp-portfolio-wd-wrap des-portfolio-wrap">
+							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
+									<div class="tp-portfolio-wd-thumb p-relative">
+									<img src="assets/img/portfolio/wd/thumb.jpg" alt="">
+									</div>
+									<div class="tp-portfolio-wd-category">
+									<span>Research</span>
+									<span>Development</span>
+									</div>
+									<div class="tp-portfolio-wd-category portfolio-meta">
+									<span>2025</span>
+									</div>
 								</a>
+								<div class="tp-portfolio-wd-content">
+									<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Polygona Arct Design</a></h2>
+								</div>
 							</div>
-							<div class="portfolio_content">
-								<h3 class="portfolio_title">
-									<a href="<?php echo esc_url(get_permalink(get_the_id())); ?>">
-										<?php echo get_the_title(); ?>
-									</a>
-								</h3>
-								<ul class="category_list unordered_list">
-									<li><?php echo esc_attr($term_slug); ?></li>
-								</ul>
+							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
+									<div class="tp-portfolio-wd-thumb p-relative">
+										<img src="assets/img/portfolio/wd/thumb-2.jpg" alt="">
+									</div>
+									<div class="tp-portfolio-wd-category">
+										<span>Research</span>
+										<span>Development</span>
+									</div>
+									<div class="tp-portfolio-wd-category portfolio-meta">
+										<span>2025</span>
+									</div>
+								</a>
+								<div class="tp-portfolio-wd-content">
+									<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Epic Strategy App</a></h2>
+								</div>
+							</div>
+							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
+									<div class="tp-portfolio-wd-thumb p-relative">
+										<img src="assets/img/portfolio/wd/thumb-3.jpg" alt="">
+									</div>
+									<div class="tp-portfolio-wd-category">
+										<span>Research</span>
+										<span>Development</span>
+									</div>
+									<div class="tp-portfolio-wd-category portfolio-meta">
+										<span>2025</span>
+									</div>
+								</a>
+								<div class="tp-portfolio-wd-content">
+									<h2 class="tp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Making Brands Shine</a></h2>
+								</div>
+							</div>
+							<div class="tp-portfolio-wd-item des-portfolio-panel p-relative not-hide-cursor mb-30" data-cursor="View<br>Demo">
+								<a class="cursor-hide" href="portfolio-details-gallery-light.html">
+									<div class="tp-portfolio-wd-thumb p-relative">
+										<img src="assets/img/portfolio/wd/thumb-4.jpg" alt="">
+									</div>
+									<div class="tp-portfolio-wd-category">
+										<span>Research</span>
+										<span>Development</span>
+									</div>
+									<div class="tp-portfolio-wd-category portfolio-meta">
+										<span>2025</span>
+									</div>
+								</a>
+								<div class="tp-portfolio-wd-content">
+									<h2 class="ttp-ff-teko tp-text-common-white fs-100 fs-lg-70 fs-md-50 fs-xs-40 lh-1 fw-500"><a href="portfolio-details-gallery-light.html">Creating Impact Online</a></h2>
+								</div>
 							</div>
 						</div>
 					</div>
-                        
-		<?php endwhile; ?>
-
-		<?php wp_reset_postdata();
-		$data_posts = ob_get_contents();
-		ob_end_clean();
-		ob_start(); ?>
-        
-        <!-- Portfolio Section - Start
-        ================================================== -->
-        <section class="portfolio_section section_space bg-light">
-          <div class="container">
-            <div class="filter_elements_nav">
-              <ul class="unordered_list justify-content-center">
-                <li class="active" data-filter="all"><?php esc_html_e('See All', 'themerange'); ?></li>
-                <?php foreach($fliteration as $t): ?>
-                <li data-filter="<?php echo esc_attr($t->slug); ?>"><?php echo wp_kses($t->name, $allowed_html); ?></li>
-                <?php endforeach; ?>
-              </ul>
-            </div>
-            <div class="filter_elements_wrapper row">
-            	<?php echo wp_kses($data_posts, $allowed_html); ?>
-            </div>
-          </div>
-        </section>
-        <!-- Portfolio Section - End
-        ================================================== -->
+				</div>
+			</div>
+		</div>
+		<!-- tp-portfolio-area-end -->
         
 	<?php }
 	}

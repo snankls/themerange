@@ -66,7 +66,7 @@ class TR_Elementor_Addons {
 			'marquee',
 			'services',
 			'portfolio',
-			'partners',
+			//'partners',
 			//'services',
 			/*'facts_counter',
 			'team',
