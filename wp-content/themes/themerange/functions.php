@@ -92,8 +92,11 @@ add_action( 'after_setup_theme', 'themerange_theme_setup');
 
 /*** Add Image Size ***/
 function themerange_add_image_size(){
+	add_image_size('team_310x400', 310, 400, true); //Team
+
+
+
 	add_image_size('services_490x700', 490, 700, true); //Services V1
-	add_image_size('team_370x500', 370, 500, true); //Team V1, V3
 	add_image_size('news_670x770', 670, 770, true); //News V1 Big
 	add_image_size('news_470x370', 470, 370, true); //News V1 Small
 	add_image_size('news_570x370', 570, 370, true); //News V2
