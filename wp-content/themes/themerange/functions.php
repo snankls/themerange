@@ -93,18 +93,10 @@ add_action( 'after_setup_theme', 'themerange_theme_setup');
 /*** Add Image Size ***/
 function themerange_add_image_size(){
 	add_image_size('team_310x400', 310, 400, true); //Team
-
-
+	add_image_size('portfolio_635x475', 635, 475, true); //Portfolio
 
 	add_image_size('services_490x700', 490, 700, true); //Services V1
 	add_image_size('news_670x770', 670, 770, true); //News V1 Big
-	add_image_size('news_470x370', 470, 370, true); //News V1 Small
-	add_image_size('news_570x370', 570, 370, true); //News V2
-	add_image_size('news_370x425', 370, 425, true); //News V3
-	add_image_size('services_480x700', 480, 700, true); //Services V2
-	add_image_size('team_480x700', 480, 700, true); //Team V2
-	add_image_size('portfolio_570x480', 570, 480, true); //Portfolio V1
-	add_image_size('portfolio_570x650', 570, 650, true); //Portfolio V1
 }
 add_action('init', 'themerange_add_image_size');
 

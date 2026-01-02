@@ -225,14 +225,14 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 					</div>
 				</div>
 				<div class="row gx-50">
-					<?php while( $team->have_posts() ){
-						$team->the_post();
+					<?php while( $portfolio->have_posts() ){
+						$portfolio->the_post();
 					?>
 					<div class="col-lg-6">
 						<div class="tp-portfolio-sa-item mb-50 not-hide-cursor portfolio__item" data-cursor="View<br>Demo">
 							<div class="tp-portfolio-sa-thumb mb-25">
 								<a href="<?php the_permalink(); ?>" class="cursor-hide">
-									<?php the_post_thumbnail('team_310x400', array('class' => 'w-100 mover')); ?>
+									<?php the_post_thumbnail('portfolio_635x475', array('class' => 'w-100 mover')); ?>
 								</a>
 							</div>
 							<div class="tp-portfolio-sa-content">
