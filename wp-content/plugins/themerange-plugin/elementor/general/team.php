@@ -81,9 +81,9 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 					</div>
 					<div class="col-xl-6 col-lg-8 col-md-9">
 						<div class="tp-team-sa-title-wrap">
-							<h2 class="tp-team-sa-title mb-25 tp_fade_anim" data-delay=".3"><?php echo $title; ?></h2>
+							<h2 class="tp-team-sa-title mb-25 tp_fade_anim" data-delay=".3"><?php echo $settings['title']; ?></h2>
 							<div class="tp-service-2-para tp-techonolgy-para tp-team-sa-para tp_fade_anim" data-delay=".5">
-								<p class="fs-18"><?php echo $text; ?></p>
+								<p class="fs-18"><?php echo $settings['text']; ?></p>
 							</div>
 						</div>
 					</div>
@@ -95,7 +95,7 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 						<div class="tp-team-sa-item mb-90" data-speed=".-9">
 							<div class="tp-team-sa-thumb mb-20 tp--hover-item p-relative">
 								<div class="tp--hover-img" data-displacement="assets/img/team/thumb-4.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
-									<?php the_post_thumbnail('team_310x400'); ?>
+									<?php the_post_thumbnail('team_310x400', array('class' => 'w-100')); ?>
 								</div>
 							</div>
 							<div class="tp-team-sa-content text-center">

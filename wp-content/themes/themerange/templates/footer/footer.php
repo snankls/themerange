@@ -81,8 +81,8 @@
                             Based on California, USA
                         </span>
                         <div class="tp-footer-pp-link">
-                            <a class="mr-35" href="mailto:info@themerange.net">info@themerange.net</a>
-                            <a href="tel:+923007101235">+92 (300) 710-1235</a>
+                            <a class="mr-35" href="mailto:info@example.com">info@example.com</a>
+                            <a href="tel:+91-87643534353">+91-876 4353 4353</a>
                         </div>
                     </div>
                 </div>
@@ -110,4 +110,4 @@
     </div>
     <!-- tp-footer area end -->
 
-</footer>
+    </footer>
