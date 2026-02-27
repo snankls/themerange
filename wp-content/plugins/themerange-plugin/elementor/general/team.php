@@ -32,33 +32,54 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 		//Text
 		$this->tr_add_text_controls();
 		
-		//Query {Item Count, Category}
-		$this->tr_add_query_controls(4, 'team_cat');
+		//Team
+		$this->start_controls_section(
+			'team_tab',
+			array(
+				'label' => esc_html__( 'Team', 'themerange' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			)
+		);
+		$repeater = new Repeater();
+    	$repeater->add_control(
+			'title',
+			[
+				'label' => esc_html__('Highlighted Title', 'themerange'),
+				'type' => Controls_Manager::TEXT,
+			]
+		);
+    	$repeater->add_control(
+			'designation',
+			[
+				'label' => esc_html__('Designation', 'themerange'),
+				'type' => Controls_Manager::TEXT,
+			]
+		);
+		$repeater->add_control(
+			'image',
+			array(
+				'label' => esc_html__( 'Image', 'themerange' ),
+				'type' => Controls_Manager::MEDIA,
+				'default' => array( 'id' => '', 'url' => '' ),
+				'description' => '',
+			)
+		);
+		$this->add_control(
+			'team',
+			[
+				'label'       => __( 'Team', 'themerange' ),
+				'type'        => Controls_Manager::REPEATER,
+				'fields'      => $repeater->get_controls(),
+				'title_field' => '{{{ title }}}',
+			]
+		);
+		$this->end_controls_section();
 	}
 	
 	protected function render(){
 		$settings = $this->get_settings_for_display();
 		extract( $settings );
 		$allowed_html = tr_allowed_html();
-		
-		global $post, $wp_query, $tr_team;
-		$paged = get_query_var('paged');
-        $paged = get_post_meta($_REQUEST, 'paged') ? esc_attr($_REQUEST['paged']) : $paged;
-		$args = array(
-			'post_type'			=> 'tr_team',
-			'post_status'		=> 'publish',
-			'posts_per_page'	=> $limit,
-			'orderby' 			=> $orderby,
-			'order' 			=> $order,
-            'paged'				=> $paged,
-		);
-		
-		if( $categories ){
-			$args['team_cat'] = $categories;
-		}
-		
-		$team = new WP_Query($args);
-		if( $team->have_posts() ){
 	?>
         
 		<!-- tp-team-area-start -->
@@ -81,38 +102,35 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 					</div>
 					<div class="col-xl-6 col-lg-8 col-md-9">
 						<div class="tp-team-sa-title-wrap">
-							<h2 class="tp-team-sa-title mb-25 tp_fade_anim" data-delay=".3"><?php echo $settings['title']; ?></h2>
+							<h2 class="tp-team-sa-title mb-25 tp_fade_anim" data-delay=".3"><?php echo wp_kses($title, true); ?></h2>
 							<div class="tp-service-2-para tp-techonolgy-para tp-team-sa-para tp_fade_anim" data-delay=".5">
-								<p class="fs-18"><?php echo $settings['text']; ?></p>
+								<p class="fs-18"><?php echo wp_kses($text, true); ?></p>
 							</div>
 						</div>
 					</div>
 					
-					<?php while( $team->have_posts() ){
-						$team->the_post();
-					?>
+					<?php foreach($settings['team'] as $index => $item) : ?>
 					<div class="col-lg-3 col-md-6">
 						<div class="tp-team-sa-item mb-90" data-speed=".-9">
 							<div class="tp-team-sa-thumb mb-20 tp--hover-item p-relative">
 								<div class="tp--hover-img" data-displacement="assets/img/team/thumb-4.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
-									<?php the_post_thumbnail('team_310x400', array('class' => 'w-100')); ?>
+									<img class="myimg" src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-100">
 								</div>
 							</div>
 							<div class="tp-team-sa-content text-center">
-								<h5 class="tp-ff-heading fw-500 fs-25 mb-5"><?php echo get_the_title(); ?></h5>
-								<span class="fs-16 tp-text-grey-1"><?php echo wp_kses(get_post_meta($post->ID, 'tr_designation', true), $allowed_html); ?></span>
+								<h5 class="tp-ff-heading fw-500 fs-25 mb-5"><?php echo wp_kses($item['title'], true); ?></h5>
+								<span class="fs-16 tp-text-grey-1"><?php echo wp_kses($item['designation'], true); ?></span>
 							</div>
 						</div>
 					</div>
-					<?php }
-						wp_reset_postdata();
-					?>
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 		</div>
 		<!-- tp-team-area-end -->
         
-		<?php }
+	<?php
 	}
 }
 

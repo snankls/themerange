@@ -26,183 +26,60 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 	}
 	
 	protected function register_controls(){
-		//Query {Item Count, Category, Excerpt}
-		$this->tr_add_query_controls(8, 'portfolio_cat', 'no');
+		//Heading
+		$this->tr_add_heading_controls();
 		
-		//Settings
+		//Text
+		$this->tr_add_text_controls();
+
+		//Portfolio
 		$this->start_controls_section(
-            'setting_tab',
-            array(
-                'label' => esc_html__( 'Settings', 'themerange' ),
-                'tab' => Controls_Manager::TAB_CONTENT,
-            )
-        );
-		$this->add_control(
-			'show_columns',
+			'portfolio_tab',
 			array(
-				'label' => esc_html__( 'Show Columns', 'themerange' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '2column',
-				'options' => array(
-					'2column'	=> esc_html__( '2 Columns', 'themerange' ),
-					'3column'	=> esc_html__( '3 Columns', 'themerange' ),
-					'4column'	=> esc_html__( '4 Columns', 'themerange' ),
-					'5column'	=> esc_html__( '5 Columns', 'themerange' ),
-					'6column'	=> esc_html__( '6 Columns', 'themerange' ),
-				),
+				'label' => esc_html__( 'Portfolio', 'themerange' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			)
+		);
+		$repeater = new Repeater();
+    	$repeater->add_control(
+			'title',
+			[
+				'label' => esc_html__('Highlighted Title', 'themerange'),
+				'type' => Controls_Manager::TEXT,
+			]
+		);
+    	$repeater->add_control(
+			'designation',
+			[
+				'label' => esc_html__('Designation', 'themerange'),
+				'type' => Controls_Manager::TEXT,
+			]
+		);
+		$repeater->add_control(
+			'image',
+			array(
+				'label' => esc_html__( 'Image', 'themerange' ),
+				'type' => Controls_Manager::MEDIA,
+				'default' => array( 'id' => '', 'url' => '' ),
+				'description' => '',
 			)
 		);
 		$this->add_control(
-			'show_thumbnail',
-			array(
-				'label' => esc_html__( 'Show Image', 'themerange' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '1',
-				'options' => array(
-					'0'	=> esc_html__( 'No', 'themerange' ),
-					'1'	=> esc_html__( 'Yes', 'themerange' ),
-				),
-			)
-		);
-		$this->add_control(
-			'show_lightbox_image',
-			array(
-				'label' => esc_html__( 'Show Lightbox Image', 'themerange' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '1',
-				'options' => array(
-					'0'	=> esc_html__( 'No', 'themerange' ),
-					'1'	=> esc_html__( 'Yes', 'themerange' ),
-				),
-			)
-		);
-		$this->add_control(
-			'show_link',
-			array(
-				'label' => esc_html__( 'Show Link', 'themerange' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '1',
-				'options' => array(
-					'0'	=> esc_html__( 'No', 'themerange' ),
-					'1'	=> esc_html__( 'Yes', 'themerange' ),
-				),
-			)
-		);
-		$this->add_control(
-			'show_pagination_button',
-			array(
-				'label'			=> esc_html__( 'Pagination / Button', 'themerange' ),
-				'type'			=> Controls_Manager::SELECT,
-				'default'		=> '',
-				'options'		=> array(
-					''				=> esc_html__( 'None', 'themerange' ),
-					'pagination'	=> esc_html__( 'Pagination', 'themerange' ),
-					'button' 		=> esc_html__( 'Button', 'themerange' ),
-				),
-				'condition' => array( 'layout' => array('layout1, layout3, layout4, layout5') ),
-			)
-		);
-		$this->add_control(
-            'portfolio_btn_style',
-            array(
-                'label' => esc_html__('Style', 'themerange'),
-                'type' => Controls_Manager::SELECT2,
-                'default' => 'two',
-                'options' => tr_button_style(),
-				'condition' => array( 'show_pagination_button' => 'button' ),
-            )
-        );
-		$this->add_control(
-            'pagination_btn_name',
-            array(
-                'label' => __( 'Name', 'themerange' ),
-                'type' => Controls_Manager::TEXT,
-                'default' => __( 'Read More', 'themerange' ),
-				'condition' => array( 'show_pagination_button' => 'button' ),
-			)
-        );
-        $this->add_control(
-            'pagination_btn_link',
-            array(
-                'label' => __( 'Link', 'themerange' ),
-                'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'themerange' ),
-                'show_external' => true,
-                'dynamic'  => array( 'active' => true ),
-				'default' => array( 'url' => '' ),
-				'condition' => array( 'show_pagination_button' => 'button' ),
-            )
-        );
-		$this->add_responsive_control(
-			'portfolio_button_alignment',
-			array(
-				'label' => esc_html__( 'Alignment', 'themerange' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
-						'title' => esc_html__( 'Left', 'themerange' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'themerange' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => esc_html__( 'Right', 'themerange' ),
-						'icon' => 'eicon-text-align-right',
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .load-more-wrapper, {{WRAPPER}} .styled-pagination' => 'text-align: {{VALUE}}',
-				],
-				'default' => 'center',
-				'condition' => array(
-                    'show_pagination_button' => array('pagination', 'button')
-                ),
-			)
+			'portfolio',
+			[
+				'label'       => __( 'Portfolio', 'themerange' ),
+				'type'        => Controls_Manager::REPEATER,
+				'fields'      => $repeater->get_controls(),
+				'title_field' => '{{{ title }}}',
+			]
 		);
 		$this->end_controls_section();
-		
-		//Style Tab
-		$this->register_style_background_controls();
-	}
-	
-	protected function register_style_background_controls() {
-		//Layout
-		$this->add_layout_style_controls();
 	}
 	
 	protected function render(){
 		$settings = $this->get_settings_for_display();
 		extract( $settings );
 		$allowed_html = tr_allowed_html();
-		
-		global $post, $wp_query, $tr_portfolio;
-        $paged = get_query_var('paged');
-        $paged = get_post_meta($_REQUEST, 'paged') ? esc_attr($_REQUEST['paged']) : $paged;
-		
-		$args = array(
-			'post_type'			=> 'tr_portfolio',
-			'post_status'		=> 'publish',
-			'posts_per_page'	=> $limit,
-			'orderby' 			=> $orderby,
-			'order' 			=> $order,
-            'paged'				=> $paged
-		);
-		
-		//Terms
-        if( $categories ){
-			$args['tax_query'] = array(
-				array(
-					'taxonomy' => 'portfolio_cat',
-					'field' => 'slug',
-					'terms' => $categories,
-				)
-			);
-		}
-        $portfolio = new \WP_Query($args);
-		
-		if($portfolio->have_posts()) {
 	?>
         
 		<!-- tp-portfolio-area-start -->
@@ -224,26 +101,25 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 					</div>
 					</div>
 				</div>
+
 				<div class="row gx-50">
-					<?php while( $portfolio->have_posts() ){
-						$portfolio->the_post();
-					?>
+					<?php foreach($settings['portfolio'] as $index => $item) : ?>
 					<div class="col-lg-6">
 						<div class="tp-portfolio-sa-item mb-50 not-hide-cursor portfolio__item" data-cursor="View<br>Demo">
 							<div class="tp-portfolio-sa-thumb mb-25">
-								<a href="<?php the_permalink(); ?>" class="cursor-hide">
-									<?php the_post_thumbnail('portfolio_635x475', array('class' => 'w-100 mover')); ?>
+								<a href="<?php echo wp_get_attachment_url($item['link']['url']); ?>" class="cursor-hide">
+									<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-100 mover">
 								</a>
 							</div>
 							<div class="tp-portfolio-sa-content">
-								<h4 class="tp-portfolio-sa-item-title fs-25 lh-1 mb-15"><a class="underline-black" href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
-								<span class="tp-portfolio-sa-item-tag fw-700 fs-16 tp-text-grey-1 tp-ff-heading tp-bg-common-white-2 d-inline-block">UI/UX Design</span>
+								<h4 class="tp-portfolio-sa-item-title fs-25 lh-1 mb-15"><a class="underline-black" href="<?php echo wp_get_attachment_url($item['link']['url']); ?>"><?php echo wp_kses($item['title'], true); ?></a></h4>
+								<span class="tp-portfolio-sa-item-tag fw-700 fs-16 tp-text-grey-1 tp-ff-heading tp-bg-common-white-2 d-inline-block"><?php echo wp_kses($item['title'], true); ?></span>
 							</div>
 						</div>
-					<?php }
-						wp_reset_postdata();
-					?>
+					</div>
+					<?php endforeach; ?>
 				</div>
+
 				<div class="row">
 					<div class="col-12">
 					<div class="tp-rounded-btn-wrap mt-30 text-center tp_fade_anim" data-delay=".5" data-fade-from="top" data-ease="bounce">
@@ -353,7 +229,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 		</div> -->
 		<!-- tp-portfolio-area-end -->
         
-	<?php }
+	<?php
 	}
 }
 
