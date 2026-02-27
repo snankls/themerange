@@ -25,7 +25,7 @@ class ThemeRange_Plugin {
 	function __construct() {
 		$this->load_language_file();
 		$this->include_files();
-		//$this->register_posttype();
+		$this->register_posttype();
 		$this->register_widgets();
 		
 		/* Allow HTML in Category Descriptions */
@@ -70,16 +70,16 @@ class ThemeRange_Plugin {
 	}
 	
 	// Posttype
-	// function register_posttype() {
-	// 	$file_names = array('services', 'team', 'portfolio', 'classes', 'hf_builder');
-	// 	foreach( $file_names as $file_name ){
-	// 		$file = plugin_dir_path( __FILE__ ) . '/posttypes/' . $file_name . '.php';
-	// 		if( file_exists($file) ){
-	// 			require_once($file);
-	// 		}
-	// 	}
-	// 	require_once('posttypes/taxonomy/register_taxonomy.php');
-	// }
+	function register_posttype() {
+		$file_names = array('services', 'team', 'portfolio', 'classes', 'hf_builder');
+		foreach( $file_names as $file_name ){
+			$file = plugin_dir_path( __FILE__ ) . '/posttypes/' . $file_name . '.php';
+			if( file_exists($file) ){
+				require_once($file);
+			}
+		}
+		require_once('posttypes/taxonomy/register_taxonomy.php');
+	}
 	
 	// Widgets
 	function register_widgets() {

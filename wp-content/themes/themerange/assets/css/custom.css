@@ -5,7 +5,7 @@
 .fab:before{
 	font-family:'Font Awesome 5 Brands';	
 }
-.admin-bar .main-header.fixed-header .header-lower {
+.admin-bar .header-sticky {
     top:32px !important;
 }
 .admin-bar .mobile-menu {
