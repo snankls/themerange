@@ -66,6 +66,17 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 				'description' => '',
 			)
 		);
+		$repeater->add_control(
+			'link',
+			[
+				'label' => __( 'Link', 'themerange' ),
+				'type' => Controls_Manager::URL,
+				'placeholder' => __( 'https://your-link.com', 'themerange' ),
+				'show_external' => true,
+				'dynamic'  => array( 'active' => true ),
+				'default' => array( 'url' => '' ),
+			]
+		);
 		$this->add_control(
 			'portfolio',
 			[
