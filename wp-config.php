@@ -29,7 +29,6 @@ if ( $_SERVER['HTTP_HOST'] === 'localhost' ) {
     define( 'DB_NAME', 'themeran_wp169' );
     define( 'DB_USER', 'themeran_wp169' );
     define( 'DB_PASSWORD', '2pS9(ffV].Y@K5-5' );
-    define( 'DB_HOST', 'localhost' );
 }
 
 /** Database hostname */
