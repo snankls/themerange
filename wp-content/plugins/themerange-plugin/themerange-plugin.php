@@ -25,7 +25,7 @@ class ThemeRange_Plugin {
 	function __construct() {
 		$this->load_language_file();
 		$this->include_files();
-		$this->register_posttype();
+		//$this->register_posttype();
 		$this->register_widgets();
 		
 		/* Allow HTML in Category Descriptions */
