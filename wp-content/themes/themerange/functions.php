@@ -1,9 +1,10 @@
 <?php 
-/*** Redux Framework ***/
-require_once get_template_directory().'/admin/init.php';
-
-/*** Theme Framework ***/
-require_once get_template_directory().'/framework/init.php';
+// File init
+function agenkx_include_framework() {
+    require_once get_template_directory().'/admin/init.php';
+    require_once get_template_directory().'/framework/init.php';
+}
+add_action('after_setup_theme', 'agenkx_include_framework');
 
 /*** Activate Theme ***/
 add_action('admin_init', 'themerange_theme_activation');
