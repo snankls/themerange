@@ -1,6 +1,7 @@
 <?php
 use Elementor\Controls_Manager;
 use Elementor\Utils;
+use Elementor\Repeater;
 use Elementor\Group_Control_Typography;
 
 class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{

@@ -1,6 +1,7 @@
 <?php
 use Elementor\Controls_Manager;
 use Elementor\Utils;
+use Elementor\Repeater;
 use Elementor\Group_Control_Typography;
 
 class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
@@ -40,6 +41,7 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 				'tab' => Controls_Manager::TAB_CONTENT,
 			)
 		);
+
 		$repeater = new Repeater();
     	$repeater->add_control(
 			'title',
