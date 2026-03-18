@@ -71,7 +71,8 @@ class ThemeRange_Plugin {
 	
 	// Posttype
 	function register_posttype() {
-		$file_names = array('services', 'team', 'portfolio', 'classes', 'hf_builder');
+		//$file_names = array('services', 'team', 'portfolio', 'classes', 'hf_builder');
+		$file_names = array('portfolio');
 		foreach( $file_names as $file_name ){
 			$file = plugin_dir_path( __FILE__ ) . '/posttypes/' . $file_name . '.php';
 			if( file_exists($file) ){

@@ -59,7 +59,7 @@ class TR_Elementor_Addons {
 		require_once 'elementor/base.php';
 		
 		// Shortcodes
-		$general_elements = array(
+		$shortcodes = array(
 			'slider',
 			'about_us',
 			'features',
@@ -68,6 +68,15 @@ class TR_Elementor_Addons {
 			'portfolio',
 			'technology',
 			'team',
+
+			
+			'button',
+			'heading',
+			'icon_box',
+			'image',
+			'listing',
+			'text',
+			'icon',
 			//'partners',
 			//'services',
 			/*'facts_counter',
@@ -84,43 +93,14 @@ class TR_Elementor_Addons {
 			'contact_info',*/
 		);
 		
-		$general_elements = apply_filters('tr_shortcodes_array', $general_elements);
-		foreach ($general_elements as $element) {
-			$path = plugin_dir_path(__FILE__) . '/elementor/general/' . $element . '.php';
+		$shortcodes = apply_filters('tr_shortcodes_array', $shortcodes);
+		foreach ($shortcodes as $element) {
+			$path = plugin_dir_path(__FILE__) . '/elementor/shortcode/' . $element . '.php';
 			if (file_exists($path)) {
 				require_once $path;
 			}
 		}
 		
-		// Elements
-		$elements = array(
-			'button',
-			'heading',
-			'icon_box',
-			'image',
-			'listing',
-			'text',
-			'icon',
-			
-			/*
-			'form',
-			'countdown',
-			'google_maps',
-			'image_box',
-			'mailchimp',
-			'nav_menu',
-			'quote',
-			'social_icons',
-			'copyrights',*/
-		);
-		
-		$elements = apply_filters('tr_elements_array', $elements);
-		foreach ($elements as $element) {
-			$path = plugin_dir_path(__FILE__) . '/elementor/elements/' . $element . '.php';
-			if (file_exists($path)) {
-				require_once $path;
-			}
-		}
 	}
 }
 
