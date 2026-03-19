@@ -223,7 +223,7 @@ class TR_Elementor_Widget_Icon_Box extends TR_Elementor_Widget_Base{
 				<?php foreach($settings['icon_box'] as $index => $item) : ?>
 					<div class="col-lg-4 col-md-6 tp_fade_anim" data-delay=".6" data-fade-from="left">
 						<div class="tp-about-process-item tp-bg-common-white-2 mb-40">
-							<span class="tp-about-process-icon d-inline-block mb-60 tr-icon">
+							<span class="tp-about-process-icon d-inline-block mb-20 tr-icon">
 								<?php \Elementor\Icons_Manager::render_icon($item['icon']); ?>
 							</span>
 							<h4 class="fs-35 fs-lg-30 tp-text-common-black-3 lh-130-per mb-20"><?php echo wp_kses($item['title'], $allowed_html); ?></h4>

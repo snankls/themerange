@@ -149,13 +149,6 @@ $option_fields = array();
 $option_fields['general'] = array(
 	//Sticky Header
 	array(
-		'id'       => 'section-sticky-header',
-		'type'     => 'section',
-		'title'    => esc_html__( 'Sticky Header', 'themerange' ),
-		'subtitle' => '',
-		'indent'   => false
-	),
-	array(
 		'id'       	=> 'tr_enable_sticky_header',
 		'type'     	=> 'switch',
 		'title'    	=> esc_html__( 'Sticky Header', 'themerange' ),
@@ -167,13 +160,6 @@ $option_fields['general'] = array(
 	
 	//Cursor Pointer
 	array(
-		'id'       	=> 'section-pointer',
-		'type'     	=> 'section',
-		'title'    	=> esc_html__( 'Cursor Pointer', 'themerange' ),
-		'subtitle' 	=> '',
-		'indent'   	=> false
-	),
-	array(
 		'id'       	=> 'tr_enable_pointer',
 		'type'     	=> 'switch',
 		'title'    	=> esc_html__( 'Cursor Pointer', 'themerange' ),
@@ -183,32 +169,7 @@ $option_fields['general'] = array(
 		'off'		=> esc_html__( 'Disable', 'themerange' ),
 	),
 	
-	//RTL
-	array(
-		'id'       => 'section-rtl',
-		'type'     => 'section',
-		'title'    => esc_html__( 'Right To Left', 'themerange' ),
-		'subtitle' => '',
-		'indent'   => false
-	),
-	array(
-		'id'       => 'tr_enable_rtl',
-		'type'     => 'switch',
-		'title'    => esc_html__( 'Enable Right To Left', 'themerange' ),
-		'subtitle' => '',
-		'default'  => false,
-		'on'		=> esc_html__( 'Enable', 'themerange' ),
-		'off'		=> esc_html__( 'Disable', 'themerange' ),
-	),
-	
 	//Disable Right Click
-	array(
-		'id'       => 'section-disable-right-click',
-		'type'     => 'section',
-		'title'    => esc_html__( 'Disable Right Click', 'themerange' ),
-		'subtitle' => '',
-		'indent'   => false
-	),
 	array(
 		'id'       => 'tr_enable_right_click',
 		'type'     => 'switch',
