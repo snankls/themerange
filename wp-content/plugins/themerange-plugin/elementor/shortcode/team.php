@@ -112,7 +112,7 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 					
 					<?php foreach($settings['team'] as $index => $item) : ?>
 					<div class="col-lg-3 col-md-6">
-						<div class="tp-team-sa-item mb-90" data-speed=".-9">
+						<div class="tp-team-sa-item" data-speed=".-9">
 							<div class="tp-team-sa-thumb mb-20 tp--hover-item p-relative">
 								<div class="tp--hover-img" data-displacement="assets/img/team/thumb-4.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
 									<img class="myimg" src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-100">
