@@ -21,6 +21,17 @@ class TR_Elementor_Widget_Text extends TR_Elementor_Widget_Base{
 	
 	protected function register_controls(){
 		$this->tr_add_text_controls();
+		
+		//Style Tab
+		$this->register_style_background_controls();
+	}
+	
+	/***********************************************
+						Style Tab
+	***********************************************/
+	protected function register_style_background_controls() {
+		//Text
+		$this->add_text_style_controls();
 	}
 	
 	protected function render(){
