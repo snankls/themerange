@@ -98,7 +98,7 @@ $header_sidebar		= get_template_directory_uri() . '/assets/images/resource/about
 //Header Layout
 $header_layout_options = array();
 $header_image_folder = get_template_directory_uri() . '/admin/assets/images/headers/';
-for( $i = 1; $i <= 3; $i++ ){
+for( $i = 1; $i <= 1; $i++ ){
 	$header_layout_options['v' . $i] = array(
 		'alt'  => sprintf(esc_html__('Header Layout %s', 'themerange'), $i),
 		'img' => $header_image_folder . 'header_v'.$i.'.png'
@@ -337,33 +337,6 @@ $option_fields['logo'] = array(
 
 /*** Header Tab ***/
 $option_fields['header'] = array(
-	array(
-		'id'       => 'header_builder_switcher',
-		'type'     => 'select',
-		'title'    => esc_html__( 'Select Layout', 'themerange' ),
-		'subtitle' => '',
-		'desc'     => '',
-		'options'  => array(
-			'th' => 'Theme Header',
-			'eh' => 'Elementor Header',
-		),
-		'default'  => 'th',
-		'select2'	=> array('allowClear' => false, 'minimumResultsForSearch' => 'Infinity'),
-	),
-	
-	//Elementor Header
-	array(
-		'id'       	=> 'el_header_layout',
-		'type'     => 'select',
-		'title'    => esc_html__( 'Header Builder', 'themerange' ),
-		'subtitle' => '',
-		'desc'     => '',
-		'options'  => themerange_get_header_block_options(),
-		'default'  => '0',
-		'select2'	=> array('allowClear' => false, 'minimumResultsForSearch' => 'Infinity'),
-		'required'	=> array('header_builder_switcher', 'equals', 'eh'),
-	),
-	
 	//Theme Header
 	array(
 		'id'       => 'tr_header_layout',
@@ -386,19 +359,6 @@ $option_fields['header'] = array(
 		'on'		=> esc_html__( 'Enable', 'themerange' ),
 		'off'		=> esc_html__( 'Disable', 'themerange' ),
 		'required'	=> array( 'tr_header_layout', 'equals', array('v1', 'v2') ),
-	),
-	array(
-		'id'       	=> 'tr_search_layout',
-		'type'     => 'select',
-		'title'    => esc_html__( 'Search Layout', 'themerange' ),
-		'desc'     => '',
-		'options'  => array(
-			'layout1' => esc_html__( 'Layout 1', 'themerange' ),
-			'layout2' => esc_html__( 'Layout 2', 'themerange' ),
-		),
-		'default'  => 'layout1',
-		'select2'	=> array('allowClear' => false, 'minimumResultsForSearch' => 'Infinity'),
-		'required'	=> array( 'tr_enable_search', 'equals', '1' ),
 	),
 	
 	//Button
