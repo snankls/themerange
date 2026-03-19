@@ -1011,28 +1011,6 @@ function tr_the_tags( $before = '', $sep = '', $after = '' ) {
 	}
 }
 
-//Button Style
-function tr_button_style() {
-	return array(
-		'big' => esc_html__('Button Big', 'themerange'),
-		'one' => esc_html__('Button One', 'themerange'),
-		'two' => esc_html__('Button Two', 'themerange'),
-		'three' => esc_html__('Button Three', 'themerange'),
-	);
-}
-//Theme Button Style
-function tr_button($btn_style, $btn_name, $btn_link) {
-	return $button = '<div class="tr-button">
-		<a href="'.$btn_link.'" class="theme-btn btn-style-'.$btn_style.'">
-			<span class="btn-wrap">
-				<span class="text-one">'.$btn_name.' <i class="fa-solid fa-plus fa-fw"></i></span>
-				<span class="text-two">'.$btn_name.' <i class="fa-solid fa-plus fa-fw"></i></span>
-			</span>
-		</a>
-	</div>';
-}
-
-
 //Get Theme Options
 function themerange_get_theme_options( $key = '', $default = '' ){
 	global $themerange_theme_options;

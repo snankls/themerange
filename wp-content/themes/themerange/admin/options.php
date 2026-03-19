@@ -133,13 +133,6 @@ if( is_array($default_sidebars) ){
 	}
 }
 
-//Button Style
-$button_style = array(
-	'one' => esc_html__('Button One', 'themerange'),
-	'two' => esc_html__('Button Two', 'themerange'),
-	'three' => esc_html__('Button Three', 'themerange'),
-);
-
 //Product Loading Image
 $product_loading_image = get_template_directory_uri() . '/assets/images/icons/prod_loading.gif';
 
@@ -418,14 +411,6 @@ $option_fields['header'] = array(
 		'on'		=> esc_html__( 'Enable', 'themerange' ),
 		'off'		=> esc_html__( 'Disable', 'themerange' ),
 		'required'	=> array( 'tr_header_layout', 'equals', 'v1' ),
-	),
-	array(
-		'id'       	=> 'tr_header_button_style',
-		'type'     => 'select',
-		'title'    => esc_html__( 'Button Style', 'themerange' ),
-		'options'  => $button_style,
-		'default'  => 'one',
-		'required'	=> array( 'tr_header_enable_button', 'equals', '1' ),
 	),
 	array(
 		'id'       => 'tr_header_button_name',
@@ -983,16 +968,6 @@ $option_fields['blog'] = array(
 		'default'  => 'false',
 		'on'	   => esc_html__( 'Show', 'themerange' ),
 		'off'	   => esc_html__( 'Hide', 'themerange' ),
-	),
-	array(
-		'id'       	=> 'tr_blog_button_style',
-		'type'     => 'select',
-		'title'    => esc_html__( 'Button Style', 'themerange' ),
-		'subtitle' => '',
-		'desc'     => '',
-		'options'  => $button_style,
-		'default'  => 'two',
-		'required' => array( 'tr_blog_read_more', 'equals', '1' ),
 	),
 	array(
 		'id'       => 'tr_blog_read_more_button',
@@ -1873,16 +1848,6 @@ $option_fields['shop-product-category'] = array(
 		'desc'      => '',
 		'default'   => esc_html__( 'View Details', 'themerange' ),
 		'required'	=> array( 'tr_product_button', 'equals', true ),
-	),
-	array(
-		'id'        => 'tr_product_button_style',
-		'type'      => 'select',
-		'title'     => esc_html__( 'Product Button Style', 'themerange' ),
-		'subtitle' => '',
-		'desc'     => '',
-		'options'  => $button_style,
-		'default'  => 'two',
-		'required' => array( 'tr_product_button', 'equals', true ),
 	),
 );
 
