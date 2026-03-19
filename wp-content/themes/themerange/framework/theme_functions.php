@@ -969,8 +969,18 @@ function themerange_register_required_plugins(){
 			'required' => true,
 		),
 		array(
+			'name' => esc_html__( 'SEO Rank Math', 'themerange' ),
+			'slug' => 'seo-by-rank-math',
+			'required' => true,
+		),
+		array(
 			'name' => esc_html__( 'WooCommerce', 'themerange' ),
 			'slug' => 'woocommerce',
+			'required' => true,
+		),
+		array(
+			'name' => esc_html__( 'Whatsapp', 'themerange' ),
+			'slug' => 'wp-whatsapp',
 			'required' => true,
 		),
     );

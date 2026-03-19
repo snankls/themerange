@@ -20607,16 +20607,9 @@ body.tp-magic-cursor #magic-cursor {
 .tp-contact-email:hover {
   color: var(--tp-grey-1);
 }
-.tp-contact-form {
-  padding: 70px 60px 70px 60px;
-}
-@media (max-width: 574.98px) {
-  .tp-contact-form {
-    padding: 30px 20px 30px 20px;
-  }
-}
 .tp-contact-form .tp-postbox-details-input input, .tp-contact-form .tp-postbox-details-input textarea {
   font-size: 18px;
+  resize: none;
 }
 .tp-contact-form .tp-postbox-details-input input::placeholder, .tp-contact-form .tp-postbox-details-input textarea::placeholder {
   font-size: 18px;

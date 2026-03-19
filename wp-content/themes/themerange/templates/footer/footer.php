@@ -21,34 +21,34 @@
                     <div class="tp-footer-top-social-wrap text-center mb-30">
                         <span class="tp-footer-top-subtitle tp-text-theme-primary fw-500 fs-18 tp-ff-heading mb-5 d-inline-block tp_fade_anim" data-delay=".3">Get’s Started a Projects?</span>
                         <h2 class="tp-footer-top-title rotate-text-anim tp-text-common-white lh-1 text-uppercase fw-500 mb-45">Let’s Work<br> Together.</h2>
-                        <div class="tp-footer-social tp-footer-pp-social tp_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
+                        <!-- <div class="tp-footer-social tp-footer-pp-social tp_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
                             <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-dribbble"></i>
-                                    Dribbble
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-behance"></i>
-                                    Behance
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-pinterest"></i>
-                                    Pinterest
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-dribbble"></i>
-                                    LinkedIn
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-dribbble"></i>
+                                        Dribbble
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-behance"></i>
+                                        Behance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-pinterest"></i>
+                                        Pinterest
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-dribbble"></i>
+                                        LinkedIn
+                                    </a>
+                                </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 </div>
@@ -68,9 +68,9 @@
                     <div class="tp-footer-pp-widget mb-40 tp_fade_anim" data-delay=".5">
                         <h3 class="tp-footer-widget-title fw-500 fs-25 mb-10 text-uppercase tp-text-common-white">Quick Links</h3>
                         <ul>
-                            <li><a href="#">About Me</a></li>
-                            <li><a href="#">My Portfolio</a></li>
-                            <li><a href="#">Contact Me</a></li>
+                            <li><a href="https://wp.themerange.net/tr/about-us/">About Me</a></li>
+                            <li><a href="https://wp.themerange.net/tr/portfolio/">My Portfolio</a></li>
+                            <li><a href="https://wp.themerange.net/tr/contact-us/">Contact Me</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     <div class="tp-footer-pp-widget ml-25 mb-40 tp_fade_anim" data-delay=".7">
                         <span class="tp-ff-heading fw-500 fs-18 tp-text-common-white mb-35 d-inline-block">
                             <i class="fa-regular fa-globe mr-5"></i>
-                            Based on California, USA
+                            Based on Multan, Pakistan.
                         </span>
                         <div class="tp-footer-pp-link">
                             <a class="mr-35" href="mailto:info@example.com">info@themerange.net</a>
@@ -110,4 +110,4 @@
     </div>
     <!-- tp-footer area end -->
 
-    </footer>
+</footer>

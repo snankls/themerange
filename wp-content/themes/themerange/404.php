@@ -20,28 +20,24 @@ if ( empty( $single_custom_name ) ) {
 themerange_single_banner($show_banner, $layout_view, $background_image, $show_single_title, $single_custom_name, $single_breadcrumb);
 ?>
 
-<!-- Error Section -->
-<div class="error-section <?php echo esc_attr(implode(' ', $classes)); ?>">
-    <div class="auto-container">
-        <div class="content">
-            <h1><?php echo wp_kses( $theme_options['tr_404_title'], true ) ? wp_kses( $theme_options['tr_404_title'], true ) : esc_html_e( '404', 'themerange' ); ?></h1>
-            <h2><?php echo wp_kses( $theme_options['tr_404_text'], true ) ? wp_kses( $theme_options['tr_404_text'], true ) : esc_html_e( 'Oops... It looks like you ‘re lost !', 'themerange' ); ?></h2>
-            <div class="text"><?php echo wp_kses( $theme_options['tr_404_description'], true ) ? wp_kses( $theme_options['tr_404_description'], true ) : esc_html_e( 'Oops! The page you are looking for does not exist. It might have been moved or deleted.', 'themerange' ); ?></div>
-            
-            <?php if ($theme_options['tr_enable_404_button']): ?>
-            <!-- Button Box -->
-            <div class="button-box text-center">
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="theme-btn btn-style-<?php if($theme_options['tr_404_button_style']) echo esc_attr($theme_options['tr_404_button_style']); else echo 'three'; ?>">
-                    <span class="btn-wrap">
-                        <span class="text-one"><?php echo wp_kses( $theme_options['tr_404_button'], true ) ? wp_kses( $theme_options['tr_404_button'], true ) : esc_html_e( 'Back to Home Page', 'themerange' ); ?></span>
-                        <span class="text-two"><?php echo wp_kses( $theme_options['tr_404_button'], true ) ? wp_kses( $theme_options['tr_404_button'], true ) : esc_html_e( 'Back to Home Page', 'themerange' ); ?></span>
-                    </span>
-                </a>
-            </div> 
-            <?php endif; ?>
+<!-- error area start -->
+<div class="tp-error-area pt-190 pb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+            <div class="tp-error-wrapper text-center">
+                <h4 class="tp-error-title">Oops!</h4>
+                <h1>404</h1>
+                <div class="tp-error-content">
+                    <h4 class="tp-error-title-sm">Something went Wrong...</h4>
+                    <p>Sorry, we couldn't find your page.</p>
+                    <a class="tp-btn" href="index.html">Back to Home</a>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- End Error Section -->
+<!-- error area end -->
 
 <?php get_footer(); ?>
