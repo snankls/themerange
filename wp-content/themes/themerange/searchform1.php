@@ -10,8 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-    <div class="form-group">
-        <input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e('Search Here', 'themerange'); ?>">
-        <button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
+    <div class="tp-search-form-input">
+        <input type="text" name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e('What are you looking for?', 'themerange'); ?>">
+        <span class="tp-search-focus-border"></span>
+        <button class="tp-search-form-icon" type="submit">
+            <i class="fa-sharp fa-regular fa-magnifying-glass"></i>
+        </button>
     </div>
 </form>
