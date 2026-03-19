@@ -60,7 +60,7 @@ class TR_Elementor_Widget_Heading extends TR_Elementor_Widget_Base{
             </div>
 
 			<?php if($settings['title_switcher']) { ?>
-				<div class=tr-title"">
+				<div class="tr-heading">
 					<<?php echo esc_attr($settings['title_tag']); ?>>
 						<?php echo wp_kses($title, $allowed_html); ?>
 					</<?php echo esc_attr($settings['title_tag']); ?>>
