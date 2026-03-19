@@ -175,25 +175,9 @@ $option_fields['general'] = array(
 	
 	//Back to Top
 	array(
-		'id'       => 'section-back-to-top-button',
-		'type'     => 'section',
-		'title'    => esc_html__( 'Back To Top Button', 'themerange' ),
-		'subtitle' => '',
-		'indent'   => false,
-	),
-	array(
-		'id'       => 'tr_back_to_top',
+		'id'       => 'tr_enable_back_to_top',
 		'type'     => 'switch',
 		'title'    => esc_html__( 'Enable Back To Top Button', 'themerange' ),
-		'subtitle' => '',
-		'default'  => true,
-		'on'		=> esc_html__( 'Enable', 'themerange' ),
-		'off'		=> esc_html__( 'Disable', 'themerange' ),
-	),
-	array(
-		'id'       => 'tr_back_to_top_mobile',
-		'type'     => 'switch',
-		'title'    => esc_html__( 'Enable Back To Top Button On Mobile', 'themerange' ),
 		'subtitle' => '',
 		'default'  => true,
 		'on'		=> esc_html__( 'Enable', 'themerange' ),
