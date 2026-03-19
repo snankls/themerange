@@ -200,15 +200,6 @@ Redux::setSection( $opt_name, array(
 	'fields'           => $option_fields['color-setting']
 ) );
 
-/*** Menu Tab ***/
-Redux::setSection( $opt_name, array(
-	'title'            => esc_html__( '404 Page', 'themerange' ),
-	'id'               => 'page-404',
-	'desc'             => '',
-	'icon'             => 'el el-error',
-	'fields'           => $option_fields['error']
-) );
-
 /*** Social Icons Tab ***/
 Redux::setSection( $opt_name, array(
 	'title'            => esc_html__( 'Social Icons', 'themerange' ),
