@@ -103,16 +103,6 @@ class TR_Elementor_Widget_Portfolio extends TR_Elementor_Widget_Base{
 			)
 		);
 		$this->add_control(
-            'portfolio_btn_style',
-            array(
-                'label' => esc_html__('Style', 'themerange'),
-                'type' => Controls_Manager::SELECT2,
-                'default' => 'two',
-                'options' => tr_button_style(),
-				'condition' => array( 'show_pagination_button' => 'button' ),
-            )
-        );
-		$this->add_control(
             'pagination_btn_name',
             array(
                 'label' => __( 'Name', 'themerange' ),

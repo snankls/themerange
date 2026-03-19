@@ -191,15 +191,6 @@ Redux::setSection( $opt_name, array(
 	'fields'           => $option_fields['footer']
 ) );
 
-/*** Color Settings Tab ***/
-Redux::setSection( $opt_name, array(
-	'title'            => esc_html__( 'Color Settings', 'themerange' ),
-	'id'               => 'color-setting-tab',
-	'desc'             => '',
-	'icon'             => 'el el-brush',
-	'fields'           => $option_fields['color-setting']
-) );
-
 /*** Social Icons Tab ***/
 Redux::setSection( $opt_name, array(
 	'title'            => esc_html__( 'Social Icons', 'themerange' ),
