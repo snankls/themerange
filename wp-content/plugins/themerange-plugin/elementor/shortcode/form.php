@@ -57,7 +57,7 @@ class TR_Elementor_Widget_Form extends TR_Elementor_Widget_Base{
 	?>
         
 		<!-- Default Form -->
-		<div id="contact-form">
+		<div id="contact-form" class="tp-contact-form">
 			<?php echo do_shortcode('[contact-form-7 id="'.esc_attr($cf7_shortocde).'"]'); ?>
 		</div>
 		<!-- End Default Form -->

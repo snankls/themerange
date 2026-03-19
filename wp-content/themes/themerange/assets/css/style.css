@@ -6292,9 +6292,6 @@ body.loaded {
 .tp-search-form-input input:focus {
   border-color: transparent;
 }
-.tp-search-form-input input[type=submit] {
-  border: none;
-}
 .tp-search-form-input input:focus ~ .tp-search-focus-border {
   width: 100%;
   left: 0;
@@ -20626,6 +20623,9 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-contact-form .tp-postbox-details-input .tp-textarea {
   height: 180px;
+}
+.tp-contact-form input[type=submit] {
+  border: none;
 }
 .tp-contact-shape {
   position: absolute;
