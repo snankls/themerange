@@ -306,7 +306,7 @@ if( !function_exists('themerange_breadcrumbs') ){
 		global $wp_rewrite, $post;
 		$rewriteUrl = $wp_rewrite->using_permalinks();
 		if( !is_home() && !is_front_page() || is_paged() ){
-			$output .= '<div class="bread-crumb clearfix">';
+			$output .= '<div class="tp-breadcrumb-list tp-breadcrumb-2-list">';
 	 
 			$homeLink = esc_url( home_url('/') ); 
 			$output .= '<a href="' . $homeLink . '">' . $ar_title['home'] . '</a> ' . $delimiter . ' ';
@@ -478,20 +478,26 @@ if( !function_exists('themerange_banner') ){
 			// }
 			
 			if( $show_page_title ){
-				$page_title = '<h1 class="page_title mt-0 mb-0 text-white">' . $page_title . '</h1>';
+				$page_title = '<h2 class="mb-15 tp-ff-dm">' . $page_title . '</h2>';
 			}
 			
-			echo '<section class="page_banner_section text-center '.esc_attr(implode(' ', array_filter($classes))).'" style="background-image: url('. esc_url($breadcrumb_bg) .')">
-				<div class="container">
-					<div class="heading_focus_text text-white"><span class="badge bg-secondary">ThemeRange</span> 😍</div>
+			echo '<div class="tp-product-hero pre-header tp-bg-common-sugar">
+               <div class="container containers">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="tp-product-hero-content text-center">
 					'.$page_title;
 				
 				$page_breadcrumb = ($tr_theme_options['tr_enable_breadcrumb'] == 1) ? $tr_theme_options['tr_enable_breadcrumb'] : $page_breadcrumb;
 				if( $page_breadcrumb ){
 					themerange_breadcrumbs();
 				}
+
 			echo '</div>
-			</section>';
+                     </div>
+                  </div>
+               </div>
+            </div>';
 		}
 	}
 }

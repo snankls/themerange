@@ -43,7 +43,7 @@ $background_image = $theme_options['tr_blog_background_image']['url'];
 $page_breadcrumb = $theme_options['tr_enable_blog_breadcrumb'];
 $page_custom_name = !empty($theme_options['tr_blog_custom_name']) ? $theme_options['tr_blog_custom_name'] : $page_title;
 
-themerange_single_banner($show_banner, $layout_view, $background_image, $page_title, $page_custom_name, $page_breadcrumb);
+themerange_banner($show_banner, $layout_view, $background_image, $page_title, $page_custom_name, $page_breadcrumb);
 ?>
 
 <!-- Sidebar Page Container -->

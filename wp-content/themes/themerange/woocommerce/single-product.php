@@ -27,7 +27,7 @@ $show_single_title = $theme_options['tr_shop_detail_title'];
 $single_custom_name = !empty($theme_options['tr_shop_detail_custom_name']) ? $theme_options['tr_shop_detail_custom_name'] : get_the_title();
 $single_breadcrumb = $theme_options['tr_enable_shop_detail_breadcrumb'];
 
-themerange_single_banner($show_banner, $layout_view, $background_image, $show_single_title, $single_custom_name, $single_breadcrumb);
+themerange_banner($show_banner, $layout_view, $background_image, $show_single_title, $single_custom_name, $single_breadcrumb);
 ?>
 
 <!-- Shop Detail -->
