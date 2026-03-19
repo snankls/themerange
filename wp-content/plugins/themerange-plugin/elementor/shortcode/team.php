@@ -84,7 +84,7 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 	?>
         
 		<!-- tp-team-area-start -->
-		<div class="tp-team-area pt-110 pb-50">
+		<div class="tp-team-area">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-4 col-lg-3 col-md-3 d-none d-md-block">
