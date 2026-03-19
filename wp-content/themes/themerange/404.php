@@ -26,12 +26,12 @@ themerange_single_banner($show_banner, $layout_view, $background_image, $show_si
         <div class="row">
             <div class="col-xl-12">
             <div class="tp-error-wrapper text-center">
-                <h4 class="tp-error-title">Oops!</h4>
-                <h1>404</h1>
+                <h4 class="tp-error-title"><?php esc_html_e( 'Oops!', 'themerange' ); ?></h4>
+                <h1><?php esc_html_e( '404', 'themerange' ); ?></h1>
                 <div class="tp-error-content">
-                    <h4 class="tp-error-title-sm">Something went Wrong...</h4>
-                    <p>Sorry, we couldn't find your page.</p>
-                    <a class="tp-btn" href="index.html">Back to Home</a>
+                    <h4 class="tp-error-title-sm"><?php esc_html_e( 'Something went Wrong...', 'themerange' ); ?></h4>
+                    <p><?php esc_html_e( '404', 'themerange' ); ?>Sorry, we couldn't find your page.</p>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="tp-btn"><?php esc_html_e( 'Back to Home', 'themerange' ); ?></a>
                 </div>
             </div>
             </div>
