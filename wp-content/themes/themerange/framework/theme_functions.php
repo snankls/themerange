@@ -964,11 +964,6 @@ function themerange_register_required_plugins(){
 			'required' => true,
 		),
 		array(
-			'name' => esc_html__('Mailchimp', 'themerange'),
-			'slug' => 'mailchimp-for-wp',
-			'required' => true,
-		),
-		array(
 			'name' => esc_html__( 'Elementor', 'themerange' ),
 			'slug' => 'elementor',
 			'required' => true,
