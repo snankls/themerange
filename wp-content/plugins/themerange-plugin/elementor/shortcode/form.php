@@ -19,11 +19,6 @@ class TR_Elementor_Widget_Form extends TR_Elementor_Widget_Base{
 		return 'tr-custom-icon';
 	}
 	
-	public function get_script_depends() {
-		wp_register_script( 'form-script', THEMERANGE_URL . 'assets/js/form-script.js', [ 'elementor-frontend' ], THEMERANGE_VERSION, true );
-		return [ 'form-script' ];
-	}
-	
 	protected function register_controls(){
 		// Layouts
 		$this->tr_add_layout_controls(3);
@@ -53,49 +48,17 @@ class TR_Elementor_Widget_Form extends TR_Elementor_Widget_Base{
             )
         );
         $this->end_controls_section();
-		
-		// Style Tab
-		$this->register_style_background_controls();
-	}
-	
-	/***********************************************
-						Style Tab
-	***********************************************/
-	protected function register_style_background_controls() {
-		// Label
-		$this->add_form_label_style_controls();
-
-		// Input
-		$this->add_form_input_style_controls();
-		
-		// Select
-		$this->add_form_select_style_controls();
-		
-		// Textarea
-		$this->add_form_textarea_style_controls();
-		
-		// Button
-		$this->add_form_button_style_controls();
 	}
 	
 	protected function render(){
 		$settings = $this->get_settings_for_display();
 		extract( $settings );
 		$allowed_html = tr_allowed_html();
-
-		if($layout == 'layout2')
-			$classes = 'comment-form';
-		else if($layout == 'layout3')
-			$classes = 'default-form';
-		else
-			$classes = 'contact-form';
 	?>
         
 		<!-- Default Form -->
-		<div class="tr-form <?php echo esc_attr($classes); ?>">
-			<div id="contact-form">
-				<?php echo do_shortcode('[contact-form-7 id="'.esc_attr($cf7_shortocde).'"]'); ?>
-			</div>
+		<div id="contact-form">
+			<?php echo do_shortcode('[contact-form-7 id="'.esc_attr($cf7_shortocde).'"]'); ?>
 		</div>
 		<!-- End Default Form -->
         
