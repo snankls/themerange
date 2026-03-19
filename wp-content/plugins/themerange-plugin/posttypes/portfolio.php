@@ -66,7 +66,7 @@ if( !class_exists('TR_Portfolio') ){
 				'rewrite' 				=> array('slug' => $portfolio_slug, 'with_front' => true),
 				'query_var' 			=> false,
 				'menu_position' 		=> 26,
-				'menu_icon' 			=> 'dashicons-format-portfolio',
+				'menu_icon' 			=> 'dashicons-portfolio',
 			);
 
 			if( $post_slug ){
