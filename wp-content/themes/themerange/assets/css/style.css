@@ -6292,6 +6292,9 @@ body.loaded {
 .tp-search-form-input input:focus {
   border-color: transparent;
 }
+.tp-search-form-input input[type=submit] {
+  border: none;
+}
 .tp-search-form-input input:focus ~ .tp-search-focus-border {
   width: 100%;
   left: 0;
