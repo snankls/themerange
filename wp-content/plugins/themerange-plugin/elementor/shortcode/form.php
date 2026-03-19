@@ -8,7 +8,7 @@ class TR_Elementor_Widget_Form extends TR_Elementor_Widget_Base{
     }
 	
 	public function get_title(){
-        return esc_html__( 'AgenkX Form', 'themerange' );
+        return esc_html__( 'TR Form', 'themerange' );
     }
 	
 	public function get_categories(){

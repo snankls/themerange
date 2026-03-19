@@ -21,17 +21,6 @@ class TR_Elementor_Widget_Text extends TR_Elementor_Widget_Base{
 	
 	protected function register_controls(){
 		$this->tr_add_text_controls();
-		
-		//Style Tab
-		$this->register_style_background_controls();
-	}
-	
-	/***********************************************
-						Style Tab
-	***********************************************/
-	protected function register_style_background_controls() {
-		//Text
-		$this->add_text_style_controls();
 	}
 	
 	protected function render(){
@@ -41,14 +30,14 @@ class TR_Elementor_Widget_Text extends TR_Elementor_Widget_Base{
 	?>
         
         <?php if($text) : ?>
-        <div class="heading_block tr-text mb-0">
-            <div class="heading_description">
-				<?php echo wp_kses($text, $allowed_html); ?>
-            </div>
-        </div>
+			<div class="heading_block tr-text mb-0">
+				<div class="heading_description">
+					<?php echo wp_kses($text, $allowed_html); ?>
+				</div>
+			</div>
         <?php endif; ?>
         
-		<?php
+	<?php
 	}
 }
 
