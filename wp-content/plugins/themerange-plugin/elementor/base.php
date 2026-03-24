@@ -435,15 +435,6 @@ abstract class TR_Elementor_Widget_Base extends Elementor\Widget_Base{
             )
         );
 		$this->add_control(
-            'btn_style',
-            array(
-                'label' => esc_html__('Style', 'themerange'),
-                'type' => Controls_Manager::SELECT2,
-                'default' => 'one',
-                'options' => tr_button_style(),
-            )
-        );
-		$this->add_control(
             'btn_name',
             array(
                 'label' => __( 'Name', 'themerange' ),
