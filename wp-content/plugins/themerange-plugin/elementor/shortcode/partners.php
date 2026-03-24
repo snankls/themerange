@@ -86,26 +86,29 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 		$allowed_html = tr_allowed_html();
 	?>
         
-		<!-- Client Logo Section - Start
-        ================================================== -->
-        <section class="client_logo_section">
-        	<div class="container">
-				<div class="client_logo_carousel swiper">
-					<div class="swiper-wrapper">
-						<?php foreach($settings['partners'] as $index => $item) :
-						$link_attr = $this->generate_link_attributes( $link ); ?>
+		<!-- tp-brands-area-start -->
+		<div class="tp-brand-area tp-brand-spacing tp-bg-common-white z-index-1 p-relative">
+			<span class="tp-brand-bottom-border"></span>
+			<div class="tp-brand-customer-wrap">
+				<span class="tp-brand-customer tp-ff-heading fs-18 fs-xs-15 fw-700 tp-text-common-black">We’ve 2,000+ Happiest Customer</span>
+			</div>
+			<div class="tp-brand-wrap">
+				<div class="swiper-container tp-brand-slide-active">
+					<div class="swiper-wrapper slide-transtion">
+						<?php foreach($settings['partners'] as $index => $item) : ?>
 							<div class="swiper-slide">
-								<div class="client_logo_item">
-									<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+								<div class="tp-brand-item">
+									<a href="#">
+										<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+									</a>
 								</div>
 							</div>
 						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- Client Logo Section - End
-		================================================== -->
+		</div>
+		<!-- tp-brands-area-end -->
     
     <?php
 	}
