@@ -27,9 +27,6 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 	}
 	
 	protected function register_controls(){
-		//Background Image
-		$this->tr_add_background_image_controls();
-
 		//Partners
 		$this->start_controls_section(
             'section_partners',
@@ -86,22 +83,22 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 	protected function render(){
 		$settings = $this->get_settings_for_display();
 		extract( $settings );
-		$link_attr = $this->generate_link_attributes( $link );
 		$allowed_html = tr_allowed_html();
 	?>
         
 		<!-- Client Logo Section - Start
         ================================================== -->
-        <section class="client_logo_section" <?php if($pattern_image) : ?>style="background-image: url(<?php echo wp_get_attachment_url($pattern_image['id']); ?>)"<?php endif; ?>>
+        <section class="client_logo_section">
         	<div class="container">
 				<div class="client_logo_carousel swiper">
 					<div class="swiper-wrapper">
-						<?php foreach($settings['partners'] as $index => $item) : ?>
-						<div class="swiper-slide">
-							<div class="client_logo_item">
-								<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+						<?php foreach($settings['partners'] as $index => $item) :
+						$link_attr = $this->generate_link_attributes( $link ); ?>
+							<div class="swiper-slide">
+								<div class="client_logo_item">
+									<img src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+								</div>
 							</div>
-						</div>
 						<?php endforeach; ?>
 					</div>
 				</div>
