@@ -100,7 +100,7 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 
 						<?php $i=1;
 						foreach($settings['team'] as $index => $item) :
-							if($i % 2) $speed = '.9'; else $speed = '-.89'; ?>
+							if($i % 2) $speed = '.9'; else $speed = '-.9'; ?>
 							<div class="col-lg-3 col-md-6">
 								<div class="tp-team-it-item mb-90" data-speed="<?php echo $speed; ?>">
 									<img class="myimg" src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>">
