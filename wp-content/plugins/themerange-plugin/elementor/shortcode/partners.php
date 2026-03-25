@@ -95,7 +95,8 @@ class TR_Elementor_Widget_Partners extends TR_Elementor_Widget_Base{
 			<div class="tp-brand-wrap">
 				<div class="swiper-container tp-brand-slide-active">
 					<div class="swiper-wrapper slide-transtion">
-						<?php foreach($settings['partners'] as $index => $item) : ?>
+						<?php foreach($settings['partners'] as $index => $item) :
+							//$link_attr = $this->generate_link_attributes( $link ); ?>
 							<div class="swiper-slide">
 								<div class="tp-brand-item">
 									<a href="#">

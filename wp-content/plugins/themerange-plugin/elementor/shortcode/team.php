@@ -27,6 +27,9 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 	}
 	
 	protected function register_controls(){
+		// Layouts
+		$this->tr_add_layout_controls(2);
+
 		//Heading
 		$this->tr_add_heading_controls();
 		
@@ -82,54 +85,88 @@ class TR_Elementor_Widget_Team extends TR_Elementor_Widget_Base{
 		extract( $settings );
 		$allowed_html = tr_allowed_html();
 	?>
-        
-		<!-- tp-team-area-start -->
-		<div class="tp-team-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-4 col-lg-3 col-md-3 d-none d-md-block">
-						<div class="tp-about-wd-shape tp-team-sa-shape tp-about-sa-shape">
-							<span class="shape-1 d-inline-block mr-10" data-speed=".9">
-								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0 40C0 17.9086 17.9086 0 40 0V40H0Z" fill="#7D5DFF" />
-								</svg>
-							</span>
-							<span class="shape-1 mb-15">
-								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M40 40C40 17.9086 22.0914 0 0 0V40H40Z" fill="#030303" />
-								</svg>
-							</span>
-						</div>
-					</div>
-					<div class="col-xl-6 col-lg-8 col-md-9">
-						<div class="tp-team-sa-title-wrap">
-							<h2 class="tp-team-sa-title mb-25 tp_fade_anim" data-delay=".3"><?php echo wp_kses($title, true); ?></h2>
-							<div class="tp-service-2-para tp-techonolgy-para tp-team-sa-para tp_fade_anim" data-delay=".5">
-								<p class="fs-18"><?php echo wp_kses($text, true); ?></p>
+
+		<?php if($layout == 'layout2') { ?>
+
+			<!-- tp-team-area-start -->
+			<div class="tp-team-area pt-115 pb-40">
+				<div class="container-fluid container-1524">
+					<div class="row gx-15">
+						<div class="col-lg-10">
+							<div class="tp-team-details-title mb-80">
+								<h2 class="tp-section-ai-title fs-72 fs-xl-60 fs-lg-55 fs-sm-45 fs-xs-40 fw-600 ls-m-4 tp-ff-dm tp-text-common-black-6"><?php echo wp_kses($title, true); ?></h2>
 							</div>
 						</div>
-					</div>
-					
-					<?php foreach($settings['team'] as $index => $item) : ?>
-					<div class="col-lg-3 col-md-6">
-						<div class="tp-team-sa-item" data-speed=".-9">
-							<div class="tp-team-sa-thumb mb-20 tp--hover-item p-relative">
-								<div class="tp--hover-img" data-displacement="assets/img/team/thumb-4.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
-									<img class="myimg" src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-100">
+
+						<?php foreach($settings['team'] as $index => $item) : ?>
+							<div class="col-lg-3 col-md-6">
+								<div class="tp-team-it-item mb-90" data-speed=".9">
+									<img class="myimg" src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>">
+									
+									<div class="tp-team-it-content p-relative">
+										<h3 class="fw-600 fs-28 fs-lg-25 ls-m-4 tp-ff-inter tp-text-common-black-1"><?php echo wp_kses($item['title'], true); ?></h3>
+										<span class="tp-text-common-black-4 ls-m-2 tp-ff-inter"><?php echo wp_kses($item['designation'], true); ?></span>
+									</div>
 								</div>
 							</div>
-							<div class="tp-team-sa-content text-center">
-								<h5 class="tp-ff-heading fw-500 fs-25 mb-5"><?php echo wp_kses($item['title'], true); ?></h5>
-								<span class="fs-16 tp-text-grey-1"><?php echo wp_kses($item['designation'], true); ?></span>
-							</div>
-						</div>
-					</div>
-					<?php endforeach; ?>
+						<?php endforeach; ?>
 
+					</div>
 				</div>
 			</div>
-		</div>
-		<!-- tp-team-area-end -->
+			<!-- tp-team-area-end -->
+        
+		<?php } else { ?>
+
+			<!-- tp-team-area-start -->
+			<div class="tp-team-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-4 col-lg-3 col-md-3 d-none d-md-block">
+							<div class="tp-about-wd-shape tp-team-sa-shape tp-about-sa-shape">
+								<span class="shape-1 d-inline-block mr-10" data-speed=".9">
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 40C0 17.9086 17.9086 0 40 0V40H0Z" fill="#7D5DFF" />
+									</svg>
+								</span>
+								<span class="shape-1 mb-15">
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M40 40C40 17.9086 22.0914 0 0 0V40H40Z" fill="#030303" />
+									</svg>
+								</span>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-8 col-md-9">
+							<div class="tp-team-sa-title-wrap">
+								<h2 class="tp-team-sa-title mb-25 tp_fade_anim" data-delay=".3"><?php echo wp_kses($title, true); ?></h2>
+								<div class="tp-service-2-para tp-techonolgy-para tp-team-sa-para tp_fade_anim" data-delay=".5">
+									<p class="fs-18"><?php echo wp_kses($text, true); ?></p>
+								</div>
+							</div>
+						</div>
+						
+						<?php foreach($settings['team'] as $index => $item) : ?>
+							<div class="col-lg-3 col-md-6">
+								<div class="tp-team-sa-item" data-speed=".-9">
+									<div class="tp-team-sa-thumb mb-20 tp--hover-item p-relative">
+										<div class="tp--hover-img" data-displacement="assets/img/team/thumb-4.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
+											<img class="myimg" src="<?php echo wp_get_attachment_url($item['image']['id']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-100">
+										</div>
+									</div>
+									<div class="tp-team-sa-content text-center">
+										<h5 class="tp-ff-heading fw-500 fs-25 mb-5"><?php echo wp_kses($item['title'], true); ?></h5>
+										<span class="fs-16 tp-text-grey-1"><?php echo wp_kses($item['designation'], true); ?></span>
+									</div>
+								</div>
+							</div>
+						<?php endforeach; ?>
+
+					</div>
+				</div>
+			</div>
+			<!-- tp-team-area-end -->
+
+		<?php } ?>
         
 	<?php
 	}
